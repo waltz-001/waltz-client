@@ -1,0 +1,70 @@
+.contact-us-container {
+    color: white;
+    padding: 50px 100px;
+    background: url('../../assests/images/ContactUsBg.png');
+    background-size: cover;
+}
+
+.contact-us-container h1 {
+    font-family: 'Lovelo-line-light';
+    font-weight: 700;
+    font-size: 70px;
+    text-align: center;
+}
+
+.contact-us-content {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Ruda', sans-serif;
+    justify-content: space-between;
+    margin: 100px 0px;
+}
+
+.contact-us-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-us-content-left h3 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 60px;
+}
+
+.contact-us-content-left li {
+    font-weight: 200;
+    font-size: 21px;
+    line-height: 33px;
+}
+
+ul {
+    list-style: none;
+}
+
+.contact-us-content-right {
+    width: 50%;
+}
+
+.contact-us-content-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-content-right label {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.contact-us-content-right input,
+textarea {
+    border: 2px solid #A023BF;
+    border-radius: 8px;
+    background-color: #000000;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: white;
+    margin: 10px 0px;
+}

@@ -1,0 +1,41 @@
+.navbar-container{
+    position: sticky;
+    top: 0px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+
+.active{
+    background-color: black;
+}
+
+.navbar-option-list{
+    width: 60%;
+}
+
+.navbar-option-list ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.navbar-option-list li a {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar-option-list li a:hover{
+    color: #A023BF;
+}
+
+.navbar-option-icons{
+    width: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

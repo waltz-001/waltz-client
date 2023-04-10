@@ -1,0 +1,84 @@
+.landing-container {
+    width: 100%;
+    top: 0px;
+
+}
+
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 585px;
+    padding: 40px;
+}
+
+.landing-logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.landing-logo-container img {
+    width: 50%;
+}
+
+.button-solid-round {
+    font-weight: 700;
+    font-size: 20px;
+    width: 232px;
+    height: 52px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.view-btn {
+    background: #1B1919;
+    color: white;
+    opacity: 0.8;
+}
+
+.register-btn {
+    background: #5B13D1;
+    color: white;
+}
+
+.landing-button-container {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .landing-content {
+        height: 430px;
+    }
+
+    .landing-logo-container img {
+        width: 70%;
+    }
+
+    .landing-button-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .button-solid-round {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        width: 130px;
+        height: 38px;
+    }
+
+    .register-btn{
+        margin-top: 20px;
+    }
+}

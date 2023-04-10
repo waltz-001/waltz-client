@@ -1,0 +1,64 @@
+.about-us {
+    background-color: black;
+    position: relative;
+}
+
+.about-us-container {
+    background: url('../../assests/images/AboutUs.svg');
+    height: 500px;
+    color: rgb(255, 255, 255);
+    padding: 50px;
+}
+
+.about-us-container h1 {
+    font-family: 'Lovelo-line-light';
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 70px;
+}
+
+.about-us-content-left,
+.about-us-content-right {
+    width: 310px;
+}
+
+.about-us-content h3 {
+    font-family: 'Lovelo-black';
+    font-weight: 900;
+    font-size: 40px;
+    margin: 30px 0px;
+}
+
+.about-us-content p {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 100px;
+    justify-content: space-between;
+}
+
+.about-us-content p {
+    padding-left: 20px;
+    border-left: 10px solid rgba(160, 35, 191, 0.7);
+}
+
+@media only screen and (max-width: 1000px) {
+    .about-us-container h1 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .about-us-content{
+        flex-direction: column;
+    }
+
+    .about-us-content-right{
+        display: none;
+    }
+}
