@@ -21,6 +21,9 @@
 .App{
   background-color: black;
   background-image: url('./assests/images/landing_image.jpg');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
