@@ -82,3 +82,37 @@
         padding: 6px 13px;
     }
 }
+@media only screen and (max-width: 600px) {
+    .sponsors-content {
+        padding: 80px 50px;
+        /* width: 100%; */
+    }
+
+    .sponsors-container h1 {
+        margin-top: 40px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .sponsors-container p {
+        /* width: 100%; */
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .sponsor-btn {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .button-outline-transparent {
+        position: relative;
+        top: 50px;
+        max-width: 110px;
+        max-height: 32px;
+        padding: 6px 13px;
+    }
+}
