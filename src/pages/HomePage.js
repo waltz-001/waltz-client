@@ -4,6 +4,7 @@ import AboutUs from '../components/AboutUs/AboutUs';
 import Sponsors from '../components/Sponsors/Sponsors';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Socials from '../components/Socials/Socials';
+import Footer from '../components/Footer/Footer.jsx';
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <AboutUs />
             <Sponsors />
             <ContactUs />
+            <Footer />
         </div>
     )
 }
