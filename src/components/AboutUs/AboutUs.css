@@ -20,7 +20,7 @@
 
 .about-us-content-left,
 .about-us-content-right {
-    width: 310px;
+    max-width: 320px;
 }
 
 .about-us-content h3 {
@@ -41,6 +41,7 @@
     flex-direction: row;
     margin: 0px 100px;
     justify-content: space-between;
+    
 }
 
 .about-us-content p {
@@ -51,14 +52,24 @@
 @media only screen and (max-width: 1000px) {
     .about-us-container h1 {
         font-weight: 700;
-        font-size: 30px;
+        font-size: 2rem;
         line-height: 30px;
     }
     .about-us-content{
         flex-direction: column;
+        flex-wrap: wrap;
     }
 
-    .about-us-content-right{
-        display: none;
+    .about-us-content{
+        object-fit: cover;
+        height: 60vh;
+        width: 90%;
+        overflow-y: scroll;
+        overflow-x: visible;
+        margin: 40px 4px;
+    }
+
+    .about-us-content::-webkit-scrollbar{
+        width: 0;
     }
 }
