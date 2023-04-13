@@ -68,3 +68,57 @@ textarea {
     color: white;
     margin: 10px 0px;
 }
+
+@media screen and (max-width: 600px) {
+    .contact-us-container {
+        padding-top: 0.43rem;
+        padding-left: 2.5rem;
+        padding-right: 2.25rem;
+    }
+
+    .contact-us-container h1 {
+
+        font-size: 1.75rem;
+        /* line-height: 0vh;
+         display: inline; 
+        padding: 50px 100px; */
+    }
+
+    .contact-us-content {
+        display: grid;
+        grid-row: auto;
+        font-size: 3rem;
+        margin-top: 10%;
+        /* margin: 22px 0px; */
+
+    }
+
+    .contact-us-content-left h3 {
+        font-size: 20px;
+    }
+
+    .contact-us-content-left ul li {
+        font-size: 13px;
+    }
+
+    .contact-us-content-right label {
+        font-size: 20px;
+    }
+
+    .contact-us-content-right label {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 45px;
+        /* width: 200px; */
+    }
+
+    .contact-us-content-right input {
+        width: 77vw;
+        line-height: 2vh;
+    }
+
+    .contact-us-content-right textarea {
+        width: 77vw;
+        line-height: 3vh;
+    }
+}
