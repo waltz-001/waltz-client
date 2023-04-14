@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className='home-page'>
             <LandingScreen />
             <Event/>
-            <Socials />
+//             <Socials />
             <AboutUs />
             <Sponsors />
             <ContactUs />
