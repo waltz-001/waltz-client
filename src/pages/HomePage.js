@@ -12,7 +12,6 @@ const HomePage = () => {
         <div className='home-page'>
             <LandingScreen />
             <Event/>
-//             <Socials />
             <AboutUs />
             <Sponsors />
             <ContactUs />
