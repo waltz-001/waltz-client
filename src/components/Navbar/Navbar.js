@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
-import SearchIcon from '../../assests/images/searchIcon.png';
-import UserIcon from '../../assests/images/userIcon.png';
 import Logo from '../../assests/images/logo.png';
 import './Navbar.css';
-import { a } from "react-router-dom";
-
 
 const Navbar = () => {
     const [navBar, setNavBar] = useState(false);
