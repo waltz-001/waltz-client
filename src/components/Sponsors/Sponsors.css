@@ -39,7 +39,7 @@
 .button-outline-transparent {
     border: 4px solid #C78E25;
     max-width: 300px;
-    max-height: 70px;
+    height: fit-content;
     padding: 17px 50px;
     text-align: center;
     cursor: pointer;
@@ -78,7 +78,7 @@
 
     .button-outline-transparent {
         max-width: 155px;
-        max-height: 39px;
+        height: fit-content;
         padding: 6px 13px;
     }
 }
@@ -112,7 +112,7 @@
         position: relative;
         top: 50px;
         max-width: 110px;
-        max-height: 32px;
+        height: fit-content;
         padding: 6px 13px;
     }
 }
