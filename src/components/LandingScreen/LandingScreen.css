@@ -25,7 +25,7 @@
 .button-solid-round {
     font-weight: 700;
     font-size: 20px;
-    width: 232px;
+    width: 18rem;
     height: 52px;
     border-radius: 50px;
     display: flex;
@@ -48,7 +48,8 @@
 }
 
 .landing-button-container {
-    width: 500px;
+    width: 45rem;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;

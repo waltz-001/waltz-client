@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import SearchIcon from '../../assests/images/searchIcon.png';
 import UserIcon from '../../assests/images/userIcon.png';
+import Logo from '../../assests/images/logo.png';
 import './Navbar.css';
+import { a } from "react-router-dom";
+
 
 const Navbar = () => {
     const [navBar, setNavBar] = useState(false);
@@ -16,20 +19,64 @@ const Navbar = () => {
     window.addEventListener('scroll', changeBackground)
 
     return (
-        <div className={navBar?'navbar-container active':'navbar-container'}>
-            <div className='navbar-option-list'>
-                <ul>
-                    <li><a href='#home'>HOME</a></li>
-                    <li><a href='#about-us'>ABOUT US</a></li>
-                    <li><a href='#sponsors'>SPONSORS</a></li>
-                    <li><a href='#contact-us'>CONTACT US</a></li>
+        <>
+        <nav className={navBar?'navbar-container active navbar-fixed-top navbar-expand-lg':'navbar-container navbar-expand-md '}>
+
+        <a class="navbar-brand p-1" href="/"><img src={Logo} alt="" style={{width:"6rem"}} /></a>
+{/* OFFCANVAS */}
+
+  <label htmlFor="navbar-toggle" className="navbar-toggler togglebtn " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+    <span className="navbar-toggler-icon"></span>
+  </label>      
+
+
+<div class="offcanvas offcanvas-start bg-dark" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="staticBackdropLabel"><a class="navbar-brand" href="/"><img className='mt-4' src={Logo} alt="" style={{width:"6rem"}} /></a></h5>
+    <button type="button" class="btn-close bg-warning" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      
+    </div>
+    <div className="navbar-option">
+            
+                <ul className='text-center'>
+                    <li className='my-5 nav-item'><a href='/'>HOME</a></li>
+                    <li className='my-5 nav-item'><a href='#about-us'>ABOUT US</a></li>
+                    <li className='my-5 nav-item'><a href='#sponsors'>SPONSORS</a></li>
+                    <li className='my-5 nav-item'><a href='#contact-us'>CONTACT US</a></li>
                 </ul>
             </div>
-            <div className='navbar-option-icons'>
-                <img src={SearchIcon} height={19} alt='search-icon' />
-                <img src={UserIcon} height={19} alt='user-icon' />
+  </div>
+</div>
+
+
+  
+        <div className="navbar-option-list">
+            
+                <ul>
+                    <li className='mt-2'><a href='/'>HOME</a></li>
+                    <li className='mt-2'><a href='#about-us'>ABOUT US</a></li>
+                    <li className='mt-2'><a href='#sponsors'>SPONSORS</a></li>
+                    <li className='mt-2'><a href='#contact-us'>CONTACT US</a></li>
+                </ul>
             </div>
-        </div>
+            <div className='navbar-option-icons mt-2'>
+                {/* <img src={SearchIcon} height={19} alt='search-icon' />
+                <img src={UserIcon} height={19} alt='user-icon' /> */}
+            </div>
+            
+        </nav>
+
+
+
+
+  
+
+     
+
+        </>
     )
 }
 
