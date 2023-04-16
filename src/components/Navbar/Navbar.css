@@ -14,6 +14,8 @@
 
 .navbar-option-list{
     width: 60%;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-option-list ul {
