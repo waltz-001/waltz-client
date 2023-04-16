@@ -11,12 +11,12 @@ const LandingScreen = () => {
                     <img src={Logo} alt='logo' />
                 </div>
                 <Timer />
-                <div className='landing-button-container'>
-                    <div className="button-solid-round view-btn">
-                        <p>VIEW DETAILS</p>
+                <div className='landing-button-container '>
+                    <div className="button-solid-round view-btn mt-5 ">
+                        <p className='mt-3'>VIEW DETAILS</p>
                     </div>
-                    <div className="button-solid-round register-btn">
-                        <p>RESGISTER NOW</p>
+                    <div className="button-solid-round register-btn mt-5 ">
+                        <p className='mt-3'>RESGISTER NOW</p>
                     </div>
                 </div>
             </div>
