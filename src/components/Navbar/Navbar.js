@@ -22,7 +22,7 @@ const Navbar = () => {
         <>
         <nav className={navBar?'navbar-container active navbar-fixed-top navbar-expand-lg':'navbar-container navbar-expand-md '}>
 
-        <a class="navbar-brand p-1" href="/"><img src={Logo} alt="" style={{width:"6rem"}} /></a>
+        <a className="navbar-brand p-1" href="/"><img src={Logo} alt="" style={{width:"6rem"}} /></a>
 {/* OFFCANVAS */}
 
   <label htmlFor="navbar-toggle" className="navbar-toggler togglebtn " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
@@ -30,12 +30,12 @@ const Navbar = () => {
   </label>      
 
 
-<div class="offcanvas offcanvas-start bg-dark" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="staticBackdropLabel"><a class="navbar-brand" href="/"><img className='mt-4' src={Logo} alt="" style={{width:"6rem"}} /></a></h5>
-    <button type="button" class="btn-close bg-warning" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div className="offcanvas offcanvas-start bg-dark" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+  <div className="offcanvas-header">
+    <h5 className="offcanvas-title" id="staticBackdropLabel"><a className="navbar-brand" href="/"><img className='mt-4' src={Logo} alt="" style={{width:"6rem"}} /></a></h5>
+    <button type="button" className="btn-close bg-warning" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div className="offcanvas-body">
     <div>
       
     </div>
