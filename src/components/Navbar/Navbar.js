@@ -42,10 +42,11 @@ const Navbar = () => {
     <div className="navbar-option">
             
                 <ul className='text-center'>
-                    <li className='my-5 nav-item'><a href='/'>HOME</a></li>
-                    <li className='my-5 nav-item'><a href='#about-us'>ABOUT US</a></li>
-                    <li className='my-5 nav-item'><a href='#sponsors'>SPONSORS</a></li>
-                    <li className='my-5 nav-item'><a href='#contact-us'>CONTACT US</a></li>
+                    <li className='my- nav-item res'><a href='/'>HOME</a></li>
+                    <li className='my- nav-item res'><a href='#about-us'>ABOUT US</a></li>
+                    <li className='my- nav-item res'><a href='#sponsors'>SPONSORS</a></li>
+                    <li className='my- nav-item res'><a href='#contact-us'>CONTACT US</a></li>
+                    <li className='my- nav-item res'><a href='/signin'>SIGN IN</a></li>
                 </ul>
             </div>
   </div>
@@ -60,6 +61,7 @@ const Navbar = () => {
                     <li className='mt-2'><a href='#about-us'>ABOUT US</a></li>
                     <li className='mt-2'><a href='#sponsors'>SPONSORS</a></li>
                     <li className='mt-2'><a href='#contact-us'>CONTACT US</a></li>
+                    <li className='mt-2'><a href='/signin'>SIGN IN</a></li>
                 </ul>
             </div>
             <div className='navbar-option-icons mt-2'>
