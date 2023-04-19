@@ -104,18 +104,7 @@ top: 185px;
     --fa-animation-duration: 3s;
   }
   
-  .fa-facebook {
-    color: #3B7DED;
-    background: white;
-    font-size: 2rem;
-  }
-
-  .fa-google {
-    color: #3B7DED;
-    background: rgba(29, 28, 37, 0.4);
-    font-size: 1.8rem;
-  }
-  
+ 
 
   
   a{
