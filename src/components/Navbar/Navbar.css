@@ -156,6 +156,11 @@
         background-image: url("/src/assests/images/ham.png");
         border-radius: 3px;
     }
+
+    .res{
+        margin: 2.3rem;
+        
+    }
     
   }
   
