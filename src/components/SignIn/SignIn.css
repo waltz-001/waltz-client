@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
+    width: 80%;
 }
 
 .card{
@@ -44,8 +44,7 @@ transform: matrix(1, 0, 0, 1, 0, 0);
 .card{
     background-image: url(../../assests/images/box.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;    
 }
 
 .card-title{
@@ -124,8 +123,15 @@ top: 185px;
 
     .part2{
         height: 37.8rem;
+        width: 100%;
+    }
+
+    .row{
+        width: 101%;
+    }
+
+    .card-container{
+        width: 100%;
         
-    /* left: 706.09px; */
-    /* top: 185px; */
     }
 }
