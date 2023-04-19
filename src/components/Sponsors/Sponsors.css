@@ -39,7 +39,7 @@
 .button-outline-transparent {
     border: 4px solid #C78E25;
     max-width: 300px;
-    max-height: 70px;
+    height: fit-content;
     padding: 17px 50px;
     text-align: center;
     cursor: pointer;
@@ -49,13 +49,13 @@
     margin: auto;
     margin-top: 50px;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 30px;
     color: white;
 }
 
 @media only screen and (max-width: 1000px) {
     .sponsors-content {
-        padding: 100px;
+        padding: 200px 100px;
     }
 
     .sponsors-container h1 {
@@ -72,13 +72,13 @@
 
     .sponsor-btn {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 27px;
     }
 
     .button-outline-transparent {
         max-width: 155px;
-        max-height: 39px;
+        height: fit-content;
         padding: 6px 13px;
     }
 }
@@ -105,14 +105,14 @@
 
     .sponsor-btn {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 27px;
     }
     .button-outline-transparent {
         position: relative;
         top: 50px;
         max-width: 110px;
-        max-height: 32px;
+        height: fit-content;
         padding: 6px 13px;
     }
 }
