@@ -1,10 +1,6 @@
-import React, {useState} from 'react';
-import SearchIcon from '../../assests/images/searchIcon.png';
-import UserIcon from '../../assests/images/userIcon.png';
-import Logo from '../../assests/images/logo.png';
+import React, { useState } from 'react';
+import Logo from '../../assests/images/WALTZ 2K23 LOGO (PNG).png';
 import './Navbar.css';
-import { a } from "react-router-dom";
-
 
 const Navbar = () => {
     const [navBar, setNavBar] = useState(false);
@@ -48,12 +44,22 @@ const Navbar = () => {
                     <li className='my- nav-item res'><a href='#contact-us'>CONTACT US</a></li>
                     <li className='my- nav-item res'><a href='/signin'>SIGN IN</a></li>
                 </ul>
+
             </div>
-  </div>
-</div>
+            <div className="navbar-option">
+
+              <ul className='text-center'>
+                <li className='my-5 nav-item'><a href='/'>HOME</a></li>
+                <li className='my-5 nav-item'><a href='#about-us'>ABOUT US</a></li>
+                <li className='my-5 nav-item'><a href='#sponsors'>SPONSORS</a></li>
+                <li className='my-5 nav-item'><a href='#contact-us'>CONTACT US</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
 
-  
+
         <div className="navbar-option-list">
             
                 <ul>
@@ -66,20 +72,21 @@ const Navbar = () => {
             </div>
             <div className='navbar-option-icons mt-2'>
                 {/* <img src={SearchIcon} height={19} alt='search-icon' />
+
                 <img src={UserIcon} height={19} alt='user-icon' /> */}
-            </div>
-            
-        </nav>
+        </div>
+
+      </nav>
 
 
 
 
-  
 
-     
 
-        </>
-    )
+
+
+    </>
+  )
 }
 
 export default Navbar
