@@ -18,7 +18,7 @@ const Navbar = () => {
         <>
         <nav className={navBar?'navbar-container active navbar-fixed-top navbar-expand-lg':'navbar-container navbar-expand-md '}>
 
-        <a className="navbar-brand p-1" href="/"><img src={Logo} alt="" style={{width:"6rem"}} /></a>
+        <a className="navbar-brand p-1" href="/"><img src={Logo} alt="" style={{width:"3rem"}} /></a>
 {/* OFFCANVAS */}
 
   <label htmlFor="navbar-toggle" className="navbar-toggler togglebtn " data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
@@ -28,7 +28,7 @@ const Navbar = () => {
 
 <div className="offcanvas offcanvas-start bg-dark" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
   <div className="offcanvas-header">
-    <h5 className="offcanvas-title" id="staticBackdropLabel"><a className="navbar-brand" href="/"><img className='mt-4' src={Logo} alt="" style={{width:"6rem"}} /></a></h5>
+    <h5 className="offcanvas-title" id="staticBackdropLabel"><a className="navbar-brand" href="/"><img className='mt-4' src={Logo} alt="" style={{width:"3rem"}} /></a></h5>
     <button type="button" className="btn-close bg-warning" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div className="offcanvas-body">
@@ -52,7 +52,7 @@ const Navbar = () => {
 
 
 
-        <div className="navbar-option-list">
+        <div className="navbar-option-list justify-content-center align-items-center">
             
                 <ul>
                     <li className='mt-2'><a href='/'>HOME</a></li>
