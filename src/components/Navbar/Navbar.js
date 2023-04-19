@@ -46,15 +46,7 @@ const Navbar = () => {
                 </ul>
 
             </div>
-            <div className="navbar-option">
-
-              <ul className='text-center'>
-                <li className='my-5 nav-item'><a href='/'>HOME</a></li>
-                <li className='my-5 nav-item'><a href='#about-us'>ABOUT US</a></li>
-                <li className='my-5 nav-item'><a href='#sponsors'>SPONSORS</a></li>
-                <li className='my-5 nav-item'><a href='#contact-us'>CONTACT US</a></li>
-              </ul>
-            </div>
+            
           </div>
         </div>
 
