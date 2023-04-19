@@ -11,16 +11,16 @@ function SignIn() {
     <div className='signin-container containe'>
       <h1 className='signin-head-txt'>Let's Get Classy</h1>
       <div className="card-container borde" style={{width:"70%", height:"80%"}}>
-      <div class="card borde mb-3" style={{width: "90%", height:"90%"}}>
+      <div class="card borde mb-3 shadow rounded" style={{width: "90%", height:"90%"}}>
   <div class="row g-0">
-    <div class="col-md-6 borde part1">
+    <div class="col-md-6 borde part1 shadow rounded">
       {/* <img src={Box} class="img-fluid rounded-start boximg" alt="..."/> */}
     </div>
-    <div class="col-md-6 container borde part2">
+    <div class="col-md-6 container borde part2 shadow rounded">
       <div class="card-body">
         <h5 class="card-title text-center borde">Sign In</h5>
         <p class="card-text">
-        <div class="input-group mb-3 email-box rounded-pill">
+        <div class="input-group mb-3 email-box">
   <span class="input-group-text px-4"><i class="fa-solid fa-envelope fa-beat fa-xl" style={{color:"#DFB6FF"}}></i></span>
   <div class="form-floating">
     <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm"/>

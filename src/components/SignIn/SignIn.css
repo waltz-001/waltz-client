@@ -18,6 +18,10 @@
     
 }
 
+.card{
+    background: linear-gradient(177.82deg, #180027 7.7%, #080824 107.27%);
+}
+
 .signin-head-txt{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -88,7 +92,7 @@ color: #5B13D1;
 backdrop-filter: blur(20px);
 
 
-/* width: 627.51px; */
+width: 50%;
 height: 32rem;
 left: 706.09px;
 top: 185px;
