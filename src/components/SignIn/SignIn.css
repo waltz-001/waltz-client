@@ -61,6 +61,11 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     display: none;
 }
 
+.label-txt{
+    margin: 0;
+    padding: 0;
+}
+
 .card{
     background-image: url(../../assests/images/box.jpg);
     background-repeat: no-repeat;
@@ -89,6 +94,7 @@ color: #5B13D1;
     background: rgba(29, 28, 37, 0.4);
 }
 
+
 .email-box, .pd-box{
  
     border: none;
@@ -112,7 +118,7 @@ backdrop-filter: blur(20px);
 
 
 width: 50%;
-height: 32rem;
+height: 32.5rem;
 left: 706.09px;
 top: 185px;
 }
@@ -135,6 +141,15 @@ top: 185px;
     
   }
 
+  .form-error{
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    
+  }
+
 
 @media (max-width: 767px) {
     .part1{
@@ -142,7 +157,7 @@ top: 185px;
     }
 
     .part2{
-        height: 37.8rem;
+        height: 38.4rem;
         width: 100%;
     }
 
