@@ -37,8 +37,28 @@ background-clip: text;
 transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-.boximg{
-    
+.extra-txt{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    gap: 5px;
+    /* border: #FFFFFF 2px solid; */
+    padding: 0.5rem;
+    margin-top: 29.5rem;
+
+}
+
+.extra-txt-link{
+    color: #EB9CFF;
+    font-weight: 600;
+}
+
+.extra-txt-res{
+    display: none;
 }
 
 .card{
@@ -133,5 +153,11 @@ top: 185px;
     .card-container{
         width: 100%;
         
+    }
+
+    .extra-txt-res{
+        display: flex;
+        margin-top: 2rem;
+        gap: 5px;
     }
 }
