@@ -1,0 +1,49 @@
+.timer-container {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+.timer-count {
+    color: white;
+    width: 83.4px;
+    height: 71.63px;
+    background: #0D0D0D;
+    border-radius: 10px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-count p {
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #A51FC7;
+    width: 80%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .timer-container {
+        width: 70%;
+    }
+
+    .timer-count {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        width: 37.83px;
+        height: 35.39px;
+    }
+
+    .timer-count p {
+        width: 27.78px;
+        height: 11.69px;
+        font-weight: 600;
+        font-size: 7px;
+        line-height: 10px;
+    }
+}

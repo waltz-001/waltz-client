@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
+
+@font-face {
+  font-family: "Lovelo-line-light";   /*Can be any text*/
+  src: local("Lovelo-line-light"),
+    url("./assests/fonts/Lovelo-LineLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lovelo-black";   /*Can be any text*/
+  src: local("Lovelo-black"),
+    url("./assests/fonts/Lovelo-Black.woff") format("woff");
+}
+
+*{
+  margin: 0%;
+  padding: 0%;
+  scroll-behavior: smooth;
+}
+
+.App{
+  background-color: black;
+  background-image: url('./assests/images/landing_image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+

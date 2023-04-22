@@ -1,0 +1,33 @@
+::placeholder {
+    color: #c9c5c5;
+    opacity: 1;
+  }
+  
+  urlButton{
+    margin: 0;
+    border-radius: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:  #c9c5c5;
+    border-width: 0.20em;
+    z-index: +1;
+  
+  }
+  
+  .dropbtn {
+    background-color: #e8ecf4;
+    color: #9fa5b1;
+    border-style: none;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: small;
+  }
+  
+  @media screen and (max-width: 725px) {
+    .dropbtn{
+      width: 70%;
+    }
+    .urlInput{
+      width: 200px;
+    }
+  }
