@@ -1,53 +1,165 @@
-import Logo from "./components/Logo/Logo";
-import PageOne from "./components/PageOne/PageOne";
-import PageTwo from "./components/PageTwo/PageTwo";
-import PageThree from "./components/PageThree/PageThree";
-import PageFour from "./components/PageFour/PageFour";
+import PageOne from "./PageOne/PageOne";
+import PageTwo from "./PageTwo/PageTwo";
+import PageThree from "./PageThree/PageThree";
 import "./Register.css";
 import React, { useState } from "react";
-import tachyons from "tachyons";
-import MultiStepProgressBar from "./components/MultiStepProgressBar/MultiStepProgressBar";
+import StepProgressBar from "./StepProgressBar/StepProgressBar";
+import { useFormik } from "formik";
+import { registerSchema } from "../../schemas";
+/**
+ * {
+  "firstName": "Jon",
+  "lastName": "Snow",
+  "gender": "Male",
+  "email": "jonsnow@gmail.com",
+  "contactNumber": "9123123123",
+  "userRole": "UITAN",
+  "department": "IT",
+  "year": 3,
+  "batch": "",
+  "companyName": "",
+  "instituteName": "",
+  "password": "Kolk@t@2023"
+}
+ */
+const initialValues = {
+  fullName: "",
+  phoneNumber: "",
+  email: "",
+  gender: "",
+  userType: "",
+  department: "",
+  graduationYear: "",
+  rollNumber: "",
+  batch: "",
+  companyName: "",
+  instituteName: "",
+  password: "",
+};
 
 const Register = () => {
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+  } = useFormik({
+    initialValues: initialValues,
+    validateOnChange: true,
+    validateOnBlur: true,
+    validationSchema: registerSchema,
+    onSubmit: (values, action) => {
+      console.log(values);
+    },
+  });
+
   const [page, setPage] = useState("pageone");
 
   const nextPage = (page) => {
     setPage(page);
   };
 
-  const nextPageNumber = (pageNumber) => {
-    switch (pageNumber) {
-      case "1":
-        setPage("pageone");
-        break;
-      case "2":
-        setPage("pagetwo");
-        break;
-      case "3":
-        setPage("pagethree");
-        break;
-      case "4":
-        alert("Ooops! Seems like you did not fill the form.");
-        break;
-      default:
-        setPage("1");
-    }
-  };
-
   return (
-    <div className="App">
-      <Logo />
-      <MultiStepProgressBar page={page} onPageNumberClick={nextPageNumber} />
-      {
-        {
-          pageone: <PageOne onButtonClick={nextPage} />,
-          pagetwo: <PageTwo onButtonClick={nextPage} />,
-          pagethree: <PageThree onButtonClick={nextPage} />,
-          pagefour: <PageFour />,
-        }[page]
-      }
+    <div className="Register">
+      <div className="signin-container containe">
+        <h1 className="signin-head-txt">Let's Get Classy</h1>
+        <div className="card-container borde" style={{ height: "81%" }}>
+          <div
+            className="card borde mb-3 shadow rounded"
+            style={{ width: "90%", height: "90%" }}
+          >
+            <div className="row g-0">
+              <div className="col-md-6 borde part1 shadow rounded">
+                <span className="extra-txt d-flex align-items-center justify-content-center">
+                  Already Registered?{" "}
+                  <a className="extra-txt-link" href="/signin">
+                    {" "}
+                    Sign In{" "}
+                  </a>
+                </span>
+              </div>
+              <div className="col-md-6   borde part2 shadow rounded">
+                <h5 className="card-title text-center">Register</h5>
+
+                <StepProgressBar page={page} />
+
+                <form onSubmit={handleSubmit}>
+                  {
+                    {
+                      pageone: (
+                        <PageOne
+                          values={values}
+                          errors={errors}
+                          touched={touched}
+                          handleBlur={handleBlur}
+                          handleChange={handleChange}
+                          handleSubmit={handleSubmit}
+                          nextPage={nextPage}
+                          setFieldValue={setFieldValue}
+                        />
+                      ),
+
+                      pagetwo: (
+                        <PageTwo
+                          values={values}
+                          errors={errors}
+                          touched={touched}
+                          handleBlur={handleBlur}
+                          handleChange={handleChange}
+                          nextPage={nextPage}
+                          setFieldValue={setFieldValue}
+                        />
+                      ),
+                      pagethree: (
+                        <div>
+                          <PageThree
+                            values={values}
+                            errors={errors}
+                            touched={touched}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                          />
+
+                          <div className="submit-btn">
+                            <button
+                              className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+                              type="submit"
+                              style={{
+                                height: "3rem",
+                                width: "30%",
+                                backgroundColor: "#A023BF",
+                              }}
+                              onClick={() => nextPage("pagetwo")}
+                            >
+                              PREVIOUS
+                            </button>
+                            <button
+                              className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+                              type="submit"
+                              style={{
+                                height: "3rem",
+                                width: "30%",
+                                backgroundColor: "#A023BF",
+                              }}
+                            >
+                              SUBMIT
+                            </button>
+                          </div>
+                        </div>
+                      ),
+                    }[page]
+                  }
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Register;

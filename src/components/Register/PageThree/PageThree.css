@@ -30,4 +30,19 @@
    }
 }
 
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    opacity: 1; /* Firefox */
+}
 
+.form-control{
+    color: white;
+}
+
+.form-control:focus{
+    color: white;
+    background-color: transparent;
+}
+
+.submit-btn{
+  }

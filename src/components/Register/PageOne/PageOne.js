@@ -1,76 +1,100 @@
 import React from "react";
 import "./PageOne.css";
+import MySelect from "../../../utils/Select/Select";
+import Input from "../../../utils/Fields/Input";
+import { genderOptions, userOptions } from "../../../utils/Options/options";
 
-const PageOne = ({ onButtonClick}) => {
+const PageOne = ({
+  nextPage,
+  values,
+  errors,
+  touched,
+  handleBlur,
+  handleChange,
+  setFieldValue,
+}) => {
+  // const {
+  //   formField: { fullName, phoneNumber, email, gender, userType },
+  // } = props;
 
   return (
-    <main
-      className="pt5 black-80 center"
-      style={{ maxWidth: "40%", maxHeight: "30%", margin: "auto" }}
-    >
-      <form className="measure">
-        <h2>Welcome! First things first...</h2>
-        <p style={{ color: "#C0C0C0" }}>You can always change them later.</p>
-        <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-          <div className="mt3">
-            <label
-              className="db lh-copy f6 mb1"
-              htmlFor="full-name"
-              style={{ textAlign: "left" }}
-            >
-              Full Name
-            </label>
-            <input
-              className="f6 br2 ph3 pv2 mb2 dib black w-100"
-              type="text"
-              name="full-name"
-              id="full-name"
-              size="30"
-              placeholder="Steve Jobs"
-              style={{
-                borderStyle: "solid",
-                borderWidth: "1px",
-                borderColor: "#EAEEF5",
-              }}
-            />
-          </div>
-          <div className="mv3">
-            <label
-              className="db lh-copy f6 mb1"
-              htmlFor="display-name"
-              style={{ textAlign: "left" }}
-            >
-              Display Name
-            </label>
-            <input
-              className="f6 br2 ph3 pv2 mb2 dib black w-100"
-              type="text"
-              name="display-name"
-              id="display-name"
-              placeholder="Steve"
-              style={{
-                borderStyle: "solid",
-                borderWidth: "1px",
-                borderColor: "#EAEEF5",
-              }}
-            />
-          </div>
-        </fieldset>
-        <div>
-          <input
-            className="f6 grow br2 ph3 pv2 mb2 dib white"
-            style={{
-              borderStyle: "none",
-              width: "100%",
-              backgroundColor: "#664DE5",
-            }}
+    <>
+      <div className="d-flex flex-column gap-3 text-center ">
+        <Input
+          name={"fullName"}
+          id={"fullName"}
+          placeholder={"Full Name"}
+          value={values.fullName}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          classname={"fa-solid fa-user"}
+          errors={errors.fullName}
+          touched={touched.fullName}
+        ></Input>
+
+        <Input
+          name={"phoneNumber"}
+          id={"phoneNumber"}
+          placeholder={"Phone Number"}
+          value={values.phoneNumber}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          classname={"fa-solid fa-phone-volume"}
+          errors={errors.phoneNumber}
+          touched={touched.phoneNumber}
+        ></Input>
+
+        <Input
+          type={"email"}
+          name={"email"}
+          id={"email"}
+          placeholder={"Email"}
+          value={values.email}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          classname={"fa-solid fa-envelope"}
+          errors={errors.email}
+          touched={touched.email}
+        ></Input>
+
+        <MySelect
+          name={"gender"}
+          options={genderOptions}
+          value={values.gender}
+          onChange={(value) => setFieldValue("gender", value.value)}
+          placeholder="Gender"
+          classname={"fa-solid fa-venus-mars"}
+          errors={errors.gender}
+          touched={touched.gender}
+        />
+
+        <MySelect
+          options={userOptions}
+          name={"userType"}
+          value={values.userType}
+          classname={"fa-solid fa-briefcase"}
+          onChange={(value) => setFieldValue("userType", value.value)}
+          placeholder="What best describes you"
+          errors={errors.userType}
+          touched={touched.userType}
+        />
+
+        <div className="d-flex">
+          <button
+            className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
             type="submit"
-            value="Create Workspace"
-            onClick={() => onButtonClick("pagetwo")}
-          />
+            style={{
+              height: "3rem",
+              width: "30%",
+              backgroundColor: "#A023BF",
+            }}
+            onClick={() => nextPage("pagetwo")}
+          >
+            NEXT
+          </button>
         </div>
-      </form>
-    </main>
+      </div>
+    </>
   );
 };
 

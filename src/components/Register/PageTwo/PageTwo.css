@@ -1,9 +1,5 @@
-::placeholder {
-    color: #c9c5c5;
-    opacity: 1;
-  }
-  
-  urlButton{
+
+    urlButton{
     margin: 0;
     border-radius: 10px;
     border-style: solid;
@@ -31,3 +27,22 @@
       width: 200px;
     }
   }
+
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+
+.form-control{
+  color: white;
+}
+
+.form-control:focus{
+  color: white;
+  background-color: transparent;
+}
+
+.form-error{
+right: 4rem;
+}
