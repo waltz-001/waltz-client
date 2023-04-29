@@ -18,7 +18,7 @@ const PageTwo = ({
   handleChange,
   setFieldValue,
 }) => {
-  if (values.userType === "student") {
+  if (values.userRole === "student") {
     return (
       <div className="d-flex flex-column gap-4">
         <MySelect
@@ -34,13 +34,13 @@ const PageTwo = ({
 
         <MySelect
           options={yearOptions}
-          value={values.graduationYear}
-          onChange={(value) => setFieldValue("graduationYear", value.value)}
+          value={values.year}
+          onChange={(value) => setFieldValue("year", value.value)}
           placeholder="Graduation Year"
           maxMenuHeight={180}
           classname={"fa-solid fa-graduation-cap"}
-          errors={errors.graduationYear}
-          touched={touched.graduationYear}
+          errors={errors.year}
+          touched={touched.year}
         />
 
         <Input
@@ -70,6 +70,7 @@ const PageTwo = ({
             PREVIOUS
           </button>
           <button
+            disabled={!values.department + !values.year + !values.rollNumber}
             className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
             type="submit"
             style={{
@@ -84,7 +85,7 @@ const PageTwo = ({
         </div>
       </div>
     );
-  } else if (values.userType === "alumni") {
+  } else if (values.userRole === "alumni") {
     return (
       <div>
         <div className="d-flex flex-column gap-4">
@@ -136,6 +137,9 @@ const PageTwo = ({
               PREVIOUS
             </button>
             <button
+              disabled={
+                !values.batch + !values.companyName + !values.department
+              }
               className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
               type="submit"
               style={{
@@ -148,6 +152,48 @@ const PageTwo = ({
               NEXT
             </button>
           </div>
+        </div>
+      </div>
+    );
+  } else if (values.userRole === "faculty") {
+    return (
+      <div>
+        <div className="d-flex flex-column gap-4">
+          <MySelect
+            options={departmentOptions}
+            value={values.department}
+            onChange={(value) => setFieldValue("department", value.value)}
+            placeholder="Department"
+            maxMenuHeight={180}
+            classname={"fa-regular fa-calendar"}
+            errors={errors.department}
+            touched={touched.department}
+          />
+        </div>
+        <div className="submit-btn">
+          <button
+            className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+            style={{
+              height: "3rem",
+              width: "30%",
+              backgroundColor: "#A023BF",
+            }}
+            onClick={() => nextPage("pageone")}
+          >
+            PREVIOUS
+          </button>
+          <button
+            className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+            type="submit"
+            style={{
+              height: "3rem",
+              width: "30%",
+              backgroundColor: "#A023BF",
+            }}
+            onClick={() => nextPage("pagethree")}
+          >
+            NEXT
+          </button>
         </div>
       </div>
     );
@@ -167,7 +213,6 @@ const PageTwo = ({
             errors={errors.instituteName}
             touched={touched.instituteName}
           />
-
           <div className="submit-btn">
             <button
               className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"

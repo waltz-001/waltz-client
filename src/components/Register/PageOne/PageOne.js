@@ -13,35 +13,31 @@ const PageOne = ({
   handleChange,
   setFieldValue,
 }) => {
-  // const {
-  //   formField: { fullName, phoneNumber, email, gender, userType },
-  // } = props;
-
   return (
     <>
       <div className="d-flex flex-column gap-3 text-center ">
         <Input
-          name={"fullName"}
-          id={"fullName"}
+          name={"firstName"}
+          id={"firstName"}
           placeholder={"Full Name"}
-          value={values.fullName}
+          value={values.firstName}
           onChange={handleChange}
           onBlur={handleBlur}
           classname={"fa-solid fa-user"}
-          errors={errors.fullName}
-          touched={touched.fullName}
+          errors={errors.firstName}
+          touched={touched.firstName}
         ></Input>
 
         <Input
-          name={"phoneNumber"}
-          id={"phoneNumber"}
-          placeholder={"Phone Number"}
-          value={values.phoneNumber}
+          name={"contactNumber"}
+          id={"contactNumber"}
+          placeholder={"Contact Number"}
+          value={values.contactNumber}
           onChange={handleChange}
           onBlur={handleBlur}
           classname={"fa-solid fa-phone-volume"}
-          errors={errors.phoneNumber}
-          touched={touched.phoneNumber}
+          errors={errors.contactNumber}
+          touched={touched.contactNumber}
         ></Input>
 
         <Input
@@ -70,17 +66,24 @@ const PageOne = ({
 
         <MySelect
           options={userOptions}
-          name={"userType"}
-          value={values.userType}
+          name={"userRole"}
+          value={values.userRole}
           classname={"fa-solid fa-briefcase"}
-          onChange={(value) => setFieldValue("userType", value.value)}
+          onChange={(value) => setFieldValue("userRole", value.value)}
           placeholder="What best describes you"
-          errors={errors.userType}
-          touched={touched.userType}
+          errors={errors.userRole}
+          touched={touched.userRole}
         />
 
         <div className="d-flex">
           <button
+            disabled={
+              !values.firstName +
+              !values.contactNumber +
+              !values.email +
+              !values.gender +
+              !values.userRole
+            }
             className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
             type="submit"
             style={{

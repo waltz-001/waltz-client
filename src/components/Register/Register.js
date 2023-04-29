@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import StepProgressBar from "./StepProgressBar/StepProgressBar";
 import { useFormik } from "formik";
 import { registerSchema } from "../../schemas";
+import axios from "axios";
 /**
  * {
   "firstName": "Jon",
@@ -22,14 +23,31 @@ import { registerSchema } from "../../schemas";
   "password": "Kolk@t@2023"
 }
  */
+
+const updateData = (values) => {
+  let nameArray = values.firstName.split(" ", 2);
+  values.firstName = nameArray[0];
+  values.lastName = nameArray[1];
+  if (
+    values.userRole === "student" ||
+    values.userRole === "faculty" ||
+    values.userRole === "alumina"
+  ) {
+    values.instituteName =
+      "University Institute of Technology, Burdwan University";
+  }
+  delete values.confirmPassword;
+};
+
 const initialValues = {
-  fullName: "",
-  phoneNumber: "",
+  firstName: "",
+  lastName: "",
+  contactNumber: "",
   email: "",
   gender: "",
-  userType: "",
+  userRole: "",
   department: "",
-  graduationYear: "",
+  year: "",
   rollNumber: "",
   batch: "",
   companyName: "",
@@ -52,6 +70,8 @@ const Register = () => {
     validateOnBlur: true,
     validationSchema: registerSchema,
     onSubmit: (values, action) => {
+      updateData(values);
+      // onSubmit(values);
       console.log(values);
     },
   });
