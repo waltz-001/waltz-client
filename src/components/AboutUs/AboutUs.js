@@ -11,9 +11,10 @@ const AboutUs = () => {
                         <h3>
                             WALTZ 23
                         </h3>
+                        <div className='box1'>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis atque consectetur doloribus? Obcaecati, quisquam quia dicta officiis temporibus soluta! Animi?
-                        </p>
+                        </p></div>
                     </div>
                     <div className='about-us-content-right box'>
                         <h3>
@@ -26,7 +27,6 @@ const AboutUs = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 
