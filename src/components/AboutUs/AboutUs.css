@@ -21,6 +21,10 @@
 .about-us-content-left,
 .about-us-content-right {
     max-width: 320px;
+    max-height: 22rem;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    /* margin: 0px 20px; */
 }
 
 .about-us-content h3 {
@@ -80,6 +84,10 @@
     }
     .about-us-content-right, .about-us-content-left{
         margin-left: 50px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
     }
+
+  
     
 }
