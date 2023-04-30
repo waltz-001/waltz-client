@@ -101,11 +101,8 @@
       display: block;
       float: right;
       margin-top: 5px;
-      
-
-
       display: flex;
-      width: 15%;
+      width: 13%;
       height: 3rem;
       background-image: url("/src/assests/images/menu.png");
       background-repeat: no-repeat;
