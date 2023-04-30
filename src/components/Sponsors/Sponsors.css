@@ -10,69 +10,55 @@
 }
 
 .sponsors-container h1 {
-    margin-top: 60px;
     background: linear-gradient(90.07deg, #D9BA7E 18.12%, rgba(228, 177, 77, 0.463235) 94.05%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-fill-color: transparent;
     font-family: 'Lovelo-line-light';
     text-align: center;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 100px;
 }
 
 .sponsors-content {
     padding: 300px 100px;
-
 }
 
 .sponsors-content p {
     font-family: 'Ruda', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 32px;
     color: white;
     max-width: 800px;
     text-align: center;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .button-outline-transparent {
     border: 4px solid #C78E25;
-    max-width: 200px;
-    display:flex;
-    align-items: center;
-    max-height: 60px;
-    padding: 10px 10px;
-    justify-content: center;
-    border-radius: 8px;
+    max-width: 300px;
+    height: fit-content;
+    padding: 17px 50px;
     text-align: center;
     cursor: pointer;
 }
 
 .sponsor-btn {
-    position: relative;
-    top: 170px;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 50px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
-    transition: 0.3s all ease-in;
-}
-
-.sponsor-btn:hover {
-    background-color: #C78E25;
 }
 
 @media only screen and (max-width: 1000px) {
     .sponsors-content {
-        padding: 100px;
+        padding: 200px 100px;
     }
 
     .sponsors-container h1 {
-        /* position: absolute; */
-        margin-top: 10rem;
         font-weight: 700;
         font-size: 40px;
         line-height: 40px;
@@ -85,19 +71,17 @@
     }
 
     .sponsor-btn {
-        top: 50px;
         font-weight: 500;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 27px;
     }
 
     .button-outline-transparent {
         max-width: 155px;
-        max-height: 39px;
+        height: fit-content;
         padding: 6px 13px;
     }
 }
-
 @media only screen and (max-width: 600px) {
     .sponsors-content {
         padding: 80px 50px;
@@ -105,7 +89,7 @@
     }
 
     .sponsors-container h1 {
-        margin-top: 60px;
+        margin-top: 40px;
         font-weight: 700;
         font-size: 40px;
         line-height: 40px;
@@ -121,20 +105,14 @@
 
     .sponsor-btn {
         font-weight: 500;
-        font-size: 10px;
-        /* line-height: 2rem; */
+        font-size: 12px;
+        line-height: 27px;
     }
-
-    .card {
-        padding: 20px 0px;
-        background-color: blue;
-    }
-
     .button-outline-transparent {
         position: relative;
         top: 50px;
         max-width: 110px;
-        max-height: 32px;
+        height: fit-content;
         padding: 6px 13px;
     }
 }

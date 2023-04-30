@@ -15,7 +15,7 @@ const initialValues={
 function SignIn() {
 
  const {values, errors, touched, handleBlur, handleChange, handleSubmit} =  useFormik({
-    initialValues,
+     initialValues,
     validationSchema: signInSchema,
     onSubmit : (values, action)=>{
       console.log(values);
@@ -147,7 +147,7 @@ function SignIn() {
                         style={{ height: "3rem", width: "100%" }}
                       >
                         {" "}
-                        ———— or continue with ————
+                        ————— or continue with —————
                       </span>
                       <span className="d-flex mx-auto mt-2 gap-5">
                         <a
