@@ -39,9 +39,9 @@ const Navbar = () => {
             
                 <ul className='text-center'>
                     <li className='my- nav-item res'><a href='/'>HOME</a></li>
-                    <li className='my- nav-item res'><a href='#about-us'>ABOUT US</a></li>
-                    <li className='my- nav-item res'><a href='#sponsors'>SPONSORS</a></li>
-                    <li className='my- nav-item res'><a href='#contact-us'>CONTACT US</a></li>
+                    <li className='my- nav-item res'><a href='/#about-us'>ABOUT US</a></li>
+                    <li className='my- nav-item res'><a href='/#sponsors'>SPONSORS</a></li>
+                    <li className='my- nav-item res'><a href='/#contact-us'>CONTACT US</a></li>
                     <li className='my- nav-item res'><a href='/signin'>SIGN IN</a></li>
                 </ul>
 
@@ -56,9 +56,9 @@ const Navbar = () => {
             
                 <ul>
                     <li className='mt-2'><a href='/'>HOME</a></li>
-                    <li className='mt-2'><a href='#about-us'>ABOUT US</a></li>
-                    <li className='mt-2'><a href='#sponsors'>SPONSORS</a></li>
-                    <li className='mt-2'><a href='#contact-us'>CONTACT US</a></li>
+                    <li className='mt-2'><a href='/#about-us'>ABOUT US</a></li>
+                    <li className='mt-2'><a href='/#sponsors'>SPONSORS</a></li>
+                    <li className='mt-2'><a href='/#contact-us'>CONTACT US</a></li>
                     <li className='mt-2'><a href='/signin'>SIGN IN</a></li>
                 </ul>
             </div>

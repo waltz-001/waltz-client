@@ -49,27 +49,37 @@
     border-left: 10px solid rgba(160, 35, 191, 0.7);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     .about-us-container h1 {
         font-weight: 700;
         font-size: 2rem;
         line-height: 30px;
     }
     .about-us-content{
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-    }
-
-    .about-us-content{
         object-fit: cover;
         height: 60vh;
-        width: 90%;
-        overflow-y: scroll;
-        overflow-x: visible;
-        margin: 40px 4px;
+        width: 88%;
+        overflow-y: hidden;
+        overflow-x: auto;
+        margin: 5vh 2vw;
+
     }
 
     .about-us-content::-webkit-scrollbar{
         width: 0;
     }
+    .about-us-container{
+        padding-left: 0px;padding-right: 0;
+    }
+    .about-us-content-left{
+            
+        padding-right: 10vw;
+    }
+    .about-us-content-right, .about-us-content-left{
+        margin-left: 50px;
+    }
+    
 }

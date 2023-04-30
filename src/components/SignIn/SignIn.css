@@ -70,7 +70,7 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     background-image: url(../../assests/images/box.jpg);
     background-repeat: no-repeat;
     background-size: cover;   
-    z-index: 999;
+    /* z-index: 999; */
     display: flex;
     position: relative; 
 }
@@ -114,16 +114,14 @@ color: #5B13D1;
 }
 
 
-.part1{
-    height: 100%;
-}
+
 .part2{
     background: rgba(29, 28, 37, 0.4);
 backdrop-filter: blur(20px);
 
 
 width: 50%;
-height: 100%;
+height: 32.5rem;
 left: 706.09px;
 top: 185px;
 }
