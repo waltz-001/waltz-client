@@ -17,7 +17,7 @@ const LandingScreen = () => {
           </div>
           <div className="button-solid-round register-btn mt-5 ">
             <p className="mt-3">
-              <Link to="/register">RESGISTER NOW</Link>
+              <Link to="/register">REGISTER NOW</Link>
             </p>
           </div>
         </div>
