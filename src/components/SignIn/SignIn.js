@@ -30,8 +30,8 @@ function SignIn() {
       <div className="signin-container containe">
         <div className="card-container borde" style={{ height: "81%" }}>
           <div
-            className="card borde mb-3 shadow rounded"
-            style={{ width: "90%", height: "90%" }}
+            className="card borde shadow rounded"
+            style={{ width: "90%", height: "100%", marginBottom:"6rem" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">

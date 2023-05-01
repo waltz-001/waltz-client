@@ -107,7 +107,7 @@
       background-image: url("/src/assests/images/menu.png");
       background-repeat: no-repeat;
       background-size: cover;
-      margin-right: 15rem;
+      margin-right: 12rem;
       flex-direction:row-reverse;
       top: 0;
     }

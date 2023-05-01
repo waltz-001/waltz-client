@@ -15,10 +15,15 @@
     justify-content: center;
     height: 100vh;
     width: 80%;
+    
+    
 }
 
 .card{
     background: linear-gradient(177.82deg, #180027 7.7%, #080824 107.27%);
+    
+    
+    
 }
 
 .signin-head-txt{
@@ -114,8 +119,10 @@ color: #5B13D1;
 backdrop-filter: blur(20px);
 
 
+
 width: 50%;
-height: 32.5rem;
+/* height: 32.5rem; */
+height: inherit;
 left: 706.09px;
 top: 185px;
 }
