@@ -15,11 +15,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={
-          navBar
-            ? "navbar-container active navbar-fixed-top navbar-expand-lg"
-            : "navbar-container navbar-expand-md "
-        }
+        className="navbar-container active navbar-fixed-top navbar-expand-lg"
       >
         <a className="navbar-brand p-1" href="/">
           <img src={Logo} alt="" style={{ width: "4rem" }} />
