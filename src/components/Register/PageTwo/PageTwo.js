@@ -45,15 +45,15 @@ const PageTwo = ({
 
         <Input
           type={"text"}
-          name={"rollNumber"}
-          id={"rollNumber"}
+          name={"rollNo"}
+          id={"rollNo"}
           placeholder={"Roll Number"}
-          value={values.rollNumber}
+          value={values.rollNo}
           onChange={handleChange}
           onBlur={handleBlur}
           classname={"fa-solid fa-building-user"}
-          errors={errors.rollNumber}
-          touched={touched.rollNumber}
+          errors={errors.rollNo}
+          touched={touched.rollo}
         />
 
         <div className="submit-btn">
@@ -70,7 +70,7 @@ const PageTwo = ({
             PREVIOUS
           </button>
           <button
-            disabled={!values.department + !values.year + !values.rollNumber}
+            disabled={!values.department + !values.year + !values.rollNo}
             className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
             type="submit"
             style={{

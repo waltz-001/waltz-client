@@ -21,10 +21,10 @@ export const departmentOptions = [
 ];
 
 export const yearOptions = [
-  { value: "first", label: "First" },
-  { value: "second", label: "Second" },
-  { value: "third", label: "Third" },
-  { value: "fourth", label: "Fourth" },
+  { value: "1", label: "First" },
+  { value: "2", label: "Second" },
+  { value: "3", label: "Third" },
+  { value: "4", label: "Fourth" },
 ];
 export const batchOptions = [
   { value: "2000-2004", label: "2000-2004" },
