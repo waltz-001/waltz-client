@@ -1,6 +1,6 @@
 import React from "react";
 import "./LandingScreen.css";
-import Logo from "../../assests/images/logo.png";
+import Logo from "../../assests/images/home_img.png";
 import Timer from "../../utils/Timer/Timer";
 import { Link } from "react-router-dom";
 const LandingScreen = () => {
