@@ -11,7 +11,10 @@ export const signInSchema = Yup.object({
 
 export const registerSchema = Yup.object().shape({
   firstName: Yup.string().min(3).max(20).required("Please enter your name"),
-  contactNumber: Yup.string().min(9).max(12).required("Please enter phone number"),
+  contactNumber: Yup.string()
+    .min(8)
+    .max(10)
+    .required("Please enter phone number"),
   email: Yup.string()
     .email()
     .min(10)

@@ -118,6 +118,9 @@
         flex-direction: column;
         gap: 20px;
     }
+    .left-list{
+        margin-left: 0px;
+    }
     .left-col p{
         max-width: 100%;
     }

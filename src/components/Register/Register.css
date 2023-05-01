@@ -10,7 +10,7 @@
   .card-title{
     font-size: 2.3rem;
     background: linear-gradient(90deg, rgba(80,56,199,1) 42%, rgba(160,35,191,1) 57%);
-    font-weight: 800;
+    font-weight: 600;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -19,4 +19,17 @@
   .submit-btn{
     display: flex;
     margin-top: 5rem;
+  }
+  .registered-text{
+    display: none;
+  }
+  
+  @media (max-width: 767px){
+
+    
+    .registered-text{
+      display: flex;
+      transform: translateY(4rem);
+    }
+    
   }

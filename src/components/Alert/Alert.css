@@ -1,0 +1,46 @@
+
+.alert-box{
+    animation-duration: 600ms; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */    
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: notification;
+    margin: 1em;
+    top: 5rem;
+}
+
+.timer-line{
+    margin: 0;
+    position: absolute;
+    bottom: 1px;
+    display: block;
+    height: 4px;
+    width: 0%; 
+    background: linear-gradient(161deg, rgba(91,19,209,1) 0%, rgba(160,35,191,1) 100%);
+    transition: all 3150ms ease-in;
+}
+
+.timer-active{
+    width: 100%;
+    background: linear-gradient(161÷deg, rgba(91,19,209,1) 0%, rgba(160,35,191,1) 100%);
+}
+@media (max-width:700px) {
+    .alert-box{
+        z-index: 1;
+        font-size: 0.8rem;
+        top: 11rem;
+    }
+}
+
+@keyframes notification {
+    0% {
+        transform: translateX(20rem);
+
+    }
+    80%{
+        transform: translateX(-0.7rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

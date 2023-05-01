@@ -7,22 +7,7 @@ import StepProgressBar from "./StepProgressBar/StepProgressBar";
 import { useFormik } from "formik";
 import { registerSchema } from "../../schemas";
 import axios from "axios";
-/**
- * {
-  "firstName": "Jon",
-  "lastName": "Snow",
-  "gender": "Male",
-  "email": "jonsnow@gmail.com",
-  "contactNumber": "9123123123",
-  "userRole": "UITAN",
-  "department": "IT",
-  "year": 3,
-  "batch": "",
-  "companyName": "",
-  "instituteName": "",
-  "password": "Kolk@t@2023"
-}
- */
+import Alert from "../Alert/Alert";
 
 const updateData = (values) => {
   let nameArray = values.firstName.split(" ", 2);
@@ -48,7 +33,7 @@ const initialValues = {
   userRole: "",
   department: "",
   year: "",
-  rollNumber: "",
+  rollNo: "",
   batch: "",
   companyName: "",
   instituteName: "",
@@ -56,6 +41,23 @@ const initialValues = {
 };
 
 const Register = () => {
+  const [isShow, setIsShow] = useState(false);
+  const [data, setData] = useState(null);
+
+  const onSubmit = async (values) => {
+    try {
+      const response = await axios.post(
+        "https://waltz-server.onrender.com/register",
+        values
+      );
+      setData(response);
+      setIsShow(true);
+    } catch (e) {
+      setData(e.response);
+      setIsShow(true);
+    }
+  };
+
   const {
     values,
     errors,
@@ -71,7 +73,7 @@ const Register = () => {
     validationSchema: registerSchema,
     onSubmit: (values, action) => {
       updateData(values);
-      // onSubmit(values);
+      onSubmit(values);
       console.log(values);
     },
   });
@@ -84,16 +86,17 @@ const Register = () => {
 
   return (
     <div className="Register">
+      <Alert isShow={isShow} setIsShow={setIsShow} data={data} />
       <div className="signin-container containe">
         <h1 className="signin-head-txt">Let's Get Classy</h1>
         <div className="card-container borde" style={{ height: "81%" }}>
           <div
             className="card borde mb-3 shadow rounded"
-            style={{ width: "90%", height: "90%" }}
+            style={{ width: "90%", height: "100%" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
-                <span className="extra-txt d-flex align-items-center justify-content-center">
+                <span className="registered-text extra-txt d-flex align-items-center justify-content-center">
                   Already Registered?{" "}
                   <a className="extra-txt-link" href="/signin">
                     {" "}
@@ -101,7 +104,10 @@ const Register = () => {
                   </a>
                 </span>
               </div>
-              <div className="col-md-6   borde part2 shadow rounded">
+              <div
+                className="col-md-6 right-destination  borde part2 shadow rounded "
+                style={{ height: "100%" }}
+              >
                 <h5 className="card-title text-center">Register</h5>
 
                 <StepProgressBar page={page} />
@@ -176,6 +182,13 @@ const Register = () => {
               </div>
             </div>
           </div>
+          <span className="registered-text extra-txt position-absolute">
+            Already Registered?{" "}
+            <a className="extra-txt-link" href="/signin">
+              {" "}
+              Sign In{" "}
+            </a>
+          </span>
         </div>
       </div>
     </div>
