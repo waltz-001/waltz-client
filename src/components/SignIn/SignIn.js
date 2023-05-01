@@ -28,7 +28,7 @@ function SignIn() {
   return (
     <>
       <div className="signin-container containe">
-        <h1 className="signin-head-txt">Let's Get Classy</h1>
+//         <h1 className="signin-head-txt">Let's Get Classy</h1>
         <div className="card-container borde" style={{ height: "81%" }}>
           <div
             className="card borde mb-3 shadow rounded"
