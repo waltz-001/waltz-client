@@ -87,3 +87,17 @@ h1 {
         rotate: 0deg;
     }
 }
+@media (max-width: 1000px) {
+    .right-destination-page {
+        width: 50%;
+        height: 70%;
+    }
+    
+}
+@media (max-width: 565px) {
+    .right-destination-page {
+        width: 70%;
+        height: 70%;
+    }
+    
+}

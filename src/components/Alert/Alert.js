@@ -13,7 +13,9 @@ const Alert = ({ isShow, setIsShow, data }) => {
   if (isShow === true) {
     setTimeout(() => {
       const timer = document.querySelector(".timer-line");
-      timer.classList.add("timer-active");
+      if (timer !== null) {
+        timer.classList.add("timer-active");
+      }
     }, 1000);
   }
 
