@@ -4,7 +4,7 @@ import './ContactUs.css';
 const ContactUs = () => {
   return (
     <div id='contact-us' className='contact-us-container'>
-        <h1>CONTACT US</h1>
+        <h1><span>CONTACT US</span></h1>
         <div className='contact-us-content'>
             <div className='contact-us-content-left'>
                 <div className='email-us'>
@@ -31,9 +31,12 @@ const ContactUs = () => {
                     <label>Message</label>
                     <textarea rows={3} />
                 </form>
+                <button>SUBMIT</button>
             </div>
         </div>
     </div>
+    
+
   )
 }
 

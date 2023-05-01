@@ -8,6 +8,7 @@ import { useFormik } from "formik";
 import { registerSchema } from "../../schemas";
 import axios from "axios";
 import Alert from "../Alert/Alert";
+import Message from "../Message/Message";
 
 const updateData = (values) => {
   let nameArray = values.firstName.split(" ", 2);
@@ -87,6 +88,7 @@ const Register = () => {
   return (
     <div className="Register">
       <Alert isShow={isShow} setIsShow={setIsShow} data={data} />
+
       <div className="signin-container containe">
         <h1 className="signin-head-txt">Let's Get Classy</h1>
         <div className="card-container borde" style={{ height: "81%" }}>
@@ -104,81 +106,88 @@ const Register = () => {
                   </a>
                 </span>
               </div>
+
               <div
                 className="col-md-6 right-destination  borde part2 shadow rounded "
                 style={{ height: "100%" }}
               >
-                <h5 className="card-title text-center">Register</h5>
+                {isShow ? (
+                  <Message data={data} />
+                ) : (
+                  <div>
+                    <h5 className="card-title text-center">Register</h5>
 
-                <StepProgressBar page={page} />
+                    <StepProgressBar page={page} />
 
-                <form onSubmit={handleSubmit}>
-                  {
-                    {
-                      pageone: (
-                        <PageOne
-                          values={values}
-                          errors={errors}
-                          touched={touched}
-                          handleBlur={handleBlur}
-                          handleChange={handleChange}
-                          handleSubmit={handleSubmit}
-                          nextPage={nextPage}
-                          setFieldValue={setFieldValue}
-                        />
-                      ),
+                    <form onSubmit={handleSubmit}>
+                      {
+                        {
+                          pageone: (
+                            <PageOne
+                              values={values}
+                              errors={errors}
+                              touched={touched}
+                              handleBlur={handleBlur}
+                              handleChange={handleChange}
+                              handleSubmit={handleSubmit}
+                              nextPage={nextPage}
+                              setFieldValue={setFieldValue}
+                            />
+                          ),
 
-                      pagetwo: (
-                        <PageTwo
-                          values={values}
-                          errors={errors}
-                          touched={touched}
-                          handleBlur={handleBlur}
-                          handleChange={handleChange}
-                          nextPage={nextPage}
-                          setFieldValue={setFieldValue}
-                        />
-                      ),
-                      pagethree: (
-                        <div>
-                          <PageThree
-                            values={values}
-                            errors={errors}
-                            touched={touched}
-                            handleBlur={handleBlur}
-                            handleChange={handleChange}
-                          />
+                          pagetwo: (
+                            <PageTwo
+                              values={values}
+                              errors={errors}
+                              touched={touched}
+                              handleBlur={handleBlur}
+                              handleChange={handleChange}
+                              nextPage={nextPage}
+                              setFieldValue={setFieldValue}
+                            />
+                          ),
+                          pagethree: (
+                            <div>
+                              <PageThree
+                                values={values}
+                                errors={errors}
+                                touched={touched}
+                                handleBlur={handleBlur}
+                                handleChange={handleChange}
+                              />
 
-                          <div className="submit-btn">
-                            <button
-                              className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
-                              type="submit"
-                              style={{
-                                height: "3rem",
-                                width: "30%",
-                                backgroundColor: "#A023BF",
-                              }}
-                              onClick={() => nextPage("pagetwo")}
-                            >
-                              PREVIOUS
-                            </button>
-                            <button
-                              className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
-                              type="submit"
-                              style={{
-                                height: "3rem",
-                                width: "30%",
-                                backgroundColor: "#A023BF",
-                              }}
-                            >
-                              SUBMIT
-                            </button>
-                          </div>
-                        </div>
-                      ),
-                    }[page]
-                  }
-                </form>
+                              <div className="submit-btn">
+                                <button
+                                  className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+                                  type="submit"
+                                  style={{
+                                    height: "3rem",
+                                    width: "30%",
+                                    backgroundColor: "#A023BF",
+                                  }}
+                                  onClick={() => nextPage("pagetwo")}
+                                >
+                                  PREVIOUS
+                                </button>
+                                <button
+                                  className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+                                  type="submit"
+                                  style={{
+                                    height: "3rem",
+                                    width: "30%",
+                                    backgroundColor: "#A023BF",
+                                  }}
+                                >
+                                  SUBMIT
+                                </button>
+                              </div>
+                            </div>
+                          ),
+                        }[page]
+                      }
+                    </form>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -1,85 +1,102 @@
 .about-us {
-    background-color: black;
-    position: relative;
+  background-color: black;
+  position: relative;
 }
 
 .about-us-container {
-    background: url('../../assests/images/AboutUs.svg');
-    height: 500px;
-    color: rgb(255, 255, 255);
-    padding: 50px;
+  background: url("../../assests/images/AboutUs.svg");
+  height: 500px;
+  color: rgb(255, 255, 255);
+  padding: 50px;
+  overflow: hidden;
 }
 
 .about-us-container h1 {
-    font-family: 'Lovelo-line-light';
-    color: white;
-    font-weight: 700;
-    text-align: center;
-    font-size: 70px;
+  font-family: "Lovelo-line-light";
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 70px;
 }
 
 .about-us-content-left,
 .about-us-content-right {
-    max-width: 320px;
+  max-width: 320px;
+  max-height: 22rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* position: absolute; */
+  
+
+  /* margin: 0px 20px; */
+}
+
+.about-us-content-left::-webkit-scrollbar {
+    display: none;
+}
+
+.about-us-content-right::-webkit-scrollbar {
+    display: none;
 }
 
 .about-us-content h3 {
-    font-family: 'Lovelo-black';
-    font-weight: 900;
-    font-size: 40px;
-    margin: 30px 0px;
+  font-family: "Lovelo-black";
+  font-weight: 900;
+  font-size: 40px;
+  margin: 30px 0px;
 }
 
 .about-us-content p {
-    font-family: 'Ruda', sans-serif;
-    font-weight: 400;
-    font-size: 22px;
+  font-family: "Ruda", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
 }
 
 .about-us-content {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 100px;
-    justify-content: space-between;
-    
+  display: flex;
+  flex-direction: row;
+  margin: 0px 100px;
+  justify-content: space-between;
 }
 
 .about-us-content p {
-    padding-left: 20px;
-    border-left: 10px solid rgba(160, 35, 191, 0.7);
+  padding-left: 20px;
+  border-left: 10px solid rgba(160, 35, 191, 0.7);
 }
 
 @media only screen and (max-width: 800px) {
-    .about-us-container h1 {
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 30px;
-    }
-    .about-us-content{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        object-fit: cover;
-        height: 60vh;
-        width: 88%;
-        overflow-y: hidden;
-        overflow-x: auto;
-        margin: 5vh 2vw;
+  .about-us-container h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .about-us-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    object-fit: cover;
+    height: 60vh;
+    width: 88%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin: 5vh 2vw;
+  }
 
-    }
-
-    .about-us-content::-webkit-scrollbar{
-        width: 0;
-    }
-    .about-us-container{
-        padding-left: 0px;padding-right: 0;
-    }
-    .about-us-content-left{
-            
-        padding-right: 10vw;
-    }
-    .about-us-content-right, .about-us-content-left{
-        margin-left: 50px;
-    }
-    
+  .about-us-content::-webkit-scrollbar {
+    width: 0;
+  }
+  .about-us-container {
+    padding-left: 0px;
+    padding-right: 0;
+  }
+  .about-us-content-left {
+    padding-right: 10vw;
+  }
+  .about-us-content-right,
+  .about-us-content-left {
+    margin-left: 50px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assests/images/WALTZ 2K23 LOGO (PNG).png";
+import Logo from "../../assests/images/logo.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
         }
       >
         <a className="navbar-brand p-1" href="/">
-          <img src={Logo} alt="" style={{ width: "3rem" }} />
+          <img src={Logo} alt="" style={{ width: "4rem" }} />
         </a>
         {/* OFFCANVAS */}
 
@@ -50,7 +50,7 @@ const Navbar = () => {
                   className="mt-4"
                   src={Logo}
                   alt=""
-                  style={{ width: "3rem" }}
+                  style={{ width: "6rem" }}
                 />
               </a>
             </h5>
