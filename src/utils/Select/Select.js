@@ -26,6 +26,7 @@ const MySelect = ({
           isSearchable
           maxMenuHeight={maxMenuHeight}
           styles={{
+            menuPortal: (base) => ({ ...base, zIndex: 9999 }),
             control: () => ({
               display: "flex",
               textAlign: "left",
