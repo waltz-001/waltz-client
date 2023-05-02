@@ -43,6 +43,7 @@ const initialValues = {
 
 const Register = () => {
   const [isShow, setIsShow] = useState(false);
+  const [isShowMessage, setIsShowMessage] = useState(false);
   const [data, setData] = useState(null);
 
   const onSubmit = async (values) => {
@@ -51,6 +52,7 @@ const Register = () => {
         "https://waltz-server.onrender.com/register",
         values
       );
+
       setData(response);
       setIsShow(true);
     } catch (e) {
@@ -74,6 +76,7 @@ const Register = () => {
     validationSchema: registerSchema,
     onSubmit: (values, action) => {
       updateData(values);
+      setIsShowMessage(true);
       onSubmit(values);
       console.log(values);
     },
@@ -111,7 +114,7 @@ const Register = () => {
                 className="col-md-6 right-destination  borde part2 shadow rounded "
                 style={{ height: "100%" }}
               >
-                {isShow ? (
+                {isShowMessage ? (
                   <Message data={data} />
                 ) : (
                   <div>
