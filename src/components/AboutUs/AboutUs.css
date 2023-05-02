@@ -99,4 +99,8 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
   }
+  
+  .about-us-content p {
+    font-size: 13px;
+}
 }
