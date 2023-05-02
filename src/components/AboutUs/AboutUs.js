@@ -17,7 +17,7 @@ const AboutUs = () => {
                         </h3>
                         <div className='box1'>
                         <p>
-                        UIT is a top engineering college with quality education, excellent infrastructure, experienced faculty, and a dynamic student community that promotes extracurricular activities and hosts various events.
+                         Waltz, the cultural fest of UIT, brings students from across the country to showcase their skills in music, dance, drama, and sports. It also offers alumni a chance to relive their college memories.
                         </p></div>
                     </div>
                     <div className='about-us-content-right box'>
@@ -25,7 +25,8 @@ const AboutUs = () => {
                             UIT BURDWAN
                         </h3>
                         <p>
-                        Waltz, the cultural fest of UIT, brings students from across the country to showcase their skills in music, dance, drama, and sports. It also offers alumni a chance to relive their college memories.
+                                UIT is a top engineering college with quality education, excellent infrastructure, experienced faculty, and a dynamic student community that promotes extracurricular activities and hosts various events.
+                       
                         </p>
                     </div>
                 </div>
