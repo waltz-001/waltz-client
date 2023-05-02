@@ -84,7 +84,7 @@ const PageOne = ({
               !values.gender +
               !values.userRole
             }
-            className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+            className="btn next-btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
             type="submit"
             style={{
               height: "3rem",

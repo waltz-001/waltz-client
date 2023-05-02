@@ -43,6 +43,8 @@ const initialValues = {
 
 const Register = () => {
   const [isShow, setIsShow] = useState(false);
+  const [isShowMessage, setIsShowMessage] = useState(false);
+
   const [data, setData] = useState(null);
 
   const onSubmit = async (values) => {
@@ -53,9 +55,11 @@ const Register = () => {
       );
       setData(response);
       setIsShow(true);
+      setIsShowMessage(true);
     } catch (e) {
       setData(e.response);
       setIsShow(true);
+      setIsShowMessage(true);
     }
   };
 
@@ -91,10 +95,10 @@ const Register = () => {
 
       <div className="signin-container containe">
         <h1 className="signin-head-txt">Let's Get Classy</h1>
-        <div className="card-container borde" style={{ height: "81%" }}>
+        <div className="card-container borde" style={{ height: "70%" }}>
           <div
             className="card borde mb-3 shadow rounded"
-            style={{ width: "90%", height: "100%" }}
+            style={{ width: "90%", height: "120%" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
@@ -111,7 +115,7 @@ const Register = () => {
                 className="col-md-6 right-destination  borde part2 shadow rounded "
                 style={{ height: "100%" }}
               >
-                {isShow ? (
+                {isShowMessage ? (
                   <Message data={data} />
                 ) : (
                   <div>
@@ -156,7 +160,7 @@ const Register = () => {
                                 handleChange={handleChange}
                               />
 
-                              <div className="submit-btn">
+                              <div className="submit-btn submit-btn-2">
                                 <button
                                   className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
                                   type="submit"
@@ -170,7 +174,7 @@ const Register = () => {
                                   PREVIOUS
                                 </button>
                                 <button
-                                  className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
+                                  className="btn  text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
                                   type="submit"
                                   style={{
                                     height: "3rem",

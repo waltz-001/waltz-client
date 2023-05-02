@@ -9,7 +9,7 @@ const Message = ({ data }) => {
           {data.status === 201 ? (
             <div>
               <p>{data.data.message}</p>
-              <p>Please, check your email inbox to verify</p>
+              <p>Please, check your email inbox and spam to verify</p>
             </div>
           ) : (
             <div>

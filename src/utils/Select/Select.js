@@ -25,13 +25,16 @@ const MySelect = ({
           onChange={(value) => onChange(value)}
           isSearchable
           maxMenuHeight={maxMenuHeight}
+          menuPortalTarget={document.body}
           styles={{
+            menuPortal: (base) => ({ ...base, zIndex: 9999 }),
             control: () => ({
               display: "flex",
               textAlign: "left",
               border: "2px solid gray",
               borderRadius: "0px 5px 5px 0px",
               background: "none",
+              zIndex: "100",
             }),
 
             placeholder: (baseStyles, state) => ({
