@@ -36,8 +36,8 @@ const Footer = () => {
             <div className="last-child">
                 <p>Contact with us on:</p>
                 <div className="icons">
-                    <a href="facebook.com"><FontAwesomeIcon className='icon' icon={faInstagram} /></a>
-                    <a href="facebook.com"><FontAwesomeIcon className='icon' icon={faFacebook}/></a>
+                    <a href="https://instagram.com/waltz.uitbu?igshid=YmMyMTA2M2Y="><FontAwesomeIcon className='icon' icon={faInstagram} /></a>
+                    <a href="https://www.facebook.com/waltz.uit"><FontAwesomeIcon className='icon' icon={faFacebook}/></a>
                     <a href="facebook.com"><FontAwesomeIcon className='icon' icon={faTwitter} /></a>
                     <a href="facebook.com"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
                 </div>
