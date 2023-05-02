@@ -41,7 +41,7 @@ const Footer = () => {
                     <a href="twitter.com"><FontAwesomeIcon className='icon' icon={faTwitter} /></a>
                     <a href="https://www.youtube.com/@uitwaltz23/"><FontAwesomeIcon className='icon' icon={faYoutube} /></a>
                 </div>
-                <p>@waltz 2023. All rights reserved</p>
+                <p><a href="https://codingjunction2022.ml/">Coding Junction</a> 2023. All rights reserved</p>
             </div>
         </div>
         </div>

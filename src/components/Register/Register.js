@@ -194,13 +194,13 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <span className="registered-text extra-txt position-absolute">
+          {/* <span className="registered-text extra-txt position-absolute">
             Already Registered?{" "}
             <a className="extra-txt-link" href="/signin">
               {" "}
               Sign In{" "}
             </a>
-          </span>
+          </span> */}
         </div>
       </div>
     </div>
