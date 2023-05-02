@@ -91,7 +91,7 @@ const Register = () => {
 
       <div className="signin-container containe">
         <h1 className="signin-head-txt">Let's Get Classy</h1>
-        <div className="card-container borde" style={{ height: "81%" }}>
+        <div className="card-container borde" style={{ height: "71%" }}>
           <div
             className="card borde mb-3 shadow rounded"
             style={{ width: "90%", height: "100%" }}
@@ -156,7 +156,7 @@ const Register = () => {
                                 handleChange={handleChange}
                               />
 
-                              <div className="submit-btn">
+                              <div className="submit-btn last-btn">
                                 <button
                                   className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
                                   type="submit"
