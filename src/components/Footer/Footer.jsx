@@ -1,6 +1,6 @@
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faFacebook, faLinkedin, faTwitter,faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {faFacebook, faTwitter,faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
 
@@ -38,8 +38,8 @@ const Footer = () => {
                 <div className="icons">
                     <a href="https://instagram.com/waltz.uitbu?igshid=YmMyMTA2M2Y="><FontAwesomeIcon className='icon' icon={faInstagram} /></a>
                     <a href="https://www.facebook.com/waltz.uit"><FontAwesomeIcon className='icon' icon={faFacebook}/></a>
-                    <a href="facebook.com"><FontAwesomeIcon className='icon' icon={faTwitter} /></a>
-                    <a href="facebook.com"><FontAwesomeIcon className='icon' icon={faLinkedin} /></a>
+                    <a href="twitter.com"><FontAwesomeIcon className='icon' icon={faTwitter} /></a>
+                    <a href="https://www.youtube.com/@uitwaltz23/"><FontAwesomeIcon className='icon' icon={faYoutube} /></a>
                 </div>
                 <p>@waltz 2023. All rights reserved</p>
             </div>
