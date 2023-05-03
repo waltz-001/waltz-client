@@ -12,14 +12,20 @@ const LandingScreen = () => {
         </div>
         <Timer />
         <div className="landing-button-container ">
-          <div className="button-solid-round view-btn mt-5 ">
-            <p className="mt-3">VIEW DETAILS</p>
-          </div>
-          <div className="button-solid-round register-btn mt-5 ">
-            <p className="mt-3">
-              <Link to="/register">REGISTER NOW</Link>
-            </p>
-          </div>
+              <Link to="/">
+                <div className="button-solid-round view-btn mt-5 ">
+                  <p className="mt-3">
+                    VIEW DETAILS
+                  </p>
+                </div>
+              </Link>
+              <Link to="/register">
+                <div className="button-solid-round register-btn mt-5 ">
+                  <p className="mt-3">
+                      REGISTER NOW
+                  </p>
+                </div>
+              </Link>
         </div>
       </div>
     </div>
