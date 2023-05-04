@@ -14,9 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className="navbar-container active navbar-fixed-top navbar-expand-lg"
-      >
+      <nav className="navbar-container active navbar-fixed-top navbar-expand-lg">
         <a className="navbar-brand p-1" href="/">
           <img src={Logo} alt="" style={{ width: "4rem" }} />
         </a>
@@ -79,6 +77,9 @@ const Navbar = () => {
                 <li className="my- nav-item res">
                   <a href="/register">REGISTER</a>
                 </li>
+                <li className="my- nav-item res">
+                  <a href="/merchandise">MERCHANDISE </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -103,6 +104,9 @@ const Navbar = () => {
             </li>
             <li className="mt-2">
               <a href="/register">REGISTER</a>
+            </li>
+            <li className="mt-2">
+              <a href="/merchandise">MERCH</a>
             </li>
           </ul>
         </div>

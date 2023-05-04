@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignIn from "./components/SignIn/SignIn";
 import Register from "./components/Register/Register";
 import Success from "./components/Success/Success";
+import Merchandise from "./components/Merchandise/Merchandise";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/register" element={<Register />} />
           <Route path="/register/:id/verify/:tokenId" element={<Success />} />
+          <Route path="/merchandise" element={<Merchandise />} />
         </Routes>
       </BrowserRouter>
 
