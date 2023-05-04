@@ -3,6 +3,16 @@
   position: relative;
 }
 
+.right-arrow-container {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  background: #664de5;
+  padding: 4px;
+  border-radius: 12px;
+  display: none;
+}
+
 .about-us-container {
   background: url("../../assests/images/AboutUs.svg");
   height: 500px;
@@ -22,22 +32,22 @@
 .about-us-content-left,
 .about-us-content-right {
   max-width: 320px;
-  max-height: 22rem;
+  /* max-height: 22rem; */
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
   /* position: absolute; */
-  
+
 
   /* margin: 0px 20px; */
 }
 
 .about-us-content-left::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .about-us-content-right::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .about-us-content h3 {
@@ -50,7 +60,7 @@
 .about-us-content p {
   font-family: "Ruda", sans-serif;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .about-us-content {
@@ -71,6 +81,7 @@
     font-size: 2rem;
     line-height: 30px;
   }
+
   .about-us-content {
     display: flex;
     flex-direction: column;
@@ -86,17 +97,28 @@
   .about-us-content::-webkit-scrollbar {
     width: 0;
   }
+
   .about-us-container {
     padding-left: 0px;
     padding-right: 0;
   }
+
   .about-us-content-left {
     padding-right: 10vw;
   }
+
   .about-us-content-right,
   .about-us-content-left {
     margin-left: 50px;
     overflow-y: scroll;
     scroll-behavior: smooth;
+  }
+
+  .about-us-content p {
+    font-size: 13px;
+  }
+
+  .right-arrow-container {
+    display: flex;
   }
 }
