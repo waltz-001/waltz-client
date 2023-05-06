@@ -36,7 +36,7 @@ const PageTwo = ({
           options={yearOptions}
           value={values.year}
           onChange={(value) => setFieldValue("year", value.value)}
-          placeholder="Graduation Year"
+          placeholder="Current Year"
           maxMenuHeight={180}
           classname={"fa-solid fa-graduation-cap"}
           errors={errors.year}
