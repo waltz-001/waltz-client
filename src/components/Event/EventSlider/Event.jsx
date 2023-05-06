@@ -7,7 +7,6 @@ const Event = ({url}) => {
     <div className = "cardBox">
       {/* <img src={require(url)}/> */}
       {/* <img src={require( `${ props.url }` )} /> */}
-
       <img src={url} alt="event Photos" />
     </div>
   );

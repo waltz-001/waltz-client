@@ -44,6 +44,7 @@ const initialValues = {
 
 const Register = () => {
   const [isShow, setIsShow] = useState(false);
+  const [isShowMessage, setIsShowMessage] = useState(false);
   const [data, setData] = useState(null);
 
   const onSubmit = async (values) => {
@@ -52,6 +53,7 @@ const Register = () => {
         "https://waltz-server.onrender.com/register",
         values
       );
+
       setData(response);
       setIsShow(true);
     } catch (e) {
@@ -75,6 +77,7 @@ const Register = () => {
     validationSchema: registerSchema,
     onSubmit: (values, action) => {
       updateData(values);
+      setIsShowMessage(true);
       onSubmit(values);
       console.log(values);
     },
@@ -92,7 +95,7 @@ const Register = () => {
 
       <div className="signin-container containe">
         <h1 className="signin-head-txt">Let's Get Classy</h1>
-        <div className="card-container borde" style={{ height: "81%" }}>
+        <div className="card-container borde" style={{ height: "71%" }}>
           <div
             className="card borde mb-3 shadow rounded"
             style={{ width: "90%", height: "100%", marginBottom:"6rem" }}
@@ -112,7 +115,7 @@ const Register = () => {
                 className="col-md-6 right-destination  borde part2 shadow rounded "
                 style={{ height: "100%" }}
               >
-                {isShow ? (
+                {isShowMessage ? (
                   <Message data={data} />
                 ) : (
                   <div>
@@ -157,7 +160,7 @@ const Register = () => {
                                 handleChange={handleChange}
                               />
 
-                              <div className="submit-btn">
+                              <div className="submit-btn last-btn">
                                 <button
                                   className="btn text-white rounded-pill d-flex mx-auto align-items-center justify-content-center"
                                   type="submit"
@@ -192,13 +195,13 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <span className="registered-text extra-txt position-absolute">
+          {/* <span className="registered-text extra-txt position-absolute">
             Already Registered?{" "}
             <a className="extra-txt-link" href="/signin">
               {" "}
               Sign In{" "}
             </a>
-          </span>
+          </span> */}
         </div>
       </div>
     </div>
