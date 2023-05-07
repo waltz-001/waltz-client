@@ -71,17 +71,6 @@
     gap: 2rem;
 }
 
-.eventCards span{
-    /* border: 1px solid green; */
-    width: 35vw;
-    height: calc(35vw*(2/3));
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.736),
-                0 0 20px rgba(255, 255, 255, 0.311);
-    background-repeat: none;
-    background-size: contain;
-    border-radius: 7px;
-}
-
 @media only screen and (max-width: 480px) {
 
     .head h1{
@@ -98,10 +87,7 @@
         width: 80vw;
     }
     
-    .eventCards span{
-        width: 80vw;
-        height: calc(80vw*(2/3));
-    }
+    
     
 }
 

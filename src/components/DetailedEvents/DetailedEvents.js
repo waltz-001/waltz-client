@@ -129,7 +129,7 @@ export default function DetailedEvents() {
 
       <div className='eventCards'>
           {arr.filter(ev => ev.day === eventDay).map((bx)=>
-            <Cards key = {bx.key} url={bx.url} title = {bx.title}/>
+            <Cards key = {bx.key} url={bx.url} title = {bx.title} desc={bx.desc}/>
           )}
       </div>
     </div>

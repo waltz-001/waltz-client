@@ -1,0 +1,47 @@
+.card{
+    width: 35vw;
+    height: calc(35vw*(2/3));
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.736),
+                0 0 20px rgba(255, 255, 255, 0.311);
+    background-repeat: none;
+    background-size: fill;
+    border-radius: 10px;
+}
+
+.card .details{
+    /* border: 1px solid green; */
+    height: 100%;
+    margin-left: 55%;
+    margin-right: 0;
+    background-color: rgba(0, 0, 0, 0.189);
+    backdrop-filter: blur(5px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.details h4{
+    font-size: 1rem;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.details button{
+    font-size: 0.7rem;
+    width: 80%;
+    height: 20%;
+    border-radius: 1.4rem;
+    
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .card{
+        width: 80vw;
+        height: calc(80vw*(2/3));
+    }
+}

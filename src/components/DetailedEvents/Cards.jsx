@@ -1,9 +1,14 @@
 import React from 'react'
+import './Cards.css'
 
-const Cards = ({title,url}) => {
+const Cards = ({title,url,desc}) => {
   return (
-    <span style={{backgroundImage: `url(${url})`}}>
-      {title}
+    <span className='card' style={{backgroundImage: `url(${url})`}}>
+      <span className='details'>
+        <h4>{title}</h4>
+        <p>{desc}</p>
+        <button>View Details</button>
+      </span>
     </span>
   )
 }
