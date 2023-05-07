@@ -7,6 +7,8 @@ import SignIn from "./components/SignIn/SignIn";
 import Register from "./components/Register/Register";
 import Success from "./components/Success/Success";
 import Merchandise from "./components/Merchandise/Merchandise";
+import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/register/:id/verify/:tokenId" element={<Success />} />
           <Route path="/merchandise" element={<Merchandise />} />
+          <Route path="/detailedEvents" element={<DetailedEvents />} />
+
         </Routes>
       </BrowserRouter>
 
