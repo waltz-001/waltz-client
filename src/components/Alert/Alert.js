@@ -8,16 +8,7 @@ const Alert = ({ isShow, setIsShow, data }) => {
     }, 4000);
   }, [isShow]);
 
-  if (isShow === false) return null;
-
-  if (isShow === true) {
-    setTimeout(() => {
-      const timer = document.querySelector(".timer-line");
-      if (timer !== null) {
-        timer.classList.add("timer-active");
-      }
-    }, 1000);
-  }
+  if (isShow === false) return;
 
   if (data.status === 201) {
     return (
