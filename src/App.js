@@ -16,14 +16,15 @@ function App() {
     setShowLoading(true);
     setTimeout(() => {
       setShowLoading(false);
-    }, 10000);
+    }, 5000);
   }, []);
+
   return (
-    <>
+    <div className="App">
       {showLoading ? (
         <Loading />
       ) : (
-        <div className="App">
+        <div>
           <Navbar />
           <BrowserRouter>
             <Routes>
@@ -40,7 +41,7 @@ function App() {
           <Footer />
         </div>
       )}
-    </>
+    </div>
   );
 }
 
