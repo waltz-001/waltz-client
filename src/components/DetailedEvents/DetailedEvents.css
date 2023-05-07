@@ -2,7 +2,7 @@
     color: white;
     background-image: linear-gradient(165deg, black, rgb(77, 65, 0), black) ;
     /* background-attachment: fixed; */
-    height: 90vh;
+    height: auto;
     margin-top: -2rem;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .head h1{
-    font-size: 3rem;
+    font-size: 5rem;
     letter-spacing: 0.3rem;
     color: goldenrod;
 }
@@ -26,9 +26,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
-    height: 2rem;
+    width: 60%;
+    height: 2.5rem;
     margin: auto;
+    font-size: 1.5rem;
 }
 
 .eveDay{
@@ -53,5 +54,54 @@
     box-shadow: 1px 0px 2px rgba(88, 49, 108, 0.374)
                 2px 1px 5px rgba(222, 217, 224, 0.374);
  
+}
+
+.eventCards{
+    /* border: 1px solid red; */
+    color: white;
+    height: auto;
+    width: 80vw;
+    margin: auto;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.eventCards span{
+    /* border: 1px solid green; */
+    width: 35vw;
+    height: calc(35vw*(2/3));
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.736),
+                0 0 20px rgba(255, 255, 255, 0.311);
+    background-repeat: none;
+    background-size: contain;
+    border-radius: 7px;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .head h1{
+        font-size: 3rem;
+    }
+
+    .days{
+        width: 80%;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .eventCards{
+        width: 80vw;
+    }
+    
+    .eventCards span{
+        width: 80vw;
+        height: calc(80vw*(2/3));
+    }
+    
 }
 
