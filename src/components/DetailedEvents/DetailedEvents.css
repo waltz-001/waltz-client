@@ -14,7 +14,8 @@
 }
 
 .head h1{
-
+    font-family: 'Days One', sans-serif;
+    font-weight: 300;
     font-size: 5rem;
     letter-spacing: 0.3rem;
     color: goldenrod;
