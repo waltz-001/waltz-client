@@ -7,6 +7,7 @@ import SignIn from "./components/SignIn/SignIn";
 import Register from "./components/Register/Register";
 import Success from "./components/Success/Success";
 import Merchandise from "./components/Merchandise/Merchandise";
+import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
 
