@@ -8,24 +8,40 @@ import Register from "./components/Register/Register";
 import Success from "./components/Success/Success";
 import Merchandise from "./components/Merchandise/Merchandise";
 import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
+import { useState, useEffect } from "react";
+import Loading from "./components/Loading/Loading";
 
 function App() {
+  const [showLoading, setShowLoading] = useState(false);
+  useEffect(() => {
+    setShowLoading(true);
+    setTimeout(() => {
+      setShowLoading(false);
+    }, 5000);
+  }, []);
+
   return (
     <div className="App">
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/register/:id/verify/:tokenId" element={<Success />} />
-          <Route path="/merchandise" element={<Merchandise />} />
-          <Route path="/detailedEvents" element={<DetailedEvents />} />
-
-        </Routes>
-      </BrowserRouter>
-
-      <Footer />
+      {showLoading ? (
+        <Loading />
+      ) : (
+        <div>
+          <Navbar />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/register" element={<Register />} />
+              <Route
+                path="/register/:id/verify/:tokenId"
+                element={<Success />}
+              />
+              <Route path="/merchandise" element={<Merchandise />} />
+            </Routes>
+          </BrowserRouter>
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }
