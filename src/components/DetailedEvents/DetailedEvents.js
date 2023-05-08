@@ -93,7 +93,7 @@ export default function DetailedEvents() {
       key: 13,
       day: 3,
       title: 'Event3',
-      url: 'https://picsum.photos/id/8/600/400',
+      url: 'https://picsum.photos/id/11/600/400',
       desc: ''
     },
     {

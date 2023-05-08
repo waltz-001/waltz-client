@@ -24,24 +24,70 @@
 }
 
 .details h4{
-    font-size: 1rem;
-    margin: auto;
-    margin-top: 0.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 0.5rem; */
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+}
+
+.details p{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 40%;
 }
 
 .details button{
-    font-size: 0.7rem;
-    width: 80%;
-    height: 20%;
-    border-radius: 1.4rem;
-    
+    font-size: 1rem;
+    width: 8rem;
+    height: 2.3rem;
+    border-radius: 10px;
+    border: 1px solid gold;
+}
+
+.details button:hover{
+    border: 1px solid goldenrod;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
 }
 
 
-
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 1000px) {
     .card{
         width: 80vw;
         height: calc(80vw*(2/3));
+    }
+
+    .details h4{
+        font-size: 1rem;
+    }
+
+    .details button{
+        font-size: 0.85rem;
+        width: 70%;
+        height: 15%;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 80vw;
+        height: calc(80vw*(2/3));
+    }
+
+    .details h4{
+        font-size: 1rem;
+    }
+
+    .details button{
+        font-size: 0.85rem;
+        width: 70%;
+        height: 15%;
     }
 }
