@@ -37,6 +37,7 @@ function App() {
                 element={<Success />}
               />
               <Route path="/merchandise" element={<Merchandise />} />
+              <Route path="/detailedEvents" element={<DetailedEvents />} />
             </Routes>
           </BrowserRouter>
           <Footer />
