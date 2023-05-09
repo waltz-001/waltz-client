@@ -2,24 +2,27 @@
 /*----------------------------------------------------*/
 
 .eve{
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.8));
-    /* remove the bg image at final production */
-    /* border: 1px solid yellow; */
-    height: 50rem;
+    background-image: linear-gradient(#1e263900, rgb(0, 0, 0));
+    backdrop-filter: blur(5px);
+    height: auto;
     overflow-x: hidden;
 }
 
-@media only screen and (max-width: 480px){
-    .eve{
-        height: 32rem;
-    }
+.cont{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    margin-top: 3rem;
+    /* margin-bottom: 5rem; */
+}
+
+/* @media only screen and (max-width: 480px){
+
 }
 
 @media only screen and (max-width: 1080px){
-    .eve{
-        height: 40rem;
-    }
-}
+    
+} */
 
 
 

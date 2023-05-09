@@ -2,6 +2,7 @@ import PageOne from "./PageOne/PageOne";
 import PageTwo from "./PageTwo/PageTwo";
 import PageThree from "./PageThree/PageThree";
 import "./Register.css";
+import "../SignIn/SignIn.css";
 import React, { useState } from "react";
 import StepProgressBar from "./StepProgressBar/StepProgressBar";
 import { useFormik } from "formik";
@@ -96,7 +97,7 @@ const Register = () => {
         <div className="card-container borde" style={{ height: "71%" }}>
           <div
             className="card borde mb-3 shadow rounded"
-            style={{ width: "90%", height: "100%" }}
+            style={{ width: "90%", height: "100%", marginBottom:"6rem" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
@@ -193,13 +194,13 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <span className="registered-text extra-txt position-absolute">
+          {/* <span className="registered-text extra-txt position-absolute">
             Already Registered?{" "}
             <a className="extra-txt-link" href="/signin">
               {" "}
               Sign In{" "}
             </a>
-          </span>
+          </span> */}
         </div>
       </div>
     </div>

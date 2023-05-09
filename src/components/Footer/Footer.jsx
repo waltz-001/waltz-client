@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="first-child">
                 <div className="left-col">
                     <h1>WALTZ 20<span>23</span></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit consectetur esse cumque quos iste. Laudantium sapiente quia assumenda et doloremque id dolorem sequi, non illum unde quam, eaque ullam neque?</p>
+                    <p>Waltz, the cultural fest of UIT, brings students from across the country to showcase their skills in music, dance, drama, and sports. It also offers alumni a chance to relive their college memories.</p>
 
                 </div>
                 <div className="right-col">
@@ -41,7 +41,7 @@ const Footer = () => {
                     <a href="twitter.com"><FontAwesomeIcon className='icon' icon={faTwitter} /></a>
                     <a href="https://www.youtube.com/@uitwaltz23/"><FontAwesomeIcon className='icon' icon={faYoutube} /></a>
                 </div>
-                <p>@waltz 2023. All rights reserved</p>
+                <p><a href="https://codingjunction2022.ml/">Coding Junction</a> 2023. All rights reserved</p>
             </div>
         </div>
         </div>

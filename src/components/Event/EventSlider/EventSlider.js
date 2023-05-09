@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Event from './Event';
 import './EventSlider.css'
-import img from '../../../assests/images/blanck.png'
+import Event1 from "../../../assests/events-static/event1.jpeg";
+import Event2 from "../../../assests/events-static/event2.jpeg";
+import Event3 from "../../../assests/events-static/event3.jpeg";
+
 
 let eventOnScreen = 3;
 
@@ -28,19 +31,19 @@ export default function EventSlider() {
   // ARRAY OF THE EVENT PHOTOS
   const arr = [
     {
-      url: img
+      url: Event1
     },
     {
-      url: img
+      url: Event2
     },
     {
-      url: img
+      url: Event3
     },
     {
-      url: img
+      url: Event1
     },
     {
-      url: img
+      url: Event2
     }
   ];
 
@@ -63,7 +66,7 @@ export default function EventSlider() {
   return (
     <div className="container"
       id="cardID">
-      <div className="navArrows" onClick={moveLeft} id="left">&#10094;</div>
+      <div className={firstImageNo === 0 ? "navArrows navArrows-inactive" : "navArrows"} onClick={moveLeft} id="left">&#10094;</div>
       {
         arr.map((ev, i) => {
           if (i >= firstImageNo && i <= lastImageNo) {
@@ -80,7 +83,7 @@ export default function EventSlider() {
         })
 
       }
-      <div className="navArrows" onClick={moveRight} id="right">&#10095;</div>
+      <div className={lastImageNo === arr.length-1 ? "navArrows navArrows-inactive" : "navArrows"} onClick={moveRight} id="right">&#10095;</div>
     </div>
   );
 }

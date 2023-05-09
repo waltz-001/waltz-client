@@ -7,6 +7,7 @@ import SignIn from "./components/SignIn/SignIn";
 import Register from "./components/Register/Register";
 import Success from "./components/Success/Success";
 import Merchandise from "./components/Merchandise/Merchandise";
+import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
 import UserContext from "./utils/UserContext";
@@ -40,12 +41,14 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/register" element={<Register />} />
+               <Route path="/detailedEvents" element={<DetailedEvents />} />
               <Route
                 path="/register/:id/verify/:tokenId"
                 element={<Success />}
               />
               <Route path="/merchandise" element={<Merchandise />} />
               <Route path="/alumni" element={<Alumni />} />
+              <Route path="/detailedEvents" element={<DetailedEvents />} />
             </Routes>
             <Footer />
           </BrowserRouter>
