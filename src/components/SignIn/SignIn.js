@@ -6,9 +6,10 @@ import "./SignIn.css";
 import { useFormik } from "formik";
 import { signInSchema } from "../../schemas";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import Alert from "../Alert/Alert";
 import Message from "../Message/Message";
+import PasswordChange from "./PasswordChange";
 
 
 const initialValues={
@@ -19,9 +20,9 @@ const initialValues={
 
 
 function SignIn() {
-
+  const { id, tokenId } = useParams();
   const emailRef = useRef(null);
-
+  const navigate = useNavigate();
   const [isShow, setIsShow] = useState(false);
   const [isShowMessage, setIsShowMessage] = useState(false);
   const [data, setData] = useState(null);
@@ -32,14 +33,39 @@ function SignIn() {
     try {
       const response = await axios.get(
         `https://waltz-server.onrender.com/reset-password/${values}`, values
-      );
 
+      );
+        console.log(response.data); 
+        if(response.data.message==="Email not registered"){
+          alert("Email not registered");
+        }
+        else if(response.data.message==="Email not Verified"){
+          alert("Email not verified");
+        }
+        else{
+          alert("Check your email");
+          navigate("/")
+        }
       setData(response);
       setIsShow(true);
     } catch (e) {
       setData(e.response);
       setIsShow(true);
     }
+
+    // try {
+    //   const response = await axios.put(
+    //     `https://waltz-server.onrender.com/reset-password/${id}/reset-password/${tokenId}`
+
+    //   );
+    //     console.log(response.data); 
+    //   setData(response);
+    //   setIsShow(true);
+    // } catch (e) {
+    //   setData(e.response);
+    //   setIsShow(true);
+    // }
+
     
   }
   
@@ -230,9 +256,9 @@ function SignIn() {
 {/* MODAL START */}
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div className="modal-dialog modal-dialog-centered" >
-    <div className="modal-content" >
+    <div className="modal-content" style={{backgroundColor:"#5038C7"}} >
       <div className="modal-header">
-        <h1 className="modal-title fs-5" id="exampleModalLabel">Forgot your password?</h1>
+        <h1 className="modal-title fs-5 text-light" id="exampleModalLabel">Forgot your password?</h1>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body" >
@@ -247,6 +273,7 @@ function SignIn() {
                       <span className="form-floating">
                         <input
                         ref={emailRef}
+                        
                           type="email"
                           name="email"
                           autoComplete="off"
@@ -273,7 +300,7 @@ function SignIn() {
       </div>
       <div className="modal-footer">
         
-        <button type="submit" className="btn btn-primary" onClick={onForgot}>Submit</button>
+        <button type="submit" className="btn btn-primary" style={{backgroundColor:"#A023BF"}} onClick={onForgot}>Submit</button>
       </div>
     </div>
   </div>
