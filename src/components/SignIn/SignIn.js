@@ -1,47 +1,116 @@
-import React from "react";
-import Box from "../../assests/images/box.jpg";
+import React, { useContext, useState } from "react";
 import google from "../../assests/images/icon1.png";
 import facebook from "../../assests/images/icon2.png";
 import "./SignIn.css";
 import { useFormik } from "formik";
 import { signInSchema } from "../../schemas";
-
-
-const initialValues={
-  email:'',
-  password:''
-}
+import axios from "axios";
+import Alert from "../Alert/Alert";
+import UserContext from "../../utils/UserContext";
+import { Link, redirect, useNavigate } from "react-router-dom";
+const initialValues = {
+  email: "",
+  password: "",
+};
 
 function SignIn() {
+  const navigate = useNavigate();
 
- const {values, errors, touched, handleBlur, handleChange, handleSubmit} =  useFormik({
-     initialValues,
-    validationSchema: signInSchema,
-    onSubmit : (values, action)=>{
-      console.log(values);
-      action.resetForm();
-      alert("Submit the form?")
-    },
-  })
+  const { user, setUser } = useContext(UserContext);
+  const [data, setData] = useState(null);
+  const [events, setEvents] = useState(null);
+  const [gallery, setGallery] = useState(null);
+  const [isShow, setIsShow] = useState(false);
 
+  const getGallery = async ({ data }) => {
+    try {
+      const response = await axios.get(
+        "https://waltz-server.onrender.com/gallery",
+        {
+          headers: {
+            Authorization: data.token,
+          },
+        }
+      );
+      setGallery(response.data.gallery);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const getEvents = async ({ data }) => {
+    try {
+      const response = await axios.get(
+        "https://waltz-server.onrender.com/events",
+        {
+          headers: {
+            Authorization: data.token,
+          },
+        }
+      );
+      setEvents(response.data.events);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const onSubmit = async (values) => {
+    try {
+      const response = await axios.post(
+        "https://waltz-server.onrender.com/login",
+        values
+      );
+      console.log(response);
+      setData(response);
+      getEvents(response);
+      getGallery(response);
+
+      setUser({
+        token: response.data.token,
+        isAlumni: response.data.isAlumni,
+        events: events,
+        gallery: gallery,
+      });
+      setIsShow(true);
+    } catch (e) {
+      console.log(e.response);
+      setData(e.response);
+      setIsShow(true);
+    }
+  };
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues,
+      validationSchema: signInSchema,
+      onSubmit: (values, action) => {
+        console.log(values);
+        onSubmit(values);
+
+        setTimeout(() => {
+          if (user.token !== "") navigate("/");
+        }, 5000);
+      },
+    });
 
   return (
     <>
+      <Alert isShow={isShow} setIsShow={setIsShow} data={data} />
+
       <div className="signin-container containe">
         <div className="card-container borde" style={{ height: "81%" }}>
           <div
             className="card borde shadow rounded"
-            style={{ width: "90%", height: "100%", marginBottom:"6rem" }}
+            style={{ width: "90%", height: "100%", marginBottom: "6rem" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
                 {/* <img src={Box} className="img-fluid rounded-start boximg" alt="..."/> */}
                 <span className="extra-txt d-flex align-items-center justify-content-center">
                   Don't have an account?{" "}
-                  <a className="extra-txt-link" href="/">
+                  <Link className="extra-txt-link" to="/">
                     {" "}
                     Sign Up{" "}
-                  </a>
+                  </Link>
                 </span>
               </div>
               <div className="col-md-6 container borde part2 shadow rounded">
@@ -67,18 +136,17 @@ function SignIn() {
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />
-                        
-                        <label
-                          htmlFor="email"
-                          className="text-secondary"
-                        >
+
+                        <label htmlFor="email" className="text-secondary">
                           Email
                         </label>
-                      
                       </span>
-                      
                     </span>
-                    {errors.email && touched.email ? <span className="form-error text-danger borde">{errors.email}</span> : null}
+                    {errors.email && touched.email ? (
+                      <span className="form-error text-danger borde">
+                        {errors.email}
+                      </span>
+                    ) : null}
                     <span className="input-group mb-1 mt-2 pd-box">
                       <span className="input-group-text px-4">
                         <i
@@ -106,7 +174,11 @@ function SignIn() {
                         </label>
                       </span>
                     </span>
-                    {errors.password && touched.password ? <span className="form-error text-danger borde">{errors.password}</span> : null}
+                    {errors.password && touched.password ? (
+                      <span className="form-error text-danger borde">
+                        {errors.password}
+                      </span>
+                    ) : null}
 
                     {/* Remember me section */}
 

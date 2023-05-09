@@ -10,6 +10,8 @@ import Merchandise from "./components/Merchandise/Merchandise";
 import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
+import UserContext from "./utils/UserContext";
+import Alumni from "./components/Alumni/Alumni";
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
@@ -20,14 +22,21 @@ function App() {
     }, 5000);
   }, []);
 
+  const [user, setUser] = useState({
+    token: "",
+    isAlumni: false,
+    events: null,
+    gallery: null,
+  });
+
   return (
     <div className="App">
       {showLoading ? (
         <Loading />
       ) : (
-        <div>
-          <Navbar />
+        <UserContext.Provider value={{ user: user, setUser: setUser }}>
           <BrowserRouter>
+            <Navbar />
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/signin" element={<SignIn />} />
@@ -38,11 +47,12 @@ function App() {
                 element={<Success />}
               />
               <Route path="/merchandise" element={<Merchandise />} />
+              <Route path="/alumni" element={<Alumni />} />
               <Route path="/detailedEvents" element={<DetailedEvents />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
-          <Footer />
-        </div>
+        </UserContext.Provider>
       )}
     </div>
   );
