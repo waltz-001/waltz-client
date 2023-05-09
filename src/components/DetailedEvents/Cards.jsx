@@ -5,9 +5,15 @@ const Cards = ({title,url,desc}) => {
   return (
     <span className='card' style={{backgroundImage: `url(${url})`}}>
       <span className='details'>
-        <h4>{title}</h4>
-        <p>{desc}</p>
-        <button>View Details</button>
+        <div className='cardHead'>
+          <h4>{title}</h4>
+        </div>
+        <div className='cardPara'>
+          <p>{desc}</p>
+        </div>
+        <div className='cardBtn'>
+          <button>View Details</button>
+        </div>
       </span>
     </span>
   )

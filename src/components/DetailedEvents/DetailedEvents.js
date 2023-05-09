@@ -110,10 +110,10 @@ export default function DetailedEvents() {
       url: 'https://picsum.photos/id/35/600/400',
       desc: ''
     }
-
-];
+  ];
 
   const[eventDay, setEventDay] = useState(1);
+  {window.scrollTo(0,0)};
 
   return (
     <div className='detailedEve'>

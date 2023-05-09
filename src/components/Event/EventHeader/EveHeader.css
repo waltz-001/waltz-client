@@ -18,8 +18,8 @@
             0 0 0.3rem rgb(0, 0, 0),
             0 0 1rem rgb(159, 151, 255),
             0 0 4rem rgb(228, 175, 255);
-    animation: flicker 2s;
-    animation-iteration-count: infinite;
+    /* animation: flicker 2s;
+    animation-iteration-count: infinite; */
     /* animation will run for 2s*10 = 20s 
     change it to infinte for infinite flickering*/
 }
