@@ -19,7 +19,7 @@ const SuccessMessage = ({ data, id, tokenId }) => {
               Congratulations! Your account has been created
             </p>
             <button className="continue-btn-container text-white rounded-pill d-flex mx-auto align-items-center justify-content-center">
-              <Link to={"/"} className="continue-btn">
+              <Link to={"/signin"} className="continue-btn">
                 Continue
               </Link>
             </button>

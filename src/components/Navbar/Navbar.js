@@ -70,6 +70,11 @@ const Navbar = () => {
                   </HashLink>
                 </li>
                 <li className="my- nav-item res">
+                  {/* <HashLink smooth to="/#about-us"> */}
+                  GALLERY
+                  {/* </HashLink> */}
+                </li>
+                <li className="my- nav-item res">
                   <HashLink smooth to="/#sponsors">
                     SPONSOR
                   </HashLink>
@@ -97,6 +102,7 @@ const Navbar = () => {
                           token: "",
                           isAlumni: false,
                           events: null,
+                          gallery: null,
                         });
                       }}
                     >
