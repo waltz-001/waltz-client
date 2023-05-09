@@ -113,6 +113,7 @@ export default function DetailedEvents() {
   ];
 
   const[eventDay, setEventDay] = useState(1);
+  {window.scrollTo(0,0)};
 
   return (
     <div className='detailedEve'>

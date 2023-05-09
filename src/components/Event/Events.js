@@ -11,7 +11,7 @@ export default function Events() {
       <EventSlider></EventSlider>
       <div className="cont">
         <Link to="/detailedEvents">
-          <button className='button'>
+          <button className='more-det-button'>
             More Details
           </button>
         </Link>

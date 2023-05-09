@@ -1,8 +1,7 @@
 .detailedEve{
     color: white;
-    background-image: url('../../assests/images/detailedEventbg.jpeg');
     background-color: black;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size:cover;
     background-repeat: no-repeat;
     height: auto;
@@ -10,10 +9,17 @@
 }
 
 .head{
+    /* border: 1px solid red; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    background-image: url(../../assests/images/detailedEventbg.jpeg);
+    background-size: cover;
+    background-position-y: -40vh;
 }
 
 .head h1{
@@ -88,6 +94,14 @@
 
     .detailedEve{
         background-size:contain;
+        background-image: url('../../assests/images/detailedEventbg.jpeg');
+    
+        
+    }
+
+    .head{
+        background-image: none;
+
     }
 
     .head h1{
