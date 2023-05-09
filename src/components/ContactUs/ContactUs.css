@@ -68,7 +68,7 @@ ul {
     color: white;
     margin: 10px 0px;
 }
-button{
+.contact-us-content-right button{
     width: 166px;
     height: 40px;
     min-height: 2px;
@@ -86,7 +86,7 @@ button{
     position: relative;
     overflow: hidden;
 }
-button:hover{
+.contact-us-content-right button:hover{
     background: transparent;
     color: plum;
     scale:1.02;
