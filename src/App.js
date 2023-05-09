@@ -9,6 +9,7 @@ import Success from "./components/Success/Success";
 import Merchandise from "./components/Merchandise/Merchandise";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
+import GalleryPage from "./pages/GalleryPage";
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
@@ -36,6 +37,7 @@ function App() {
                 element={<Success />}
               />
               <Route path="/merchandise" element={<Merchandise />} />
+              <Route path="/gallery" element={<GalleryPage/>}/>
             </Routes>
           </BrowserRouter>
           <Footer />
