@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Box from "../../assests/images/box.jpg";
 import google from "../../assests/images/icon1.png";
 import facebook from "../../assests/images/icon2.png";
 import "./SignIn.css";
 import { useFormik } from "formik";
 import { signInSchema } from "../../schemas";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import Alert from "../Alert/Alert";
+import Message from "../Message/Message";
 
 
 const initialValues={
@@ -12,7 +16,33 @@ const initialValues={
   password:''
 }
 
+
+
 function SignIn() {
+
+  const emailRef = useRef(null);
+
+  const [isShow, setIsShow] = useState(false);
+  const [isShowMessage, setIsShowMessage] = useState(false);
+  const [data, setData] = useState(null);
+
+  const onForgot= async (values) =>{
+    values = emailRef.current.value;
+    console.log(values);
+    try {
+      const response = await axios.get(
+        `https://waltz-server.onrender.com/reset-password/${values}`, values
+      );
+
+      setData(response);
+      setIsShow(true);
+    } catch (e) {
+      setData(e.response);
+      setIsShow(true);
+    }
+    
+  }
+  
 
  const {values, errors, touched, handleBlur, handleChange, handleSubmit} =  useFormik({
      initialValues,
@@ -22,6 +52,8 @@ function SignIn() {
       action.resetForm();
       alert("Submit the form?")
     },
+    
+     
   })
 
 
@@ -38,10 +70,10 @@ function SignIn() {
                 {/* <img src={Box} className="img-fluid rounded-start boximg" alt="..."/> */}
                 <span className="extra-txt d-flex align-items-center justify-content-center">
                   Don't have an account?{" "}
-                  <a className="extra-txt-link" href="/">
+                  <Link className="extra-txt-link" to="/register">
                     {" "}
                     Sign Up{" "}
-                  </a>
+                  </Link>
                 </span>
               </div>
               <div className="col-md-6 container borde part2 shadow rounded">
@@ -120,7 +152,8 @@ function SignIn() {
                           <input type="checkbox" required /> Remember me
                         </span>
                         <span className="forg">
-                          <a href="/">Forgot password?</a>
+                          <a href="/" data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot password?</a>  
+                         
                         </span>
                       </span>
                     </span>
@@ -182,7 +215,7 @@ function SignIn() {
                     </span>
                     <span className="extra-txt-res align-items-center justify-content-center">
                       Don't have an account?{" "}
-                      <a className="extra-txt-link" href="/">
+                      <a className="extra-txt-link" href="/register">
                         {" "}
                         Sign Up{" "}
                       </a>
@@ -194,6 +227,57 @@ function SignIn() {
           </div>
         </div>
       </div>
+{/* MODAL START */}
+      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div className="modal-dialog modal-dialog-centered" >
+    <div className="modal-content" >
+      <div className="modal-header">
+        <h1 className="modal-title fs-5" id="exampleModalLabel">Forgot your password?</h1>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body" >
+        
+      <span className="input-group mb-1 email-box" >
+                      <span className="input-group-text px-4 bg-light">
+                        <i
+                          className="fa-solid fa-envelope fa-flip fa-xl"
+                          style={{ color: "#DFB6FF" }}
+                        ></i>
+                      </span>
+                      <span className="form-floating">
+                        <input
+                        ref={emailRef}
+                          type="email"
+                          name="email"
+                          autoComplete="off"
+                          className="form-control text-dark bg-light"
+                          id="email"
+                          placeholder="Email"
+                          value={values.email}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                        />
+                        
+                        <label
+                          htmlFor="email"
+                          className="text-secondary"
+                        >
+                          Email
+                        </label>
+                      
+                      </span>
+                      
+                    </span>
+            
+                    {errors.email && touched.email ? <span className="form-error text-danger borde">{errors.email}</span> : null}
+      </div>
+      <div className="modal-footer">
+        
+        <button type="submit" className="btn btn-primary" onClick={onForgot}>Submit</button>
+      </div>
+    </div>
+  </div>
+</div>   
     </>
   );
 }
