@@ -85,11 +85,13 @@ function SignIn() {
 
   return (
     <>
+      <Alert isShow={isShow} setIsShow={setIsShow} data={data} />
+
       <div className="signin-container containe">
         <div className="card-container borde" style={{ height: "81%" }}>
           <div
             className="card borde shadow rounded"
-            style={{ width: "90%", height: "100%", marginBottom:"6rem" }}
+            style={{ width: "90%", height: "100%", marginBottom: "6rem" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
@@ -125,18 +127,17 @@ function SignIn() {
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />
-                        
-                        <label
-                          htmlFor="email"
-                          className="text-secondary"
-                        >
+
+                        <label htmlFor="email" className="text-secondary">
                           Email
                         </label>
-                      
                       </span>
-                      
                     </span>
-                    {errors.email && touched.email ? <span className="form-error text-danger borde">{errors.email}</span> : null}
+                    {errors.email && touched.email ? (
+                      <span className="form-error text-danger borde">
+                        {errors.email}
+                      </span>
+                    ) : null}
                     <span className="input-group mb-1 mt-2 pd-box">
                       <span className="input-group-text px-4">
                         <i
@@ -164,7 +165,11 @@ function SignIn() {
                         </label>
                       </span>
                     </span>
-                    {errors.password && touched.password ? <span className="form-error text-danger borde">{errors.password}</span> : null}
+                    {errors.password && touched.password ? (
+                      <span className="form-error text-danger borde">
+                        {errors.password}
+                      </span>
+                    ) : null}
 
                     {/* Remember me section */}
 
