@@ -10,7 +10,7 @@ const Alert = ({ isShow, setIsShow, data }) => {
 
   if (isShow === false) return;
 
-  if (data.status === 201) {
+  if (data.status === 201 || data.status === 200) {
     return (
       <div className="alert-box position-absolute end-0">
         <div className="alert alert-success" role="alert">
