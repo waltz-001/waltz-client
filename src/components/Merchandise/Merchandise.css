@@ -60,7 +60,7 @@
 .bg{
         position: absolute;
         width: 100vw;
-        height: 200%;
+        height: 210%;
         top: 443px;
         background:url('../../assests/images/bg.png');
         background-size: cover;
