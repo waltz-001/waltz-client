@@ -10,12 +10,12 @@ import Merchandise from "./components/Merchandise/Merchandise";
 import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
-<<<<<<< HEAD
+
 import PasswordChange from "./components/SignIn/PasswordChange";
-=======
+
 import UserContext from "./utils/UserContext";
 import Alumni from "./components/Alumni/Alumni";
->>>>>>> main
+
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
