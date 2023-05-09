@@ -12,6 +12,16 @@
     url("./assests/fonts/Lovelo-Black.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Antonio";
+  src: url("./assests/fonts/Antonio-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assests/fonts/Poppins-Regular.ttf");
+}
+
 *{
   margin: 0%;
   padding: 0%;
