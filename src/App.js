@@ -10,12 +10,9 @@ import Merchandise from "./components/Merchandise/Merchandise";
 import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
-
 import PasswordChange from "./components/SignIn/PasswordChange";
-
 import UserContext from "./utils/UserContext";
 import Alumni from "./components/Alumni/Alumni";
-
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
@@ -45,7 +42,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/register" element={<Register />} />
-               <Route path="/detailedEvents" element={<DetailedEvents />} />
+              <Route path="/detailedEvents" element={<DetailedEvents />} />
               <Route
                 path="/register/:id/verify/:tokenId"
                 element={<Success />}

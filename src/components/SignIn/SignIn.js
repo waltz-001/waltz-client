@@ -1,87 +1,118 @@
-import React, { useState, useRef } from "react";
-import Box from "../../assests/images/box.jpg";
+import React, { useState, useRef, useContext } from "react";
 import google from "../../assests/images/icon1.png";
 import facebook from "../../assests/images/icon2.png";
 import "./SignIn.css";
 import { useFormik } from "formik";
 import { signInSchema } from "../../schemas";
 import axios from "axios";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Alert from "../Alert/Alert";
-import Message from "../Message/Message";
-import PasswordChange from "./PasswordChange";
-
-
-const initialValues={
-  email:'',
-  password:''
-}
-
-
+import UserContext from "../../utils/UserContext";
+const initialValues = {
+  email: "",
+  password: "",
+};
 
 function SignIn() {
-  const { id, tokenId } = useParams();
   const emailRef = useRef(null);
   const navigate = useNavigate();
-  const [isShow, setIsShow] = useState(false);
-  const [isShowMessage, setIsShowMessage] = useState(false);
+  const { user, setUser } = useContext(UserContext);
   const [data, setData] = useState(null);
+  const [events, setEvents] = useState(null);
+  const [gallery, setGallery] = useState(null);
+  const [isShow, setIsShow] = useState(false);
 
-  const onForgot= async (values) =>{
+  const getGallery = async ({ data }) => {
+    try {
+      const response = await axios.get(
+        "https://waltz-server.onrender.com/gallery",
+        {
+          headers: {
+            Authorization: data.token,
+          },
+        }
+      );
+      setGallery(response.data.gallery);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const getEvents = async ({ data }) => {
+    try {
+      const response = await axios.get(
+        "https://waltz-server.onrender.com/events",
+        {
+          headers: {
+            Authorization: data.token,
+          },
+        }
+      );
+      setEvents(response.data.events);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const onSubmit = async (values) => {
+    try {
+      const response = await axios.post(
+        "https://waltz-server.onrender.com/login",
+        values
+      );
+      console.log(response);
+      setData(response);
+      getEvents(response);
+      getGallery(response);
+
+      setUser({
+        token: response.data.token,
+        isAlumni: response.data.isAlumni,
+        events: events,
+        gallery: gallery,
+      });
+      setIsShow(true);
+      navigate("/");
+    } catch (e) {
+      console.log(e.response);
+      setData(e.response);
+      setIsShow(true);
+    }
+  };
+
+  const onForgot = async (values) => {
     values = emailRef.current.value;
     console.log(values);
     try {
       const response = await axios.get(
-        `https://waltz-server.onrender.com/reset-password/${values}`, values
-
+        `https://waltz-server.onrender.com/reset-password/${values}`,
+        values
       );
-        console.log(response.data); 
-        if(response.data.message==="Email not registered"){
-          alert("Email not registered");
-        }
-        else if(response.data.message==="Email not Verified"){
-          alert("Email not verified");
-        }
-        else{
-          alert("Check your email");
-          navigate("/")
-        }
+      console.log(response.data);
+      if (response.data.message === "Email not registered") {
+        alert("Email not registered");
+      } else if (response.data.message === "Email not Verified") {
+        alert("Email not verified");
+      } else {
+        alert("Check your email");
+        navigate("/");
+      }
       setData(response);
       setIsShow(true);
     } catch (e) {
       setData(e.response);
       setIsShow(true);
     }
+  };
 
-    // try {
-    //   const response = await axios.put(
-    //     `https://waltz-server.onrender.com/reset-password/${id}/reset-password/${tokenId}`
-
-    //   );
-    //     console.log(response.data); 
-    //   setData(response);
-    //   setIsShow(true);
-    // } catch (e) {
-    //   setData(e.response);
-    //   setIsShow(true);
-    // }
-
-    
-  }
-  
-
- const {values, errors, touched, handleBlur, handleChange, handleSubmit} =  useFormik({
-     initialValues,
-    validationSchema: signInSchema,
-    onSubmit : (values, action)=>{
-      console.log(values);
-      action.resetForm();
-      alert("Submit the form?")
-    },
-    
-     
-  })
-
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues,
+      validationSchema: signInSchema,
+      onSubmit: (values, action) => {
+        onSubmit(values);
+      },
+    });
 
   return (
     <>
@@ -183,8 +214,13 @@ function SignIn() {
                           <input type="checkbox" required /> Remember me
                         </span>
                         <span className="forg">
-                          <a href="/" data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot password?</a>  
-                         
+                          <a
+                            href="/"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                          >
+                            Forgot password?
+                          </a>
                         </span>
                       </span>
                     </span>
@@ -258,58 +294,77 @@ function SignIn() {
           </div>
         </div>
       </div>
-{/* MODAL START */}
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div className="modal-dialog modal-dialog-centered" >
-    <div className="modal-content" style={{backgroundColor:"#5038C7"}} >
-      <div className="modal-header">
-        <h1 className="modal-title fs-5 text-light" id="exampleModalLabel">Forgot your password?</h1>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      {/* MODAL START */}
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content" style={{ backgroundColor: "#5038C7" }}>
+            <div className="modal-header">
+              <h1
+                className="modal-title fs-5 text-light"
+                id="exampleModalLabel"
+              >
+                Forgot your password?
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <span className="input-group mb-1 email-box">
+                <span className="input-group-text px-4 bg-light">
+                  <i
+                    className="fa-solid fa-envelope fa-flip fa-xl"
+                    style={{ color: "#DFB6FF" }}
+                  ></i>
+                </span>
+                <span className="form-floating">
+                  <input
+                    ref={emailRef}
+                    type="email"
+                    name="email"
+                    autoComplete="off"
+                    className="form-control text-dark bg-light"
+                    id="email"
+                    placeholder="Email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+
+                  <label htmlFor="email" className="text-secondary">
+                    Email
+                  </label>
+                </span>
+              </span>
+
+              {errors.email && touched.email ? (
+                <span className="form-error text-danger borde">
+                  {errors.email}
+                </span>
+              ) : null}
+            </div>
+            <div className="modal-footer">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                style={{ backgroundColor: "#A023BF" }}
+                onClick={onForgot}
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="modal-body" >
-        
-      <span className="input-group mb-1 email-box" >
-                      <span className="input-group-text px-4 bg-light">
-                        <i
-                          className="fa-solid fa-envelope fa-flip fa-xl"
-                          style={{ color: "#DFB6FF" }}
-                        ></i>
-                      </span>
-                      <span className="form-floating">
-                        <input
-                        ref={emailRef}
-                        
-                          type="email"
-                          name="email"
-                          autoComplete="off"
-                          className="form-control text-dark bg-light"
-                          id="email"
-                          placeholder="Email"
-                          value={values.email}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                        />
-                        
-                        <label
-                          htmlFor="email"
-                          className="text-secondary"
-                        >
-                          Email
-                        </label>
-                      
-                      </span>
-                      
-                    </span>
-            
-                    {errors.email && touched.email ? <span className="form-error text-danger borde">{errors.email}</span> : null}
-      </div>
-      <div className="modal-footer">
-        
-        <button type="submit" className="btn btn-primary" style={{backgroundColor:"#A023BF"}} onClick={onForgot}>Submit</button>
-      </div>
-    </div>
-  </div>
-</div>   
     </>
   );
 }

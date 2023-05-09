@@ -13,11 +13,11 @@ const Message = ({ data }) => {
               <p className="text-white message-text-box">
                 Please, check your email inbox or spam to verify
               </p>
-              <button className="continue-btn-container text-white rounded-pill d-flex mx-auto align-items-center justify-content-center mb-4">
+              {/* <button className="continue-btn-container text-white rounded-pill d-flex mx-auto align-items-center justify-content-center mb-4">
                 <Link to={"/"} className="continue-btn ">
                   Continue
                 </Link>
-              </button>
+              </button> */}
             </div>
           ) : (
             <div>
