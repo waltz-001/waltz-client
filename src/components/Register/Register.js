@@ -10,7 +10,7 @@ import { registerSchema } from "../../schemas";
 import axios from "axios";
 import Alert from "../Alert/Alert";
 import Message from "../Message/Message";
-
+import { Link } from "react-router-dom";
 const updateData = (values) => {
   let nameArray = values.firstName.split(" ", 2);
   values.firstName = nameArray[0];
@@ -79,7 +79,6 @@ const Register = () => {
       updateData(values);
       setIsShowMessage(true);
       onSubmit(values);
-      console.log(values);
     },
   });
 
@@ -104,10 +103,10 @@ const Register = () => {
               <div className="col-md-6 borde part1 shadow rounded">
                 <span className="registered-text extra-txt d-flex align-items-center justify-content-center">
                   Already Registered?{" "}
-                  <a className="extra-txt-link" href="/signin">
+                  <Link className="extra-txt-link" to={"/signin"}>
                     {" "}
                     Sign In{" "}
-                  </a>
+                  </Link>
                 </span>
               </div>
 

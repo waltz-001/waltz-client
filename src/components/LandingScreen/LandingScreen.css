@@ -49,10 +49,10 @@
 
 .landing-button-container {
     width: 45rem;
-    
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 6rem;
 }
 
 a {

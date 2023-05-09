@@ -66,7 +66,7 @@ export default function EventSlider() {
   return (
     <div className="container"
       id="cardID">
-      <div className="navArrows" onClick={moveLeft} id="left">&#10094;</div>
+      <div className={firstImageNo === 0 ? "navArrows navArrows-inactive" : "navArrows"} onClick={moveLeft} id="left">&#10094;</div>
       {
         arr.map((ev, i) => {
           if (i >= firstImageNo && i <= lastImageNo) {
@@ -83,7 +83,7 @@ export default function EventSlider() {
         })
 
       }
-      <div className="navArrows" onClick={moveRight} id="right">&#10095;</div>
+      <div className={lastImageNo === arr.length-1 ? "navArrows navArrows-inactive" : "navArrows"} onClick={moveRight} id="right">&#10095;</div>
     </div>
   );
 }
