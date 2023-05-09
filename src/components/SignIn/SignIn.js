@@ -71,7 +71,8 @@ function SignIn() {
         events: events,
         gallery: gallery,
       });
-      setIsShow(true);
+      setIsShow(true); 
+      navigate("/");
     } catch (e) {
       console.log(e.response);
       setData(e.response);
@@ -86,9 +87,6 @@ function SignIn() {
         console.log(values);
         onSubmit(values);
 
-        setTimeout(() => {
-          if (user.token !== "") navigate("/");
-        }, 5000);
       },
     });
 
