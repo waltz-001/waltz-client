@@ -6,7 +6,6 @@ import "./SignIn.css";
 import { useFormik } from "formik";
 import { signInSchema } from "../../schemas";
 import axios from "axios";
-import { Link, useParams, useNavigate } from "react-router-dom";
 import Alert from "../Alert/Alert";
 import UserContext from "../../utils/UserContext";
 import { Link, redirect, useNavigate } from "react-router-dom";
