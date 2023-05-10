@@ -27,8 +27,7 @@ function App() {
   const [user, setUser] = useState({
     token: "",
     isAlumni: false,
-    events: null,
-    gallery: null,
+    events: []
   });
 
   return (

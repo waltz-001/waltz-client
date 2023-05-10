@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                     <div className="right-list">
                         <ul>
-                            <li><a href="#About">Events</a></li>
+                            <li><Link to={"/detailedEvents"}>Events</Link></li>
                             <li><a href="#About">News</a></li>
                             <li><Link to={"/gallery"}>Galleries</Link></li>
                             <li><a href="#About">Know more</a></li>
