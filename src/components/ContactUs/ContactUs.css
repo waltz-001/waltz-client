@@ -1,0 +1,154 @@
+.contact-us-container {
+    color: white;
+    padding: 50px 100px;
+    background: url('../../assests/images/ContactUsBg.png');
+    background-size: cover;
+}
+
+.contact-us-container h1 {
+    font-family: 'Lovelo-line-light';
+    font-weight: 700;
+    font-size: 70px;
+    text-align: center;
+}
+
+.contact-us-content {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Ruda', sans-serif;
+    justify-content: space-between;
+    margin: 100px 0px;
+}
+
+.contact-us-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-us-content-left h3 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 60px;
+}
+
+.contact-us-content-left li {
+    font-weight: 200;
+    font-size: 21px;
+    line-height: 33px;
+}
+
+ul {
+    list-style: none;
+}
+
+.contact-us-content-right {
+    width: 50%;
+}
+
+.contact-us-content-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-content-right label {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.contact-us-content-right input,textarea
+ {
+    border: 2px solid #A023BF;
+    border-radius: 8px;
+    background-color: #000000;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: white;
+    margin: 10px 0px;
+}
+.contact-us-content-right button{
+    width: 166px;
+    height: 40px;
+    min-height: 2px;
+    min-width: 17.5px;
+    /* padding: 15px 0; */
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #A023BF;
+    background: #A023BF;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.contact-us-content-right button:hover{
+    background: transparent;
+    color: plum;
+    scale:1.02;
+}
+
+
+
+@media screen and (max-width: 600px)
+{
+    .contact-us-container{
+        padding-top: 0.43rem;
+        padding-left: 2.5rem;
+        padding-right: 2.25rem;
+    }
+    .contact-us-container h1{
+
+        font-size: 1.75rem;
+         /* line-height: 0vh;
+         display: inline; 
+        padding: 50px 100px; */
+    }
+    .contact-us-content{
+        display: grid;
+        grid-row:auto;
+        font-size: 3rem;
+        margin-top: 10%;
+        /* margin: 22px 0px; */
+
+    }
+    .contact-us-content-left h3
+    {
+        font-size: 20px;
+    }
+    .contact-us-content-left ul li{
+        font-size: 13px;
+    }
+       .contact-us-content-right label{
+        font-size: 20px;
+       }
+
+       .contact-us-content-right label{
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 45px;
+          /* width: 200px; */
+       }
+
+         .contact-us-content-right input{
+            width: 77vw;
+            line-height: 2vh;
+         }
+        .contact-us-content-right textarea{
+            width: 77vw;
+            line-height: 3vh;
+         }
+
+         .contact-us-content-right button{
+           position: relative;
+           left: 16vw; 
+         }
+
+
+
+
+}

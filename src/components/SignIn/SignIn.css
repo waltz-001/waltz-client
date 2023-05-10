@@ -1,0 +1,182 @@
+.signin-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(177.82deg, #180027 7.7%, #080824 107.27%);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 80%;
+    
+    
+}
+
+.card{
+    background: linear-gradient(177.82deg, #180027 7.7%, #080824 107.27%);
+    
+    
+    
+}
+
+.signin-head-txt{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+
+    background: linear-gradient(270.02deg, #A023BF 18.27%, #5038C7 61.7%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.extra-txt{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    gap: 5px;
+    /* border: #FFFFFF 2px solid; */
+    padding: 0.5rem;
+    margin-top: 29.5rem;
+
+}
+
+.extra-txt-link{
+    color: #EB9CFF;
+    font-weight: 600;
+}
+
+.extra-txt-res{
+    display: none;
+}
+
+.label-txt{
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    background-image: url(../../assests/images/box.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.card-title{
+/* position: absolute; */
+/* width: 176.97px; */
+height: 77.59px;
+margin-top: 1rem;
+font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 1000;
+font-size: 2rem;
+line-height: 75px;
+/* display: flex; */
+align-items: center;
+text-align: center;
+
+color: #5B13D1;
+
+}
+
+.form-control, .input-group-text{
+    background: rgba(29, 28, 37, 0.4);
+}
+
+
+.email-box, .pd-box{
+ 
+    border: none;
+    outline: none;
+    /* padding: 0.5rem; */
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+}
+
+
+
+.part2{
+    background: rgba(29, 28, 37, 0.4);
+backdrop-filter: blur(20px);
+
+
+
+width: 50%;
+/* height: 32.5rem; */
+height: inherit;
+left: 706.09px;
+top: 185px;
+}
+
+.fab {
+    --fa-animation-duration: 3s;
+    border-radius: 90%;
+    background: rgba(29, 28, 37, 0.4);
+  }
+
+  .fa-xl{
+    --fa-animation-duration: 3s;
+  }
+  
+ 
+
+  
+  a{
+    text-decoration: none;
+    
+  }
+
+  .form-error{
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    
+  }
+
+
+@media (max-width: 767px) {
+    .part1{
+        display: none;
+    }
+
+    .part2{
+        height: 38.4rem;
+        width: 100%;
+    }
+
+    .row{
+        width: 101%;
+    }
+
+    .card-container{
+        width: 100%;
+        
+    }
+
+    .extra-txt-res{
+        display: flex;
+        margin-top: 2rem;
+        gap: 5px;
+    }
+}

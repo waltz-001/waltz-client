@@ -1,0 +1,130 @@
+.detailedEve{
+    color: white;
+    background-color: black;
+    /* background-attachment: fixed; */
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: auto;
+    margin-top: -2rem;
+}
+
+.head{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    background-image: url(../../assests/images/detailedEventbg.jpeg);
+    background-size: cover;
+    background-position-y: -40vh;
+}
+
+.head h1{
+    /* border: 1px solid red; */
+    font-family: "Antonio";
+    font-weight: bold;
+    font-size: 5rem;
+    letter-spacing: 2rem;
+    color: goldenrod;
+    background-image: linear-gradient(90deg, #c79a25, white);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.days{
+    /* border: 1px solid red; */
+    background-color: #a174e9;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 2.2rem;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px black,
+                0 0 10px white;
+}
+
+.eveDay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+    border-radius: 7px;
+    width: 34%;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
+}
+
+.eveDay:hover{
+    background-color: #c79a25;
+}
+
+.eveDay-active{
+    background-color: #c79a25;
+    box-shadow: 1px 0px 2px rgba(88, 49, 108, 0.374)
+                2px 1px 5px rgba(222, 217, 224, 0.374);
+ 
+}
+
+.eventCards{
+    /* border: 1px solid red; */
+    color: white;
+    height: auto;
+    width: 80vw;
+    margin: auto;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 1080px) {
+
+    .detailedEve{
+        background-size:contain;
+        background-image: url('../../assests/images/detailedEventbg.jpeg');
+    
+        
+    }
+
+    .head{
+        background-image: none;
+
+    }
+
+    .head h1{
+        font-size: 3rem;
+        padding-left: 1rem;
+    }
+
+    .days{
+        width: 80%;
+        height: 2rem;
+        font-size: 0.8rem;
+        border-radius: 15px;
+    }
+
+    .eveDay{
+        border-radius: 15px;
+    }
+
+    .eventCards{
+        width: 80vw;
+    }
+    
+    
+    
+}
+

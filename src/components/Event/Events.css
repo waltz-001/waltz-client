@@ -1,0 +1,43 @@
+
+/*----------------------------------------------------*/
+
+.eve{
+    background-image: linear-gradient(#1e263900, rgb(0, 0, 0));
+    backdrop-filter: blur(5px);
+    height: auto;
+    overflow-x: hidden;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    margin-top: 3rem;
+    /* margin-bottom: 5rem; */
+}
+
+.more-det-button{
+    background-color: #5b12d1;
+    border: none;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 16px;
+    text-shadow: 0 0 4px black,
+                0 0 10px rgba(255, 255, 255, 0.248);
+}
+.more-det-button:hover{
+    border: 2px solid #5b12d1;
+    background-color: #5b12d189;
+    font-weight: 500;
+}
+
+/* @media only screen and (max-width: 480px){
+
+}
+
+@media only screen and (max-width: 1080px){
+    
+} */
+
+
+

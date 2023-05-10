@@ -1,0 +1,103 @@
+.top-container{
+   background: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   border-radius: 0.5rem;
+   transition: all 1s ease-in;
+}
+.right-destination-page {
+    width: 30%;
+    height: 60%;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+.icon-container{
+    animation-duration: 600ms; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */    
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: appear;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.fa-check {
+    animation-duration: 800ms; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */    
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: appear;
+    font-size: 1.3rem;
+    color: white;
+}
+.fa-xmark {
+    animation-duration: 800ms; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */    
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: appear;
+    font-size: 1.3rem;
+    color: white;
+}
+.success-message{
+    margin: 3rem 1.5rem;
+    
+}
+
+.continue-btn-container{
+    all: unset;
+    background-color: #5B13D1;
+    padding:0.4rem 1.6rem;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s ease-in;
+}
+
+.continue-btn{
+    color: white;
+    font-weight: 600;
+}
+.continue-btn-container:hover{
+    scale: 1.1;
+}
+
+@keyframes appear {
+    0% {
+        scale: 0;
+        rotate: 360deg;
+
+    }
+    80%{
+        scale: 1.2;
+    }
+    100% {
+        scale: 1;
+        rotate: 0deg;
+    }
+}
+@media (max-width: 1000px) {
+    .right-destination-page {
+        width: 50%;
+        height: 70%;
+    }
+    
+}
+@media (max-width: 565px) {
+    .right-destination-page {
+        width: 70%;
+        height: 70%;
+    }
+    
+}

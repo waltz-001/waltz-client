@@ -1,0 +1,118 @@
+.sponsors-container {
+    background: url('../../assests/images/starBg.png');
+    background-size: cover;
+}
+
+.sponsors-container-top-image img {
+    position: absolute;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.sponsors-container h1 {
+    background: linear-gradient(90.07deg, #D9BA7E 18.12%, rgba(228, 177, 77, 0.463235) 94.05%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Lovelo-line-light';
+    text-align: center;
+    font-weight: 700;
+    font-size: 100px;
+}
+
+.sponsors-content {
+    padding: 300px 100px;
+}
+
+.sponsors-content p {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: white;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.button-outline-transparent {
+    border: 4px solid #C78E25;
+    max-width: 300px;
+    height: fit-content;
+    padding: 17px 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sponsor-btn {
+    margin: auto;
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sponsors-content {
+        padding: 200px 100px;
+    }
+
+    .sponsors-container h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .sponsors-container p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .sponsor-btn {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    .button-outline-transparent {
+        max-width: 155px;
+        height: fit-content;
+        padding: 6px 13px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .sponsors-content {
+        padding: 80px 50px;
+        /* width: 100%; */
+    }
+
+    .sponsors-container h1 {
+        margin-top: 40px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .sponsors-container p {
+        /* width: 100%; */
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .sponsor-btn {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 27px;
+    }
+    .button-outline-transparent {
+        position: relative;
+        top: 50px;
+        max-width: 110px;
+        height: fit-content;
+        padding: 6px 13px;
+    }
+}
