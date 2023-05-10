@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Antonio");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --colYel: #c79a25;
+  --colPnk: #a174ea;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  padding: 0px important;
+  margin: 0px important;
+  border: 0px important;
+  background-color: rgb(255, 255, 255);
+}
+
+.GalleryHeadText {
+  letter-spacing: 4vw;
+  font-family: "Antonio", sans-serif;
+  font-size: 6vw;
+  font-weight: 700;
+  background: -webkit-linear-gradient(184deg, #000000 45.91%, #fefefe 61.45%);
+  background: linear-gradient(184deg, #000000 45.91%, #fefefe 61.45%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.Galinneropacityh {
+  background-color: rgba(0, 0, 0, 0.454);
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GalleryHead {
+  background-image: url("./assets/galhead.png");
+  height: 13vw;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GalImagesCrd {
+  display: flex;
+  flex-direction: column;
+  max-width: 30vw;
+  max-height: 25vw;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  margin-bottom: 25px;
+  transition: transform 0.3s;
+  z-index: 3;
+}
+.GalImagesCrd:hover {
+  transform: scale(1.1);
+  z-index: 3;
+}
+.GalImagesCrd:hover .GalImageTitle {
+  opacity: 1;
+  z-index: 4;
+}
+.GalImagesMain {
+  height: 100%;
+  width: 100%;
+  max-width: inherit;
+  max-height: inherit;
+  margin: 0px;
+  justify-self: flex-start;
+  align-self: flex-start;
+  z-index: 0;
+}
+.GalImageTitle {
+  justify-self: baseline;
+  align-self: flex-end;
+  z-index: 4;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(124, 124, 124, 0.6012780112044818) 100%
+  );
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-top: -30px;
+  border: 0px;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.GalleryPics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px;
+  flex-wrap: wrap;
+  height: 70vh;
+  width: 90%;
+  overflow: scroll;
+  justify-self: flex-end;
+}
+.GalleryPics::-webkit-scrollbar {
+  display: none;
+}
+.GalleryPics {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Goptnbt {
+  height: 4vh;
+  width: 18vw;
+  border-radius: 5px;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.6vh;
+}
+.GalleryBodyTopOpt {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style-type: none;
+  height: 4vh;
+  width: 54vw;
+  border-radius: 5px;
+  background-color: var(--colPnk);
+  flex-direction: row;
+  display: flex;
+  align-self: center;
+  margin: 50px;
+}
+.GalleryBody {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url("./assets/artgal.png");
+  /* background-color: #000000; */
+  background-size: cover;
+}
+@media(max-width:430px) {
+  .GalImagesCrd {
+  display: flex;
+  flex-direction: column;
+  max-width: 60vw;
+  max-height: 50vw;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  margin-bottom: 25px;
+  transition: transform 0.3s;
+}
+.GalleryPics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px;
+  flex-wrap: wrap;
+  height: 70vh;
+  width: 90%;
+  overflow: scroll;
+  justify-self: flex-end;
+}
+.GalleryHead {
+  background-image: url("./assets/galhead.png");
+  height: 30vw;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GalleryHeadText {
+  letter-spacing: 4vw;
+  font-family: "Antonio", sans-serif;
+  font-size: 15vw;
+  font-weight: 700;
+  background: -webkit-linear-gradient(184deg, #000000 45.91%, #fefefe 61.45%);
+  background: linear-gradient(184deg, #000000 45.91%, #fefefe 61.45%);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.Goptnbt {
+  height: 4vh;
+  width: 25vw;
+  border-radius: 5px;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.6vh;
+}
+.GalleryBodyTopOpt {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style-type: none;
+  height: 4vh;
+  width: 75vw;
+  border-radius: 5px;
+  background-color: var(--colPnk);
+  flex-direction: row;
+  display: flex;
+  align-self: center;
+  margin: 50px;
+}
+}

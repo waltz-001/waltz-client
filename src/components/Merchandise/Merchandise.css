@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.merch{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 412px 1462px;
+}
+
+
+.hbg{
+/* position: absolute;
+    left: 15px;
+    top: -78px; */
+    background:url('../../assests/images/hbg.png');
+    background-repeat: no-repeat;    
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mbar{
+    /* width: 50vw; */
+    height: 16%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;align-items: center;
+
+    z-index: 2;
+}
+
+.m1,.m2:hover{
+    cursor: pointer;
+}
+
+.m1, .m2{
+    position: absolute;
+    right: 750px;
+    width: 22%;
+    height: 50px;
+    background: #C79A25;
+    border-radius: 8px;
+    border-right:2px  #967203;  
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+}
+.m2{
+    right: 480px;
+    background: #A174EA;
+    z-index: -1;
+    width: 24%;
+}
+
+.bg{
+        position: absolute;
+        width: 100vw;
+        height: 210%;
+        top: 443px;
+        background:url('../../assests/images/bg.png');
+        background-size: cover;
+        display: grid;
+
+}
+
+.bg::before{
+    content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(29, 28, 37, 0.4);
+        backdrop-filter: blur(10px);
+}
+
+@font-face {
+    font-family: Antonio-Bold;
+    src: url(../../assests/fonts/Antonio-Bold.ttf);
+}
+
+.mhead{
+position: absolute;
+width: 1119px;
+height: 150px;
+left: 310px;
+top: 180px;
+
+font-family: 'Antonio-Bold', sans-serif;
+font-style:normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 50%;
+
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 6.4rem;
+
+background: linear-gradient(89.54deg, #c58e02 33.99%, #FFF4E0 81.96%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+mix-blend-mode: normal;
+}
+
+.mbody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.i1, .i2, .i3{
+    position: absolute;
+    top: 250px;
+    left: 80px;
+}
+
+.i2{
+    top: 600px;
+    left: 1000px;
+}
+
+.i3{
+    top: 1000px;
+}
+
+@font-face {
+    font-family: 'Lovelo';
+    src: url(../../assests/fonts/Lovelo-Black.woff);
+}
+
+.f, .g, .i{
+    position: absolute;
+    top: 315px;
+    left: 260px;
+    color: #C79925;
+    font-size: 170px;
+    font-weight: 600;
+    font-family: 'Lovelo', sans-serif;
+    letter-spacing: 2rem;
+}
+
+.g{
+    top: 700px;
+    left: 600px;
+}
+
+.i{
+    top: 1050px;
+    left: 200px
+}
+
+.txtgrad:not(txtgrad0){
+        background: linear-gradient(89.54deg, #C79925 33.99%, #FFF4E0 81.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        
+            mix-blend-mode: normal;
+}
+
+.txtgrad1{
+    background: linear-gradient(89.76deg, #FFF4E0 35.99%, #C79925 76.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+        mix-blend-mode: normal;
+}
+
+.txtgrad0{
+    color: #C79A25;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 5px;
+    
+}
+
+@media  screen and (max-width:1200px) {
+    .merch{
+        background-size: cover;
+        overflow: hidden;
+
+    }
+
+        .mhead{
+            width: 57vw;
+            /* height: 150px; */
+            left: 28vw;
+            top: 22vh;
+            letter-spacing: 1rem;
+            font-family: 'Antonio-Bold', sans-serif;
+            font-weight: 100;
+            font-size: 1.6rem;
+            line-height: 50%;
+        }
+
+        img{
+            width: 30vw;
+        }
+
+                .i1,
+                .i2,
+                .i3 {
+                    position: absolute;
+                    top: 15vh;
+                    left: 6vw;
+                }
+
+            .i2 {
+                position: relative;
+                top: 40vh;
+                left: 27vw;
+            }
+
+            .i3 {
+                position: absolute;
+                top: 68vh;
+            }
+
+                .m1,
+                .m2 {
+                    position: absolute;
+                    top: 3vh;
+                    right: 47vw;
+                    width: 40vw;
+                    height: 4vh;
+                    text-align: center;
+                    padding-top: 0.5vh;
+                }
+        
+                .m2 {
+                    left: 47vw;
+                    background: #A174EA;
+                    z-index: -1;
+                    width: 46vw;
+                }
+
+                .f, .g, .i{
+                    position: absolute;
+                    top: 18vh;
+                    left: 22vw;
+                    font-size: 4rem;
+                    font-weight: lighter;
+                    letter-spacing: 0;
+                }
+
+                .g{
+                    top: 43vh;
+                    left: 30vw;
+                }
+
+                .i{
+                    top: 72vh;
+                    left: 18vw;
+                    font-size: 3.1rem;
+                    font-weight: lighter;
+                }
+                .bg{
+                    height: 100%;width: 100%;
+                }
+                .merch{
+                    height: 140vh;
+                }
+}
