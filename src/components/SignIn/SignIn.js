@@ -8,6 +8,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Alert from "../Alert/Alert";
 import UserContext from "../../utils/UserContext";
+
 const initialValues = {
   email: "",
   password: "",
@@ -18,41 +19,7 @@ function SignIn() {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
   const [data, setData] = useState(null);
-  const [events, setEvents] = useState(null);
-  const [gallery, setGallery] = useState(null);
   const [isShow, setIsShow] = useState(false);
-
-  const getGallery = async ({ data }) => {
-    try {
-      const response = await axios.get(
-        "https://waltz-server.onrender.com/gallery",
-        {
-          headers: {
-            Authorization: data.token,
-          },
-        }
-      );
-      setGallery(response.data.gallery);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
-  const getEvents = async ({ data }) => {
-    try {
-      const response = await axios.get(
-        "https://waltz-server.onrender.com/events",
-        {
-          headers: {
-            Authorization: data.token,
-          },
-        }
-      );
-      setEvents(response.data.events);
-    } catch (e) {
-      console.log(e);
-    }
-  };
 
   const onSubmit = async (values) => {
     try {
@@ -60,16 +27,28 @@ function SignIn() {
         "https://waltz-server.onrender.com/login",
         values
       );
-      console.log(response);
-      setData(response);
-      getEvents(response);
-      getGallery(response);
+
+      const eventResponse = await axios.get(
+        "https://waltz-server.onrender.com/events",
+        {
+          headers: {
+            Authorization: response.data.token,
+          },
+        }
+      );
+
+      // console.log(response);
+      // setData(response);
+      // getEvents(response);
+      // await getGallery(response).then(()=> {
+      //   console.log("gallery", gallery)
+      // })
+
 
       setUser({
         token: response.data.token,
         isAlumni: response.data.isAlumni,
-        events: events,
-        gallery: gallery,
+        events: eventResponse.status===200? eventResponse.data.events: []
       });
       setIsShow(true);
       navigate("/");
@@ -152,7 +131,7 @@ function SignIn() {
                           name="email"
                           autoComplete="off"
                           className="form-control text-warning"
-                          id="email"
+                          id="email1"
                           placeholder="Email"
                           value={values.email}
                           onChange={handleChange}
@@ -213,7 +192,7 @@ function SignIn() {
                         <span className="rem ">
                           <input type="checkbox" required /> Remember me
                         </span>
-                        <span className="forg">
+                        {/* <span className="forg">
                           <a
                             href="/"
                             data-bs-toggle="modal"
@@ -221,7 +200,7 @@ function SignIn() {
                           >
                             Forgot password?
                           </a>
-                        </span>
+                        </span> */}
                       </span>
                     </span>
 
@@ -240,22 +219,21 @@ function SignIn() {
                       </button>
                     </span>
                     <span className="d-grid gap-2">
-                      <span
+                      {/* <span
                         className="borde mt-1 text-secondary d-flex mx-auto align-items-center justify-content-center"
                         type="button"
                         style={{ height: "3rem", width: "100%" }}
                       >
                         {" "}
                         ————— or continue with —————
-                      </span>
+                      </span> */}
                       <span className="d-flex mx-auto mt-2 gap-5">
-                        <a
+                        {/* <a
                           href="/"
                           target="_blank"
                           rel="noreferrer"
                           className="text-dark me-4"
                         >
-                          {/* <i className="fab fa-facebook fa-flip"></i> */}
                           <img
                             src={google}
                             alt=""
@@ -270,14 +248,13 @@ function SignIn() {
                           rel="noreferrer"
                           className="text-dark me-4"
                         >
-                          {/* <i className="fab fa-google  fa-flip"></i> */}
                           <img
                             src={facebook}
                             alt=""
                             className="fa-flip fab"
                             style={{ width: "2.2rem" }}
                           />
-                        </a>
+                        </a> */}
                       </span>
                     </span>
                     <span className="extra-txt-res align-items-center justify-content-center">
