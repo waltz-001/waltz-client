@@ -4,7 +4,7 @@ import "./Merchandise.css";
 import merch1 from "../../assests/images/merch1.png"
 import merch2 from "../../assests/images/mercg2.png"
 import merch3 from "../../assests/images/merch3.png"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Merchandise = () => {
   return (
@@ -17,7 +17,7 @@ const Merchandise = () => {
           <div className="bg">
             <div className="mbar">
               <a href='#'><div className="m1">Student</div></a>
-              <Link to="src\components\Merchandise\merchalum.js"><div className="m2">Alumni</div></Link>
+              <a href='#'><div className="m2">Alumni</div></a>
               <div className="mbody">
                 <img src={merch1} alt='#' className='i1'></img>
                 <img src={merch2} alt='#' className='i2'></img>
