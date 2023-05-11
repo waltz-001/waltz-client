@@ -75,6 +75,7 @@ function SignIn() {
       } else {
         alert("Check your email");
         navigate("/");
+        window.location.reload(true);
       }
       setData(response);
       setIsShow(true);
@@ -192,7 +193,7 @@ function SignIn() {
                         <span className="rem ">
                           <input type="checkbox" required /> Remember me
                         </span>
-                        {/* <span className="forg">
+                        <span className="forg">
                           <a
                             href="/"
                             data-bs-toggle="modal"
@@ -200,7 +201,7 @@ function SignIn() {
                           >
                             Forgot password?
                           </a>
-                        </span> */}
+                        </span>
                       </span>
                     </span>
 
