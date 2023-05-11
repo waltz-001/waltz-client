@@ -105,12 +105,13 @@
 
   .about-us-content-left {
     padding-right: 10vw;
+    overflow-x: auto;
   }
 
   .about-us-content-right,
   .about-us-content-left {
     margin-left: 50px;
-    overflow-y: scroll;
+    overflow-x: visible;
     scroll-behavior: smooth;
   }
 
