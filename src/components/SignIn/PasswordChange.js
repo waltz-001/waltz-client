@@ -41,6 +41,7 @@ const PasswordChange = () => {
       getData(obj);
       alert("Password changed successfully!!")
       navigate("/");
+      window.location.reload(true);
     }
     else{
       alert("Password does not match!!")
