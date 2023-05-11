@@ -120,6 +120,7 @@ function GalleryPage() {
           </li>
         </ul>
         {loading === true ? null : (
+          imagesData===[]?<p>Gallery Images will be uploaded soon</p>:
           <GalRenderImg imagesData={imagesData} selectedTag={select} />
         )}
       </div>

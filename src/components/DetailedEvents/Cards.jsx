@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cards.css'
 
-const Cards = ({title,url,desc}) => {
+const Cards = ({title,url,desc, startTime, endTime}) => {
   return (
     <span className='card' style={{backgroundImage: `url(${url})`}}>
       <span className='details'>
