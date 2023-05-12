@@ -62,7 +62,7 @@
 
 @media (max-width: 767px) {
     .active{
-        background-color: black;
+        background-color: color(prophoto-rgb 0.38 0.2 0.56 / 0);
         backdrop-filter: none;
     }
     .navbar-container{
