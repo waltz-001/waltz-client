@@ -16,13 +16,13 @@ const LandingScreen = () => {
         <Timer />
         <div className="landing-button-container ">
           <HashLink to={"/#about-us"}>
-            <div className="button-solid-round view-btn mt-5 ">
+            <div className="button-solid-round view-btn">
               <p className="mt-3">VIEW DETAILS</p>
             </div>
           </HashLink>
           {user.token === "" ? (
             <Link to="/register">
-              <div className="button-solid-round register-btn mt-5 ">
+              <div className="button-solid-round register-btn">
                 <p className="mt-3">REGISTER NOW</p>
               </div>
             </Link>
