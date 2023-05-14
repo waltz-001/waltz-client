@@ -1,0 +1,103 @@
+.card{
+    width: 35vw;
+    height: calc(35vw*(2/3));
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.736),
+                0 0 20px rgba(255, 255, 255, 0.311);
+    background-repeat: none;
+    background-size: fill;
+    border-radius: 0;
+}
+
+.card .details{
+    /* border: 1px solid green; */
+    height: 100%;
+    margin-left: 55%;
+    margin-right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.details .cardHead{
+    /* border: 1px solid red; */
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase ;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+
+.details .cardPara{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 60%;
+}
+
+.details .cardBtn{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: 1rem;
+}
+
+.cardBtn button{
+    background-color: #5b12d1;
+    border: none;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 16px;
+    text-shadow: 0 0 4px black,
+                0 0 10px rgba(255, 255, 255, 0.248);
+}
+.cardBtn button:hover{
+    border: 2px solid #5b12d1;
+    background-color: #5b12d189;
+    font-weight: 500;
+}
+
+
+/* @media only screen and (max-width: 1000px) {
+    .card{
+        width: 80vw;
+        height: calc(80vw*(2/3));
+    }
+
+    .details h4{
+        font-size: 1rem;
+    }
+
+    .details button{
+        font-size: 0.85rem;
+        width: 70%;
+        height: 15%;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 80vw;
+        height: calc(80vw*(2/3));
+    }
+
+    .details .cardHead{
+        font-size: 1rem;
+        padding-top: 5px;
+    }
+
+    .cardBtn button{
+        /* padding: 0; */
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+}

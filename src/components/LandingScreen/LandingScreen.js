@@ -1,10 +1,14 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import "./LandingScreen.css";
 import Logo2 from "../../assests/images/newHeading2.png";
 import Timer from "../../utils/Timer/Timer";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
+import UserContext from "../../utils/UserContext";
+import { HashLink } from "react-router-hash-link";
+
 const LandingScreen = () => {
+  const { user, setUser } = useContext(UserContext);
   return (
     <div id="home" className="landing-container">
       <div className="landing-content">
@@ -45,6 +49,7 @@ const LandingScreen = () => {
               <Link to="/register">REGISTER NOW</Link>
             </p>
           </motion.div>
+
         </div>
       </div>
     </div>

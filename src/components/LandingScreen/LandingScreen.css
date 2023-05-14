@@ -4,6 +4,20 @@
 
 }
 
+::-webkit-scrollbar{
+    width: 8px;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top, #5B13D1, #b90cdb);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(to top, #15dc47,#212dd6);
+}
+
 .landing-content {
     display: flex;
     flex-direction: column;
@@ -49,10 +63,10 @@
 
 .landing-button-container {
     width: 45rem;
-    
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 6rem;
 }
 
 a {
@@ -73,6 +87,7 @@ a {
         flex-direction: column;
         width: 100%;
         align-items: center;
+        gap:0;
     }
 
     .button-solid-round {

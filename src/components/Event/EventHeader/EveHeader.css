@@ -3,7 +3,8 @@
     color: white;
     /* border: 2px solid cyan; */
     width:100%;
-    height: 30%;
+    height: 30vh;
+    margin-top: 2%;
     /* font-size: xx-large; */
     display: flex;
     justify-content: center;
@@ -17,9 +18,9 @@
             0 0 0.3rem rgb(0, 0, 0),
             0 0 1rem rgb(159, 151, 255),
             0 0 4rem rgb(228, 175, 255);
-    animation: flicker 2s;
-    animation-iteration-count: infinite;
-    /* animation will rum for 2s*10 = 20s 
+    /* animation: flicker 2s;
+    animation-iteration-count: infinite; */
+    /* animation will run for 2s*10 = 20s 
     change it to infinte for infinite flickering*/
 }
 
@@ -53,7 +54,7 @@ delete below  keyframes CSS*/
 
 @media only screen and (max-width: 1080px){
     .text{
-        margin-top: 5%;
+        margin-top: 10%;
         height: 30%;
         letter-spacing: 0.1rem;
         line-height: 4rem;
@@ -64,8 +65,8 @@ delete below  keyframes CSS*/
     .text{
         /* border: 1px solid red; */
         /* margin-top: 2rem; */
-        height: 30%;
-        font-size: 1.7rem;
+        height: 30vh;
+        font-size: 2rem;
         line-height: 3rem;
         /* letter-spacing: 0.1rem; */
     }

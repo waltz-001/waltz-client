@@ -2,6 +2,7 @@ import PageOne from "./PageOne/PageOne";
 import PageTwo from "./PageTwo/PageTwo";
 import PageThree from "./PageThree/PageThree";
 import "./Register.css";
+import "../SignIn/SignIn.css";
 import React, { useState } from "react";
 import StepProgressBar from "./StepProgressBar/StepProgressBar";
 import { useFormik } from "formik";
@@ -9,7 +10,7 @@ import { registerSchema } from "../../schemas";
 import axios from "axios";
 import Alert from "../Alert/Alert";
 import Message from "../Message/Message";
-
+import { Link } from "react-router-dom";
 const updateData = (values) => {
   let nameArray = values.firstName.split(" ", 2);
   values.firstName = nameArray[0];
@@ -78,7 +79,6 @@ const Register = () => {
       updateData(values);
       setIsShowMessage(true);
       onSubmit(values);
-      console.log(values);
     },
   });
 
@@ -97,16 +97,16 @@ const Register = () => {
         <div className="card-container borde" style={{ height: "71%" }}>
           <div
             className="card borde mb-3 shadow rounded"
-            style={{ width: "90%", height: "100%" }}
+            style={{ width: "90%", height: "100%", marginBottom:"6rem" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
                 <span className="registered-text extra-txt d-flex align-items-center justify-content-center">
                   Already Registered?{" "}
-                  <a className="extra-txt-link" href="/signin">
+                  <Link className="extra-txt-link" to={"/signin"}>
                     {" "}
                     Sign In{" "}
-                  </a>
+                  </Link>
                 </span>
               </div>
 

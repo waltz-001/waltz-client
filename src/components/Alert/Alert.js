@@ -8,18 +8,9 @@ const Alert = ({ isShow, setIsShow, data }) => {
     }, 4000);
   }, [isShow]);
 
-  if (isShow === false) return null;
+  if (isShow === false) return;
 
-  if (isShow === true) {
-    setTimeout(() => {
-      const timer = document.querySelector(".timer-line");
-      if (timer !== null) {
-        timer.classList.add("timer-active");
-      }
-    }, 1000);
-  }
-
-  if (data.status === 201) {
+  if (data.status === 201 || data.status === 200) {
     return (
       <div className="alert-box position-absolute end-0">
         <div className="alert alert-success" role="alert">

@@ -6,14 +6,27 @@
     flex-direction: row;
     justify-content: space-evenly;
     z-index: 3;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.2px);
+    -webkit-backdrop-filter: blur(17.2px);
 }
 
 .navbar-option{
     display: none;
 }
 
+.signinbutton a{
+    padding: 0.4rem 0.6rem;
+    border: 2px solid #5B13D1;
+    border-radius: 0.3rem;
+}
+.registerbutton a{
+    padding: 0.4rem 0.6rem;
+    background-color:  #5B13D1;
+    border-radius: 0.3rem;
+}
 .active{
-    background-color: black;
 }
 
 .navbar-option-list{
@@ -36,7 +49,7 @@
 }
 
 .navbar-option-list li a:hover{
-    color: #A023BF;
+    color: #C78E25;
 }
 
 .navbar-option-icons{
@@ -48,7 +61,10 @@
 
 
 @media (max-width: 767px) {
-
+    .active{
+        background-color: color(prophoto-rgb 0.38 0.2 0.56 / 0);
+        backdrop-filter: none;
+    }
     .navbar-container{
         position: sticky;
         top: 0px;
