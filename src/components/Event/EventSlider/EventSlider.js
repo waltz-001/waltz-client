@@ -49,7 +49,7 @@ export default function EventSlider() {
   }
 
   return (
-    <div className="container"
+    <div className="my-container"
       id="cardID">
       <div className={firstImageNo === 0 ? "navArrows navArrows-inactive" : "navArrows"} onClick={moveLeft} id="left">&#10094;</div>
       {
