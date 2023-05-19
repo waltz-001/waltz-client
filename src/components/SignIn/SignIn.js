@@ -104,7 +104,7 @@ function SignIn() {
             className="card borde shadow rounded"
             style={{ width: "90%", height: "100%", marginBottom: "6rem" }}
           >
-            <div className="row g-0">
+            <div className="my-row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
                 {/* <img src={Box} className="img-fluid rounded-start boximg" alt="..."/> */}
                 <span className="extra-txt d-flex align-items-center justify-content-center">
