@@ -1,5 +1,5 @@
 
-.container{
+.my-container{
     /* border: 1px solid red; */
     height: 60vh;
     width: 100%;
@@ -52,7 +52,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .container{
+    .my-container{
         /* border: 1px solid blue; */
         height: 60%;
     }
