@@ -17,6 +17,7 @@ import GalleryPage from "./pages/GalleryPage";
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
+
   useEffect(() => {
     setShowLoading(true);
     setTimeout(() => {
@@ -27,7 +28,7 @@ function App() {
   const [user, setUser] = useState({
     token: "",
     isAlumni: false,
-    events: []
+    events: [],
   });
 
   return (
