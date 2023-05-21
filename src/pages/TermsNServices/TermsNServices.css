@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.TNSBackground
+{
+    background-image: url("assets/wall.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TNSImage
+{
+    display:inline;
+    width: 50px;
+    height: 50px;
+
+}
+.TNSHeading
+{
+    font-family: 'Poppins', sans-serif;
+    font-size:220%;
+    color: #ffffff;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    width: 100%;
+}
+.HRLine
+{
+    height: 3px;
+    background-color: #ffffff;
+    width: 60%;
+    
+}
+
+.TNSGlass{
+height: 90%;
+width: 90%;
+background: rgba(19, 19, 19, 0.6);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+-webkit-backdrop-filter: blur(0.9px);
+backdrop-filter: blur(0.9px);
+border: 1px solid rgba(0, 0, 0, 0.44);
+overflow-y: scroll;
+scrollbar-width: none;
+padding: 2% 2%;
+}
+.TNSGlass::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.ServiceName
+{
+    font-family: 'Poppins', sans-serif;
+    font-size:180%;
+    color: #ffffff;;
+    text-align: left;
+    width: 100%;
+}
+.ServiceTerms
+{
+    font-family: 'Poppins', sans-serif;
+    font-size:130%;
+    color: #dfdfdf;;
+    text-align: left;
+    width: 100%;
+}
