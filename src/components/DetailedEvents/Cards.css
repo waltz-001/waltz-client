@@ -17,8 +17,9 @@
     backdrop-filter: blur(5px);
     color: white;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .details .cardHead{
@@ -33,12 +34,6 @@
     text-transform: uppercase ;
     letter-spacing: 0.1rem;
     font-weight: bold;
-}
-
-.details .cardPara{
-    /* border: 1px solid red; */
-    width: 100%;
-    height: 60%;
 }
 
 .details .cardBtn{
@@ -67,22 +62,6 @@
 }
 
 
-/* @media only screen and (max-width: 1000px) {
-    .card{
-        width: 80vw;
-        height: calc(80vw*(2/3));
-    }
-
-    .details h4{
-        font-size: 1rem;
-    }
-
-    .details button{
-        font-size: 0.85rem;
-        width: 70%;
-        height: 15%;
-    }
-} */
 
 @media only screen and (max-width: 600px) {
     .card{
@@ -90,9 +69,14 @@
         height: calc(80vw*(2/3));
     }
 
-    .details .cardHead{
+    .cardHead{
         font-size: 1rem;
         padding-top: 5px;
+    }
+
+    .cardHead h4{
+        font-size: 1rem;
+        letter-spacing: 0;
     }
 
     .cardBtn button{
