@@ -84,12 +84,12 @@
 
   .about-us-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     object-fit: cover;
     height: 60vh;
     width: 88%;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: auto;
     margin: 5vh 2vw;
   }
@@ -101,6 +101,7 @@
   .about-us-container {
     padding-left: 0px;
     padding-right: 0;
+    overflow-y: scroll;
   }
 
   .about-us-content-left {

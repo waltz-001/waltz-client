@@ -65,6 +65,8 @@ const AboutUs = () => {
         }
         },
       };
+
+      
   
     return (
         <div ref={ref} id='about-us' className='about-us'>
