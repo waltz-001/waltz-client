@@ -25,7 +25,7 @@ function DetailedEvents() {
       }
     );
     setEvents(res.data.events)
-    console.log(res)
+    // console.log(res)
   }
     
     //above code should be UNCOMMENTED in Production
@@ -42,7 +42,7 @@ function DetailedEvents() {
       }
     }, [1000])
 
-    console.log(events)
+    // console.log(events)
   
     //**************[IMP]********^******above code should be uncommented during production**********************************************
 

@@ -1,16 +1,13 @@
 import React, { useState, useContext } from 'react'
 import Event from './Event';
 import './EventSlider.css'
-import Event1 from "../../../assests/events-static/event1.jpeg";
-import Event2 from "../../../assests/events-static/event2.jpeg";
-import Event3 from "../../../assests/events-static/event3.jpeg";
 import UserContext from "../../../utils/UserContext";
 
 
 let eventOnScreen = 3;
 
 let width = window.innerWidth;
-// console.log(width);
+
 changeImgNo(width);
 
 window.addEventListener("resize",changeImgNo);

@@ -11,7 +11,7 @@ export default function ViewEvent() {
     let urlArr = window.location.pathname.split('/');
     const id = urlArr[urlArr.length - 1];
 
-    console.log(id);
+    // console.log(id);
 
     const { user, setUser } = useContext(UserContext);
     const navigate = useNavigate();
@@ -33,7 +33,7 @@ export default function ViewEvent() {
         setSingleEvent(res.data.events.filter(e => e._id === id))
     }
 
-    console.log(singleEvent);
+    // console.log(singleEvent);
 
     // const eve = [{ _id: "78676969", title: "halu", startTime: "XX:XX", endTime: "XX:XX", date: 67, description: "lorem10" }];
 
