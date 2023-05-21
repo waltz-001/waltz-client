@@ -20,13 +20,12 @@
     padding: 0.4rem 0.6rem;
     border: 2px solid #5B13D1;
     border-radius: 0.3rem;
+    transition: 0.3s all ease-in;
 }
 .registerbutton a{
     padding: 0.4rem 0.6rem;
     background-color:  #5B13D1;
     border-radius: 0.3rem;
-}
-.active{
 }
 
 .navbar-option-list{
@@ -59,7 +58,64 @@
     justify-content: space-evenly;
 }
 
+.link li {
+    display: inline-block;
+  }
+  .link li,
+  .link li:after,
+  .link li:before {
+  transition: all .5s;
+}
+.link li:hover {
+  color: #555;
+}
 
+.link.stroke  li ,
+.link.fill li {
+    position: relative;
+  }
+  .link.stroke li:after,
+  .link.fill  li:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #C78E25;
+    height: 1px;
+  }
+  .link.stroke li:hover:after {
+    width: 100%;
+  }
+  
+  .link.fill  li {
+    transition: all 2s;
+  }
+  
+  .link.fill  li:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  .link.fill  li:hover {
+    color: #C78E25;
+    z-index: 1;
+  }
+  .link.fill  li:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+.signinbutton:hover a{
+    background-color: #5B13D1;
+}
 @media (max-width: 767px) {
     .active{
         background-color: color(prophoto-rgb 0.38 0.2 0.56 / 0);
@@ -127,15 +183,15 @@
       flex-direction:row-reverse;
       top: 0;
     }
-    .navbar-toggler-icon {
-      /* display: inline-block;
+    /* .navbar-toggler-icon {
+     display: inline-block;
       width: 30px;
       height: 30px;
       background-image: url("/src/assests/images/avatar.png");
       background-repeat: no-repeat;
       background-size: cover;
-      margin-left: 13rem; */
-    }
+      margin-left: 13rem; 
+    } */
     .navbar-toggle:checked ~ .navbar-option-list {
       display: flex;
       position:absolute;
@@ -187,4 +243,3 @@
     }
     
   }
-  

@@ -30,6 +30,11 @@ const PageThree = ({ values, errors, touched, handleBlur, handleChange }) => {
           errors={errors.confirmPassword}
           touched={touched.confirmPassword}
         />
+        <div>
+          <span className="emailcheckbox">
+            <input type="checkbox" /> Opt for WALTZ email update
+          </span>
+        </div>
       </div>
     </div>
   );
