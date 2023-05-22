@@ -1,0 +1,182 @@
+.view-event{
+    background-color: black;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0px 0px 2px black,
+                 1px 0px 10px #00000090;
+}
+
+.view-event img{
+    /* border: 2px solid orange; */
+    margin-top: 5%;
+    width: 90vw;
+    height: calc(90vw*(2/3));
+    align-self: center;
+}
+    
+.view-event-box{
+    /* border: 1px solid red; */
+    background-image: linear-gradient(#00000020, #000000);
+    background-size: contain;
+    align-self: center;
+    width: 90vw;
+    height: calc(90vw *(2/3));
+    margin: 2%;
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.434);
+    position:absolute;
+}
+
+.box-title{
+    /* border: 1px solid blue; */
+    margin: 2%;
+    /* margin-top: 4%; */
+    margin-left: 2%; 
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.box-title span{
+    /* border: 1px solid brown; */
+    align-self: end;
+}
+
+.box-title .title-span{
+    /* border: 1px solid red; */
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    /* margin-right: 1rem; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../assests/images/hot.png');
+    animation-name: breathe;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes breathe{
+    0%{
+        filter: drop-shadow(0px 0px 10px rgb(255, 115, 22));
+    }
+    50%{
+        filter: drop-shadow(0px 0px 20px rgb(255, 73, 73));
+    }
+    100%{
+        filter: drop-shadow(0px 0px 10px rgb(255, 115, 22));
+    }
+}
+
+.box-event-child{
+    /* border: 1px solid blue; */
+    margin: 2%;
+    /* margin-top: 20%; */
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-event-child span{
+    /* border: 1px solid green; */
+    margin-left: 50%;
+}
+
+.view-event-back-button{
+    align-self: flex-end;
+    color: white;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 10px;
+    border-style: none;
+    border: 3px solid #7c4ec6;
+    background-color: #5b12d1;
+}
+
+.view-event-back-button:hover{
+    color: gold;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.378);  
+}
+
+.title-span-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 550px) {
+
+    .view-event img{
+        margin-top: 5%;
+    }
+
+    .view-event-box{
+        position: relative;
+        margin-top: 0;
+        height: auto;
+        box-shadow: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.434);
+    }
+
+    .box-title{
+        align-self: auto;
+        font-size: x-large;
+        /* border: 1px solid red; */
+    }
+
+    .box-title .title-span{
+        /* border: 1px solid red; */
+        display: none;
+    }
+
+    .title-span-mobile{
+        display: flex;
+        position: absolute;
+        z-index: 56;
+        top: 11.5vh;
+        left: 7vw;
+        width: 3.5rem;
+        height: 3.5rem;
+        /* margin-right: 1rem; */
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../../assests/images/hot.png');
+        animation-name: breathe;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .box-event-child{
+        margin-left: 2%;
+    }
+
+    .box-event-child span{
+        margin-left: 0;
+        font-size: small;
+    }
+
+    .view-event-back-button{
+        align-self: center;
+    }
+
+    .box-event-child h5{
+        font-size: medium;
+    }
+
+    .box-event-child p{
+        font-size: small;
+    }
+}
