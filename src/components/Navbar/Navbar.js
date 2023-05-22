@@ -90,6 +90,9 @@ const Navbar = () => {
                     CONTACT US
                   </HashLink>
                 </li>
+                <li className="my- nav-item res">
+                    <Link to="/merchandise">MERCHANDISE</Link>
+                  </li>
                 {user.isAlumni ? (
                   <li className="my- nav-item res">
                     <Link to="/alumni">ALUMNI</Link>
