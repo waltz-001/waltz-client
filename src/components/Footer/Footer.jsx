@@ -20,7 +20,7 @@ const Footer = () => {
                             <li><a href="#About">About us</a></li>
                             <li><a href="#About">FAQs</a></li>
                             <li><a href="#About">SPP</a></li>
-                            <li><a href="#About">About Theme</a></li>
+                            <li><Link to={"/terms"}>Terms &amp; Conditions</Link></li>
                         </ul>
                     </div>
                     <div className="right-list">

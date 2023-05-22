@@ -14,6 +14,7 @@ import PasswordChange from "./components/SignIn/PasswordChange";
 import UserContext from "./utils/UserContext";
 import Alumni from "./components/Alumni/Alumni";
 import GalleryPage from "./pages/GalleryPage";
+import Terms from "./pages/TermsNServices"
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
@@ -56,6 +57,7 @@ function App() {
               <Route path="/alumni" element={<Alumni />} />
               <Route path="/detailedEvents" element={<DetailedEvents />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
             <Footer />
           </BrowserRouter>
