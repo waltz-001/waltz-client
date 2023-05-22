@@ -62,7 +62,7 @@
     /* margin-right: 1rem; */
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('/home/the15thsin/Warpinator/hottrending.png');
+    background-image: url('../../assests/images/hot.png');
     animation-name: breathe;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -152,7 +152,7 @@
         /* margin-right: 1rem; */
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url('/home/the15thsin/Warpinator/hottrending.png');
+        background-image: url('../../assests/images/hot.png');
         animation-name: breathe;
         animation-duration: 1s;
         animation-timing-function: ease-in-out;
