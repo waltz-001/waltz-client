@@ -14,6 +14,8 @@ import PasswordChange from "./components/SignIn/PasswordChange";
 import UserContext from "./utils/UserContext";
 import Alumni from "./components/Alumni/Alumni";
 import GalleryPage from "./pages/GalleryPage";
+import Team from "./components/Team/Team";
+
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
@@ -55,6 +57,7 @@ function App() {
               <Route path="/alumni" element={<Alumni />} />
               <Route path="/detailedEvents" element={<DetailedEvents />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/team" element={<Team />} />
             </Routes>
             <Footer />
           </BrowserRouter>
