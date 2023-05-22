@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.merch-container {
+    height: 260vh;
+    width: 100%;
+    ;
+}
+
+.merch-header {
+    background-image: url(/src/assests/images/hbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 460px;
+    /* text-align: center; */
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@font-face {
+    font-family: Antonio-Bold;
+    src: url(../../assests/fonts/Antonio-Bold.ttf);
+}
+
+.merch-header h1 {
+    font-size: 4.5em;
+    font-family: 'Antonio-Bold', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50%;
+    letter-spacing: 6rem;
+    margin-top: 20vh;
+    padding-left: 6vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(89.54deg, #e87b0f 33.99%, #FFF4E0 81.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    mix-blend-mode: normal;
+}
+
+.merch-option {
+    width: 100%;
+    height: 20vh;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.student {
+    background: #C79A25;
+    width: 22%;
+    height: 50px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.alumni {
+    background: #A174EA;
+    width: 22%;
+    height: 50px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.merch-body {
+    background: url(/src/assests/images/bg2.jpg);
+    background-size: contain;
+    /* background-repeat:inherit; */
+    width: 100%;
+    height: inherit;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.i1,
+.i2,
+.i3 {
+    width: 22%;
+    margin-left: 60px;
+}
+
+.i2 {
+    position: absolute;
+    top: 150vh;
+    left: 69.5vw;
+}
+
+.i3 {
+    margin-top: 500px;
+}
+
+@font-face {
+    font-family: 'Lovelo';
+    src: url(../../assests/fonts/Lovelo-Black.woff);
+}
+
+.f,
+.g,
+.i {
+    position: absolute;
+    top: 100vh;
+    left: 15vw;
+    color: #C79925;
+    font-size: 10rem;
+    font-weight: 600;
+    font-family: 'Lovelo', sans-serif;
+    letter-spacing: 1.2rem;
+    padding: 0%;
+    margin: 0%;
+}
+
+.g {
+    top: 162vh;
+    left: 48vw;
+    font-size: 10.5rem;
+}
+
+.i {
+    top: 220vh;
+}
+
+.txtgrad:not(txtgrad0) {
+    background: linear-gradient(89.54deg, #C79925 33.99%, #FFF4E0 81.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    mix-blend-mode: normal;
+}
+
+.txtgrad1 {
+    background: linear-gradient(89.76deg, #FFF4E0 35.99%, #C79925 76.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    mix-blend-mode: normal;
+}
+
+.txtgrad0 {
+    color: #C79A25;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 5px;
+
+}
+
+@media (max-width: 1000px) {
+    .merch-container {
+        height: 140vh;
+    }
+
+
+    .merch-header {
+        height: 200px;
+    }
+
+    .merch-header h1 {
+        font-size: 2rem;
+        letter-spacing: 1.2rem;
+        margin-top: 12vh;
+    }
+
+    .i1,
+    .i2,
+    .i3 {
+        width: 35%;
+        padding: 0%;
+        margin-left: 30px;
+    }
+
+    .i2 {
+        top: 660px;
+        left: 190px;
+        padding-right: 0%;
+        margin: 0%;
+    }
+
+    .i3 {
+        position: absolute;
+        top: 486px;
+    }
+
+    .f,
+    .g,
+    .i {
+        position: absolute;
+        top: 450px;
+        left: 56px;
+        font-size: 3.7rem;
+        letter-spacing: normal;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .g {
+        top: 686px;
+        left: 50px;
+        font-size: 4.5rem;
+    }
+
+    .i {
+        left: 80px;
+        top: 1000px;
+        letter-spacing: normal;
+        font-size: 3.1rem;
+    }
+}

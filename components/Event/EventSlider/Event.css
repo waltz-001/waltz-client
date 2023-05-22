@@ -1,0 +1,48 @@
+
+.cardBox{
+    /* border: 5px solid yellow; */
+    width: 22vw;
+    height: 22vw;
+    border-radius: 5%;
+    border: 1px solid rgba(193, 213, 255, 0.857);
+    box-shadow: 1px 5px 10px rgba(255, 255, 255, 0.118);
+    transition: 0.3s linear;
+    /* overflow-x: hidden; */
+}
+
+.cardBox img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+    object-fit: fill;
+}
+
+.cardBox:hover{
+    box-shadow: 2px 10px 20px rgba(255, 255, 255, 0.216);
+    cursor: pointer;
+    width: 24vw;
+    height: 24vw;
+}
+
+
+@media screen and (max-width: 1080px){
+    .cardBox{
+        height: 32vw;
+        width: 32vw;
+    }
+    .cardBox:hover{
+        height: 35vw;
+        width: 35vw;
+    }   
+}
+
+@media screen and (max-width: 480px){
+    .cardBox{
+        height: 60vw;
+        width: 90vw;
+    }
+    .cardBox:hover{
+        height: 75vw;
+        width: 75vw;
+    }
+}

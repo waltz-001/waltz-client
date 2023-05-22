@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+.socials-container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.socials{
+    height: 58vh;
+}
+.socials img{
+    position: absolute;
+}
+.summit img{
+    position: absolute;
+}
+.socials-contains{
+    height: 82vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.summit-contains{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.socialup{
+    width: 26%;
+}
+.socialdown{
+    width: 27%;
+}
+.blank{
+    width: 30%;
+}
+.blank2{
+    width: 30%;
+}
+.summit {
+    margin-top: 20vh;
+    height: 73vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.content-box{
+    color: white;
+    width: 20%;
+    
+}
+.content-box h1{
+    font-size:3em;
+    margin-bottom: 5%;
+    font-family: 'Days One', sans-serif;
+}
+.content-box p{
+    font-size: 1.1em;
+    margin-bottom: 10%;
+}
+.img1{
+    width: 30%;
+    height: 65%;
+    margin-top: 3.5%;
+}
+.img2{
+    width: 30%;
+    height: 65%;
+}
+.Event{
+    color: red;
+}
+@media only screen and (max-width: 1000px) {
+    .socials{
+        height: 48vh;
+    }
+    .socials-contains{
+        height: 48vh;
+    }
+    .content-box h1{
+        font-size: 2em;
+    }
+    .content-box p{
+        margin-bottom: 5%;
+    }
+    .content-box{
+        width: 30%;
+    }
+    .summit{
+        margin-top: 0vh;
+        height: 44vh;
+    }
+    .summit-contains{
+        height: 44vh;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    .socials-contains{
+        flex-direction: column;
+    }
+    .content-box{
+        width: 73%;
+        z-index: 3;
+    }
+    .blank{
+        width: 67%;
+    }
+    .img1{
+        width: 69%;
+    }
+    .socials-contains{
+        height: 54vh;
+    }
+    .socials{
+        height: 54vh;
+    }
+    .summit-contains{
+        flex-direction: column-reverse;
+    }
+    #summit{
+        text-align: right;
+    }
+    .blank2{
+        width: 67%;
+    }
+    .img2{
+        width: 69%;
+    }
+    .summit{
+        height: 52vh;
+        margin-top: 7vh;
+    }
+    .summit-contains{
+        height: 52vh;
+    }
+    .socialup{
+        width: 46%;
+        top: 82%;
+    }
+    .socialdown {
+        width: 45%;
+        top: 146%;
+    }
+}

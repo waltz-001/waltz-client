@@ -1,0 +1,50 @@
+.clicked{
+    border-color: #EAEEF5;
+    cursor: pointer;
+    text-align: left;
+}
+
+.clicked:hover{
+    border-color: #664DE5
+}
+
+.clicked:active{
+    border-color: #664DE5
+}
+
+@media screen and (max-width: 1228px){
+
+    .selectionDiv{
+        flex-wrap: wrap;
+    }
+
+    .clicked{
+        min-width:200px;
+    }
+ }
+
+@media screen and (max-width: 800px){
+
+   .submitButton{
+    min-width: 100%;
+   }
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    opacity: 1; /* Firefox */
+}
+
+.form-control{
+    color: white;
+}
+
+.form-control:focus{
+    color: white;
+    background-color: transparent;
+}
+
+.emailcheckbox {
+    text-align: left;
+    color: white;
+}

@@ -1,0 +1,43 @@
+.loader {
+    border: 8px solid rgb(31, 29, 29); /* Light grey */
+    border-top: 8px solid #664DE5; /* Blue */
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 2s linear infinite;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .message-text-box{
+    font-size: 1.3rem;
+  }
+  .message-box{
+    margin-top:40%;
+    margin-bottom: 40%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 500px){
+    .loader{
+      margin-top: 20%;
+    }
+    .message-box{
+      margin-top:50%;
+  }
+  @media (max-width: 400px){
+    .loader{
+      margin-top: 30%;
+    }
+    .message-box{
+      margin-top:60%;
+      margin-bottom: 60%;
+    }
+  }
+}
