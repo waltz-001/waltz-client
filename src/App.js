@@ -16,9 +16,11 @@ import Alumni from "./components/Alumni/Alumni";
 import GalleryPage from "./pages/GalleryPage";
 import Team from "./components/Team/Team";
 
+import Terms from "./pages/TermsNServices"
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
+
   useEffect(() => {
     setShowLoading(true);
     setTimeout(() => {
@@ -29,7 +31,7 @@ function App() {
   const [user, setUser] = useState({
     token: "",
     isAlumni: false,
-    events: []
+    events: [],
   });
 
   return (
@@ -57,7 +59,6 @@ function App() {
               <Route path="/alumni" element={<Alumni />} />
               <Route path="/detailedEvents" element={<DetailedEvents />} />
               <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/team" element={<Team />} />
             </Routes>
             <Footer />
           </BrowserRouter>
