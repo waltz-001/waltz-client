@@ -126,7 +126,6 @@ const Navbar = () => {
                 {/* <li className="my- nav-item res">
                   <Link to="/merchandise">MERCHANDISE </Link>
                 </li> */}
-<<<<<<< HEAD
 
                 {user.isAlumni ? (
                   <li className="my- nav-item res">
@@ -138,8 +137,6 @@ const Navbar = () => {
                     OUR TEAM
                   </HashLink>
                 </li>
-=======
->>>>>>> 9046f39819c08cee927bd269adb1d5d5dcde3d16
               </ul>
             </div>
           </div>
@@ -230,7 +227,6 @@ const Navbar = () => {
                 </div>
               </li>
             )}
-<<<<<<< HEAD
             {user.isAlumni ? (
               <li className="mt-2">
                 <Link to="/alumni">ALUMNI</Link>
@@ -242,8 +238,6 @@ const Navbar = () => {
                     OUR TEAM
                   </HashLink>
                 </li>
-=======
->>>>>>> 9046f39819c08cee927bd269adb1d5d5dcde3d16
           </ul>
 
         </div>

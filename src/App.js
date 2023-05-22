@@ -59,6 +59,7 @@ function App() {
               <Route path="/alumni" element={<Alumni />} />
               <Route path="/detailedEvents" element={<DetailedEvents />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/team" element={<Team />} />
             </Routes>
             <Footer />
           </BrowserRouter>
