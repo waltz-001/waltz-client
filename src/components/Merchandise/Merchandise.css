@@ -11,16 +11,17 @@
 }
 
 .merch-header {
-    background-image: url(/src/assests/images/hbg.png);
+    background-image: url(/src/assests/images/hbg2.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 460px;
+    height: 360px;
     /* text-align: center; */
     text-transform: capitalize;
     display: flex;
     justify-content: center;
     align-content: center;
+    
 }
 
 @font-face {
@@ -35,17 +36,16 @@
     font-weight: 600;
     line-height: 50%;
     letter-spacing: 6rem;
-    margin-top: 20vh;
+    margin-top: 5vh;
     padding-left: 6vw;
     display: flex;
     align-items: center;
     text-align: center;
     background: linear-gradient(89.54deg, #e87b0f 33.99%, #FFF4E0 81.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+   -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
     mix-blend-mode: normal;
 }
 
@@ -54,37 +54,38 @@
     height: 20vh;
     background: transparent;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
 .student {
-    background: #C79A25;
-    width: 22%;
-    height: 50px;
+    background: #A174EA;
+    width: 18%;
+    height: 40px;
     font-weight: 700;
     color: white;
     text-align: center;
     padding-top: 8px;
-    border-radius: 8px;
+    border-radius: 8px 0px 0px 8px;
     cursor: pointer;
 }
 
 .alumni {
     background: #A174EA;
-    width: 22%;
-    height: 50px;
+    width: 18%;
+    height: 40px;
     font-weight: 700;
     color: white;
     text-align: center;
     padding-top: 8px;
-    border-radius: 8px;
+    border-radius: 0px 8px 8px 0px;
     cursor: pointer;
+}.activebutton{
+    background-color: #C79925;
 }
-
 .merch-body {
-    background: url(/src/assests/images/bg2.jpg);
+    background: url(/src/assests/images/bg_merch.png);
     background-size: contain;
     /* background-repeat:inherit; */
     width: 100%;
@@ -172,20 +173,35 @@
 
 @media (max-width: 1000px) {
     .merch-container {
-        height: 140vh;
+        height: 180vh;
     }
 
 
     .merch-header {
-        height: 200px;
+        height: 160px;
     }
 
     .merch-header h1 {
         font-size: 2rem;
         letter-spacing: 1.2rem;
-        margin-top: 12vh;
+        margin-top: 4vh;
+    }
+    .student{
+        height: 1.6rem;
+        width: 30%;
+        font-size: 12px;
+        padding: 3px 2px 2px 2px;
+    }
+    .student p{
+        margin: 0;
     }
 
+    .alumni{ 
+         height: 1.6rem;
+        width: 30%;
+        font-size: 12px;
+        padding: 3px 2px 2px 2px ;
+    }
     .i1,
     .i2,
     .i3 {
@@ -210,8 +226,8 @@
     .g,
     .i {
         position: absolute;
-        top: 450px;
-        left: 56px;
+        top: 400px;
+        left: 90px;
         font-size: 3.7rem;
         letter-spacing: normal;
         padding: 0%;
@@ -221,12 +237,12 @@
     .g {
         top: 686px;
         left: 50px;
-        font-size: 4.5rem;
+        font-size: 3.7rem;
     }
 
     .i {
         left: 80px;
-        top: 1000px;
+        top: 65rem;
         letter-spacing: normal;
         font-size: 3.1rem;
     }

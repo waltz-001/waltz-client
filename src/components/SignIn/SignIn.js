@@ -6,8 +6,8 @@ import { useFormik } from "formik";
 import { signInSchema } from "../../schemas";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import Alert from "../Alert/Alert";
 import UserContext from "../../utils/UserContext";
+import AlertContext from "../../utils/AlertContext";
 
 const initialValues = {
   email: "",
@@ -18,8 +18,7 @@ function SignIn() {
   const emailRef = useRef(null);
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
-  const [data, setData] = useState(null);
-  const [isShow, setIsShow] = useState(false);
+  const { alert, setAlert } = useContext(AlertContext);
 
   const onSubmit = async (values) => {
     try {
@@ -43,19 +42,25 @@ function SignIn() {
       // await getGallery(response).then(()=> {
       //   console.log("gallery", gallery)
       // })
-
-
+      console.log(response);
       setUser({
         token: response.data.token,
         isAlumni: response.data.isAlumni,
-        events: eventResponse.status===200? eventResponse.data.events: []
+        events: eventResponse.status === 200 ? eventResponse.data.events : [],
       });
-      setIsShow(true);
+
+      setAlert({
+        isShow: true,
+        message: response,
+      });
+      console.log(alert);
       navigate("/");
     } catch (e) {
       console.log(e.response);
-      setData(e.response);
-      setIsShow(true);
+      setAlert({
+        isShow: true,
+        message: e.response,
+      });
     }
   };
 
@@ -77,11 +82,15 @@ function SignIn() {
         navigate("/");
         window.location.reload(true);
       }
-      setData(response);
-      setIsShow(true);
+      setAlert({
+        isShow: true,
+        message: response,
+      });
     } catch (e) {
-      setData(e.response);
-      setIsShow(true);
+      setAlert({
+        isShow: true,
+        message: e.response,
+      });
     }
   };
 
@@ -96,8 +105,6 @@ function SignIn() {
 
   return (
     <>
-      <Alert isShow={isShow} setIsShow={setIsShow} data={data} />
-
       <div className="signin-container containe">
         <div className="card-container borde" style={{ height: "81%" }}>
           <div

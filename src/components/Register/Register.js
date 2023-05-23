@@ -3,7 +3,7 @@ import PageTwo from "./PageTwo/PageTwo";
 import PageThree from "./PageThree/PageThree";
 import "./Register.css";
 import "../SignIn/SignIn.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import StepProgressBar from "./StepProgressBar/StepProgressBar";
 import { useFormik } from "formik";
 import { registerSchema } from "../../schemas";
@@ -11,6 +11,7 @@ import axios from "axios";
 import Alert from "../Alert/Alert";
 import Message from "../Message/Message";
 import { Link } from "react-router-dom";
+import AlertContext from "../../utils/AlertContext";
 const updateData = (values) => {
   let nameArray = values.firstName.split(" ", 2);
   values.firstName = nameArray[0];
@@ -43,22 +44,26 @@ const initialValues = {
 };
 
 const Register = () => {
-  const [isShow, setIsShow] = useState(false);
   const [isShowMessage, setIsShowMessage] = useState(false);
   const [data, setData] = useState(null);
-
+  const { alert, setAlert } = useContext(AlertContext);
   const onSubmit = async (values) => {
     try {
       const response = await axios.post(
         "https://waltz-server.onrender.com/register",
         values
       );
-
       setData(response);
-      setIsShow(true);
+      setAlert({
+        isShow: true,
+        message: response,
+      });
     } catch (e) {
       setData(e.response);
-      setIsShow(true);
+      setAlert({
+        isShow: true,
+        message: e.response,
+      });
     }
   };
 
@@ -90,14 +95,12 @@ const Register = () => {
 
   return (
     <div className="Register">
-      <Alert isShow={isShow} setIsShow={setIsShow} data={data} />
-
       <div className="signin-container containe">
         <h1 className="signin-head-txt">Let's Get Classy</h1>
         <div className="card-container borde" style={{ height: "71%" }}>
           <div
             className="card borde mb-3 shadow rounded"
-            style={{ width: "90%", height: "100%", marginBottom:"6rem" }}
+            style={{ width: "90%", height: "100%", marginBottom: "6rem" }}
           >
             <div className="row g-0">
               <div className="col-md-6 borde part1 shadow rounded">
