@@ -8,6 +8,7 @@ import Register from "./components/Register/Register";
 import Success from "./components/Success/Success";
 import Merchandise from "./components/Merchandise/Merchandise";
 import DetailedEvents from "./components/DetailedEvents/DetailedEvents";
+import ViewEvent from "./components/ViewEvent/ViewEvent";
 import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
 import PasswordChange from "./components/SignIn/PasswordChange";
@@ -58,6 +59,7 @@ function App() {
               <Route path="/merchandise" element={<Merchandise />} />
               <Route path="/alumni" element={<Alumni />} />
               <Route path="/detailedEvents" element={<DetailedEvents />} />
+                <Route path="/detailedEvents/viewEvent/:title" element = {<ViewEvent />}/>
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/team" element={<Team />} />
             </Routes>
