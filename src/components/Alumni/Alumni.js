@@ -74,11 +74,20 @@ function Alumni() {
                   <span className="text1 mb-3">Dear {userName},</span>
                   <span className="text2  ">
                     {" "}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vero dignissimos distinctio repellat laborum quia
-                    perferendis tempora libero quae, et nisi recusandae dolores
-                    natus sed minima aspernatur assumenda, maxime voluptatum
-                    blanditiis?{" "}
+                    Warm greetings from the students of University Institute of Technology! We hope this letter finds you in good health and high spirits.
+
+We are excited to inform you about the upcoming Cultural Fest Waltz 2k23, scheduled to take place on 26th may 2023 to 28th may 2023 at our campus. As valued members of our alumni community, we extend a heartfelt invitation for you to join us in celebrating this vibrant and diverse event.
+
+The Waltz 2k23 serves as a platform for our current students to showcase their talents, creativity, and cultural heritage through a wide range of performances, exhibitions, and activities. It is an occasion where students, faculty, staff, and alumni come together to foster a sense of unity and pride in our college.
+
+By attending the Waltz 2k23, you will have the opportunity to witness the exceptional talent of our students and reconnect with fellow alumni. We believe your presence and support will greatly inspire and motivate our current students, who look up to you as role models.
+
+We kindly request you to RSVP by 23rd may 2023 to confirm your attendance. If you have any special requirements or if there is anything we can do to facilitate your participation, please let us know, and we will be more than happy to assist you.
+
+Your support and presence at the Cultural Fest will contribute to its success and strengthen the bond between our alumni and our college community. We truly value your continued association with University Institute of Technology and look forward to your presence at this joyful celebration.
+
+Thank you for considering our invitation. We eagerly await your positive response.
+?{" "}
                   </span>
                   <span className="text3 row mx-auto mt-4 p-2 mb-5 borde ">
                     <span className="col-5 text3-part1 mx-auto borde text-start">
