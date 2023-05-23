@@ -4,8 +4,7 @@ const UserContext = createContext({
   user: {
     token: "",
     isAlumni: false,
-    events: null,
-    gallery: null,
+    events: [],
   },
 });
 

@@ -1,29 +1,35 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import "./Alert.css";
+import AlertContext from "../../utils/AlertContext";
 
-const Alert = ({ isShow, setIsShow, data }) => {
+const Alert = () => {
+  const { alert, setAlert } = useContext(AlertContext);
+
   useEffect(() => {
     setTimeout(() => {
-      setIsShow(false);
+      setAlert({
+        isShow: false,
+        message: null,
+      });
     }, 4000);
-  }, [isShow]);
+  }, [alert.isShow]);
 
-  if (isShow === false) return;
+  if (alert.isShow === false) return;
 
-  if (data.status === 201 || data.status === 200) {
+  if (alert.message.status === 201 || alert.message.status === 200) {
     return (
       <div className="alert-box position-absolute end-0">
         <div className="alert alert-success" role="alert">
-          {data.data.message}
+          {alert.message.data.message}
           <div className="timer-line"></div>
         </div>
       </div>
     );
-  } else if (data.status === 208) {
+  } else if (alert.message.status === 208) {
     return (
       <div className="alert-box position-absolute end-0">
         <div className="alert alert-primary" role="alert">
-          {data.data.message}
+          {alert.message.data.message}
           <div className="timer-line"></div>
         </div>
       </div>
@@ -32,7 +38,7 @@ const Alert = ({ isShow, setIsShow, data }) => {
     return (
       <div className="alert-box position-absolute end-0">
         <div className="alert alert-danger" role="alert">
-          {data.data.message}
+          {alert.message.data.message}
           <div className="timer-line"></div>
         </div>
       </div>
