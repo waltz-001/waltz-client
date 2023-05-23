@@ -87,7 +87,7 @@ We kindly request you to RSVP by 23rd may 2023 to confirm your attendance. If yo
 Your support and presence at the Cultural Fest will contribute to its success and strengthen the bond between our alumni and our college community. We truly value your continued association with University Institute of Technology and look forward to your presence at this joyful celebration.
 
 Thank you for considering our invitation. We eagerly await your positive response.
-?{" "}
+{" "}
                   </span>
                   <span className="text3 row mx-auto mt-4 p-2 mb-5 borde ">
                     <span className="col-5 text3-part1 mx-auto borde text-start">
@@ -99,7 +99,9 @@ Thank you for considering our invitation. We eagerly await your positive respons
 
                     <span className="col-6   text3-part2 mx-auto borde text-start">
                       <span className="text3-part1-uptxt">
-                        University Institute of Technology, Burdwan
+                        Students of UIT<br/>
+Media Committee of Waltz 2k23<br/>
+University Institute of Technology
                       </span>
                       <br />
                       <span className="text3-part1-uptxt">4:00pm - 8:00pm</span>
