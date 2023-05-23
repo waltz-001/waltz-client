@@ -1,6 +1,6 @@
 import React from "react";
 import "./Team.css";
-import usr from "../../assests/images/usr.jpeg"
+
 
 function Team() {
   return (
