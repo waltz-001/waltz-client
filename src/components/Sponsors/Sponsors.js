@@ -79,11 +79,13 @@ const Sponsors = () => {
                 
                 
                 >Their support and partnership has been invaluable in making WALTZ 2023 possible</motion.p>
+<a href="#contact-us">
                 <motion.div
                 whileHover={{scale:1.3}}
                 className='button-outline-transparent sponsor-btn'>
                     SPONSOR US
                 </motion.div>
+</a>
             </div>
         </div>
     )
