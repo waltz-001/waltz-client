@@ -6,7 +6,7 @@ function Team() {
   return (
     <div className="team-main">
       <div className="hero-team-heading text-center">
-        <span className="team-heading-txt shadow">Our Team</span>
+        <span className="team-heading-txt shadow">Our Team </span>
       </div>
       <div className="team-container text-light">
         <div class="container text-center mt-5 team-part1">
