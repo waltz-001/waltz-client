@@ -118,9 +118,8 @@
 }
 @media (max-width: 767px) {
     .active{
-        background-color: color(prophoto-rgb 0.38 0.2 0.56 / 0);
-        backdrop-filter: blur(17.2px);
-        -webkit-backdrop-filter: blur(17.2px);
+      backdrop-filter: none;
+      -webkit-backdrop-filter:none;
     }
     .navbar-container{
         position: sticky;
@@ -213,7 +212,7 @@
         list-style: none;
         justify-content: space-evenly;
         align-items: center;
-        
+
     }
     .navbar-toggle:checked ~ .navbar-option-list li {
         /* display: flex;
@@ -238,6 +237,7 @@
         border-radius: 3px;
     }
 
+   
     .res{
         margin: 2.3rem;
         
