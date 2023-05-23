@@ -10,8 +10,8 @@
   background-clip: text;
   text-decoration-color: transparent;
     font-weight: 700;
-    font-size: calc(0.514rem + 1.9vw);
-    
+    font-size: calc(0.514rem + 2.5vw);
+  
 }
 
 .waltz-txt{
@@ -67,7 +67,7 @@
     /* position: absolute; */
     position: relative;
     left: 30px;
-    top: 30px;
+    top: -20rem;
     z-index: 2;
     cursor: pointer;
   }
@@ -75,9 +75,13 @@
   .over {
     position: absolute;
     left: 80px;
-    top: 160px;
-    z-index: 3;
+    top: 280px;
+    z-index: 2  ;
     
+  }
+
+  .text2{
+    text-align: justify;
   }
 
   @media (max-width: 767px) {
@@ -87,7 +91,7 @@
     .under {
       position: relative;
       left: 0px;
-      top: -190px;
+      top: -45.5rem;
       z-index: 2;
       cursor: pointer;
     }
@@ -95,9 +99,15 @@
     .over {
       position: absolute;
       left: 0.8rem;
-      top:14.0rem;
+      top:6.0rem;
       z-index: 3;
       width: 80%;
+    }
+
+    .subhero-section-part1-bodytxt{
+      /* border:  #D9BA7E 1px solid; */
+      width: 21.2rem;
+      
     }
   }
 

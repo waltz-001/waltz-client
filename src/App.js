@@ -15,9 +15,15 @@ import PasswordChange from "./components/SignIn/PasswordChange";
 import UserContext from "./utils/UserContext";
 import Alumni from "./components/Alumni/Alumni";
 import GalleryPage from "./pages/GalleryPage";
-import Terms from "./pages/TermsNServices";
+import Team from "./components/Team/Team";
+
+import Terms from "./pages/TermsNServices"
+
 import AlertContext from "../src/utils/AlertContext";
 import Alert from "./components/Alert/Alert";
+
+
+
 
 function App() {
   const [showLoading, setShowLoading] = useState(false);
@@ -71,6 +77,7 @@ function App() {
                 />
                 <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/team" element={<Team />} />
               </Routes>
               <Footer />
             </AlertContext.Provider>
