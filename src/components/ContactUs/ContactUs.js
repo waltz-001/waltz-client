@@ -108,15 +108,15 @@ const ContactUs = () => {
           <div className='email-us'>
             <h3>Email Us on:</h3>
             <ul>
-              <li>xyz@gmail.com</li>
-              <li>uit@gmail.com</li>
+              <li>waltz.uit.bu.2023.tech@gmail.com</li>
+              <li>admin@waltzuit.in</li>
             </ul>
           </div>
           <div className='call-us'>
             <h3>Call us on:</h3>
             <ul>
-              <li>+91-294250825</li>
-              <li>+91-395859836</li>
+              <li>+91 7407788005</li>
+              <li>+91 9123699383</li>
             </ul>
           </div>
         </motion.div>

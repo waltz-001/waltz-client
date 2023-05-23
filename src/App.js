@@ -19,6 +19,12 @@ import Team from "./components/Team/Team";
 
 import Terms from "./pages/TermsNServices"
 
+import AlertContext from "../src/utils/AlertContext";
+import Alert from "./components/Alert/Alert";
+
+
+
+
 function App() {
   const [showLoading, setShowLoading] = useState(false);
 
@@ -34,6 +40,10 @@ function App() {
     isAlumni: false,
     events: [],
   });
+  const [alert, setAlert] = useState({
+    isShow: false,
+    message: null,
+  });
 
   return (
     <div className="App">
@@ -42,28 +52,35 @@ function App() {
       ) : (
         <UserContext.Provider value={{ user: user, setUser: setUser }}>
           <BrowserRouter>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/signin" element={<SignIn />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/detailedEvents" element={<DetailedEvents />} />
-              <Route
-                path="/register/:id/verify/:tokenId"
-                element={<Success />}
-              />
-              <Route
-                path="/reset-password/:id/update/:tokenId"
-                element={<PasswordChange />}
-              />
-              <Route path="/merchandise" element={<Merchandise />} />
-              <Route path="/alumni" element={<Alumni />} />
-              <Route path="/detailedEvents" element={<DetailedEvents />} />
-                <Route path="/detailedEvents/viewEvent/:title" element = {<ViewEvent />}/>
-              <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/team" element={<Team />} />
-            </Routes>
-            <Footer />
+            <AlertContext.Provider value={{ alert: alert, setAlert: setAlert }}>
+              <Alert />
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/signin" element={<SignIn />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/detailedEvents" element={<DetailedEvents />} />
+                <Route
+                  path="/register/:id/verify/:tokenId"
+                  element={<Success />}
+                />
+                <Route
+                  path="/reset-password/:id/update/:tokenId"
+                  element={<PasswordChange />}
+                />
+                <Route path="/merchandise" element={<Merchandise />} />
+                <Route path="/alumni" element={<Alumni />} />
+                <Route path="/detailedEvents" element={<DetailedEvents />} />
+                <Route
+                  path="/detailedEvents/viewEvent/:title"
+                  element={<ViewEvent />}
+                />
+                <Route path="/gallery" element={<GalleryPage />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/team" element={<Team />} />
+              </Routes>
+              <Footer />
+            </AlertContext.Provider>
           </BrowserRouter>
         </UserContext.Provider>
       )}

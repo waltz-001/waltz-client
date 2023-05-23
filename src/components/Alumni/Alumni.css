@@ -91,7 +91,7 @@
     .under {
       position: relative;
       left: 0px;
-      top: -72rem;
+      top: -45.5rem;
       z-index: 2;
       cursor: pointer;
     }
@@ -99,9 +99,15 @@
     .over {
       position: absolute;
       left: 0.8rem;
-      top:14.0rem;
+      top:6.0rem;
       z-index: 3;
       width: 80%;
+    }
+
+    .subhero-section-part1-bodytxt{
+      /* border:  #D9BA7E 1px solid; */
+      width: 21.2rem;
+      
     }
   }
 
