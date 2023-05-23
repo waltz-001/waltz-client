@@ -91,8 +91,8 @@ const Navbar = () => {
                   </HashLink>
                 </li>
                 <li className="my- nav-item res">
-                    <Link to="/merchandise">MERCHANDISE</Link>
-                  </li>
+                  <Link to="/merchandise">MERCHANDISE</Link>
+                </li>
                 {user.isAlumni ? (
                   <li className="my- nav-item res">
                     <Link to="/alumni">ALUMNI</Link>
@@ -183,11 +183,18 @@ const Navbar = () => {
                 </HashLink>
               </li>
             </div>
+            {user.token !== "" ? (
+              <div className="link stroke">
+                <li className="mt-2">
+                  <HashLink smooth to="/#contact-us">
+                    CONTACT US
+                  </HashLink>
+                </li>
+              </div>
+            ) : null}
             <div className="link stroke">
               <li className="mt-2">
-                <HashLink smooth to="/#contact-us">
-                  CONTACT US
-                </HashLink>
+                <Link to="/merchandise">MERCHANDISE</Link>
               </li>
             </div>
 

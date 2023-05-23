@@ -29,7 +29,7 @@
 }
 
 .navbar-option-list{
-    width: 60%;
+    width: 80%;
     align-items: center;
     justify-content: center;
 }
@@ -119,7 +119,8 @@
 @media (max-width: 767px) {
     .active{
         background-color: color(prophoto-rgb 0.38 0.2 0.56 / 0);
-        backdrop-filter: none;
+        backdrop-filter: blur(17.2px);
+        -webkit-backdrop-filter: blur(17.2px);
     }
     .navbar-container{
         position: sticky;
