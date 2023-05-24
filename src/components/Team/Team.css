@@ -147,4 +147,8 @@ height: 220px;
         transition: .6s;
         z-index: 1;
       }
+
+      .team-main{
+        z-index: inherit;
+      }
 }
