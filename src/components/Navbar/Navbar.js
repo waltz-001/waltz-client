@@ -124,14 +124,12 @@ const Navbar = () => {
                     </Link>
                   </li>
                 )}
-               
 
                 {/* <li className="my- nav-item res">
                   <Link to="/merchandise">MERCHANDISE </Link>
                 </li> */}
 
-                
-                 <li className="my- nav-item res">
+                <li className="my- nav-item res">
                   <HashLink smooth to="/team">
                     OUR TEAM
                   </HashLink>
@@ -233,26 +231,19 @@ const Navbar = () => {
                 </div>
               </li>
             )}
-            {user.isAlumni ? (
-              <li className="mt-2">
-                <Link to="/alumni">ALUMNI</Link>
-              </li>
-            ) : null}
 
-<li className="mt-2">
-                  <HashLink smooth to="/team">
-                    OUR TEAM
-                  </HashLink>
-                </li>
+            <li className="mt-2">
+              <HashLink smooth to="/team">
+                OUR TEAM
+              </HashLink>
+            </li>
           </ul>
-
         </div>
         <div className="navbar-option-icons mt-2">
           {/* <img src={SearchIcon} height={19} alt='search-icon' />
 
                 <img src={UserIcon} height={19} alt='user-icon' /> */}
         </div>
-
       </nav>
     </>
   );
