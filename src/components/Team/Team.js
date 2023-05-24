@@ -4,6 +4,7 @@ import axios from "axios";
 import AlertContext from "../../utils/AlertContext";
 import useTeams from "../../utils/useTeams";
 import Card from "../../utils/Fields/Card";
+
 const Team = () => {
   const [teams, setTeams] = useState([]);
   const { alert, setAlert } = useContext(AlertContext);
