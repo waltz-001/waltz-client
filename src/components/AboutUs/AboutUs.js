@@ -87,7 +87,7 @@ ref={ref}
      animate={inView ? "visible" : "hidden"}
      variants={animationVariants}
      transition={{ duration: 0.5 }}
-     whileHover={{scale:1.5}}
+     whileHover={{scale:1.3}}
      className='about-us-content-left box'>
         <h3>
             WALTZ 23
@@ -102,7 +102,7 @@ ref={ref}
      animate={inView ? "visible" : "hidden"}
      variants={animationVariants1}
      transition={{ duration: 0.5 }}
-     whileHover={{scale:1.5}}
+     whileHover={{scale:1.3}}
     
       className='about-us-content-right box'>
         <h3>
