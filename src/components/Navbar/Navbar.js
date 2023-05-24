@@ -130,11 +130,7 @@ const Navbar = () => {
                   <Link to="/merchandise">MERCHANDISE </Link>
                 </li> */}
 
-                {user.isAlumni ? (
-                  <li className="my- nav-item res">
-                    <Link to="/alumni">ALUMNI</Link>
-                  </li>
-                ) : null}
+                
                  <li className="my- nav-item res">
                   <HashLink smooth to="/team">
                     OUR TEAM
