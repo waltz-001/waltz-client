@@ -91,7 +91,7 @@ function Alumni() {
                     exceptional talent of our students and reconnect with fellow
                     alumni. We believe your presence and support will greatly
                     inspire and motivate our current students, who look up to
-                    you as role models. We kindly request you to RSVP by 23rd
+                    you as role models. We kindly request you to RSVP by 24th
                     may 2023 to confirm your attendance. If you have any special
                     requirements or if there is anything we can do to facilitate
                     your participation, please let us know, and we will be more
