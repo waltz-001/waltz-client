@@ -1,6 +1,7 @@
 .about-us {
   background-color: black;
   position: relative;
+  user-select: none;
 }
 
 .right-arrow-container {
@@ -14,8 +15,13 @@
 }
 
 .about-us-container {
+  /* border: 1px solid red; */
   background: url("../../assests/images/AboutUs.svg");
-  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 4rem;
+  height: 100vh;
+  /* height: 500px; */
   color: rgb(255, 255, 255);
   padding: 50px;
   overflow: hidden;
@@ -82,6 +88,11 @@
     line-height: 30px;
   }
 
+  .about-us-container{
+    height: 70vh;
+    background-position-y: 0rem;
+  }
+
   .about-us-content {
     display: flex;
     flex-direction: column;
@@ -101,6 +112,7 @@
   .about-us-container {
     padding-left: 0px;
     padding-right: 0;
+    background-size: cover;
   }
 
   .about-us-content-left {
