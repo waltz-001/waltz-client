@@ -13,7 +13,7 @@ const Card = ({ name, imageUrl, position, description, github, linkedin }) => {
 
         <div class="social-links">
           {github ? (
-            <a href={github}>
+            <a href={github} target="_blank" >
               <i class="fab fa-github"></i>
             </a>
           ) : null}

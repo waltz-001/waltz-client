@@ -15,7 +15,7 @@ const Team = () => {
       const response = await axios.get(
         "https://waltz-server.onrender.com/admin/teams"
       );
-      console.log(response.data.teams);
+      // console.log(response.data.teams);
       setTeams(response.data.teams);
     } catch (e) {
       setAlert({
@@ -30,11 +30,11 @@ const Team = () => {
 
   return (
     <div className="team-main">
-      <div className="hero-team-heading text-center">
-        <span className="team-heading-txt shadow">Our Team </span>
+      <div className="hero-team-heading text-center pt-5 pb-4">
+        <span className="team-heading-txt shadow">Our Team</span>
       </div>
 
-      <div className="team-container text-light">
+      <div className="team-container text-light pb-5">
         {core.length === 0 ? null : (
           <div class="container text-center mt-5 team-part1">
             <span className="part1-headtxt">CORE TEAM</span>
