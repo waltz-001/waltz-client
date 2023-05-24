@@ -1,29 +1,32 @@
 .team-main{
     background: url(../../assests/images/team-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-repeat: repeat;
+    background-size: auto;
 }
+
 .team-heading-txt{
     font-family: "Lovelo-line-light";
-    background: linear-gradient(270.02deg, #A023BF 18.27%, #5038C7 61.7%);
--webkit-background-clip: text;
+    letter-spacing: 20px;
+    background: linear-gradient(270.02deg, #ffff 18.27%, #5B13D1 61.7%);
+  -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
 transform: matrix(1, 0, 0, 1, 0, 0);
     text-align: center;
     font-weight: 700;
-    font-size: calc(0.514rem + 2.5vw);
-    
+    font-size: calc(2rem + 2.5vw);
+    padding-top: 2rem;
     
 }
 
 .part1-headtxt{
-    color: #D9BA7E;
+    /* color: #D9BA7E; */
+    background: linear-gradient(270.02deg, #5B13D1 18.27%, #fff 61.7%);
+    letter-spacing: 0.4rem;
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-decoration-color: transparent;
+    /* text-decoration-color: transparent; */
       font-weight: 700;
       font-size: calc(0.514rem + 1.9vw);
       
@@ -34,8 +37,10 @@ transform: matrix(1, 0, 0, 1, 0, 0);
   position: relative;
   font-family: sans-serif;
   width: 220px;
-  height: 220px;
+height: 220px;
   background: url(../../assests/images/person-bg.jpg);
+  background-size: 15rem 18rem;
+  background-repeat: no-repeat;
   padding: 30px;
   border-radius: 50%;
   box-shadow: 0 0 22px #3336;
@@ -52,7 +57,7 @@ transform: matrix(1, 0, 0, 1, 0, 0);
   width: 100%;
   height: 100%;
   transition: .6s;
-  z-index: 99;
+  z-index: 1;
   filter: grayscale(100%);
 }
 .profile-card:hover .img{
@@ -90,14 +95,35 @@ transform: matrix(1, 0, 0, 1, 0, 0);
 .caption .social-links a{
   color: #fff;
   margin-right: 15px;
+  /* margin-bottom: 2rem; */
   font-size: 21px;
   transition: .6s;
+}
+.team-body{
+  width: 80%;
+}
+.team-section{
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.texting{
+  font-size: 0.4rem;
 }
 .social-links a:hover{
   color: #0c52a1;
 }
 
 @media screen and (max-width: 768px){
+  .team-main{
+    background: url(../../assests/images/team-bg.png);
+    background-repeat:repeat;
+    background-size: auto;
+}
 
     .team-heading-txt{
         font-size: calc(0.514rem + 5.5vw);
@@ -112,18 +138,17 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     
     .profile-card{
      
-        width: 200px;
-        height: 200px;
+      width: 220px;
+      height: 220px;
         background: url(../../assests/images/person-bg.jpg);
+        background-size: 15rem 18rem;
         margin-bottom: 3rem;
       }
       .profile-card .img{
         position: relative;
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         transition: .6s;
-        z-index: 99;
-        margin-left: 0.8rem;
-        margin-top: 0.8rem;
+        z-index: 1;
       }
 }

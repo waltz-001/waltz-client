@@ -1,195 +1,84 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Team.css";
+import axios from "axios";
+import AlertContext from "../../utils/AlertContext";
+import useTeams from "../../utils/useTeams";
+import Card from "../../utils/Fields/Card";
+const Team = () => {
+  const [teams, setTeams] = useState([]);
+  const { alert, setAlert } = useContext(AlertContext);
+  const [core, tech, media, culture] = useTeams(teams);
 
+  const getTeams = async () => {
+    try {
+      const response = await axios.get(
+        "https://waltz-server.onrender.com/admin/teams"
+      );
+      setTeams(response.data.teams);
+    } catch (e) {
+      setAlert({
+        isShow: true,
+        message: e.response,
+      });
+    }
+  };
+  useEffect(() => {
+    getTeams();
+  }, []);
 
-function Team() {
   return (
     <div className="team-main">
       <div className="hero-team-heading text-center">
         <span className="team-heading-txt shadow">Our Team </span>
       </div>
+
       <div className="team-container text-light">
-        <div class="container text-center mt-5 team-part1">
-          <span className="part1-headtxt">EXECUTIVE</span>
-
-{/* SECTION ONE START */}
-
-          <div class="row justify-content-evenly team-part1-content mt-5">
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg" />
-              </div>
-              <div class="caption">
-                <h3>Vin Diesel</h3>
-                <p>Senior App Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
-            </div>
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" />
-              </div>
-              <div class="caption">
-                <h3>David Corner</h3>
-                <p>Front End Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
-            </div>
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg" />
-              </div>
-              <div class="caption">
-                <h3>Tom Cruise</h3>
-                <p>Full Stact Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
+        {core.length === 0 ? null : (
+          <div class="container text-center mt-5 team-part1">
+            <span className="part1-headtxt">CORE TEAM</span>
+            <div class="row justify-content-evenly team-part1-content mt-5">
+              {core.map((core) => (
+                <Card key={core._id} {...core} />
+              ))}
             </div>
           </div>
-{/* SECTION ONE END */}
-{/* SECTION TWO START */}
+        )}
+        {tech.length === 0 ? null : (
+          <div class="container text-center mt-5 team-part1 team-body">
+            <span className="part1-headtxt">TECH TEAM</span>
 
-<div class="row justify-content-evenly team-part1-content mt-5">
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg" />
-              </div>
-              <div class="caption">
-                <h3>Vin Diesel</h3>
-                <p>Senior App Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
-            </div>
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" />
-              </div>
-              <div class="caption">
-                <h3>David Corner</h3>
-                <p>Front End Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
-            </div>
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg" />
-              </div>
-              <div class="caption">
-                <h3>Tom Cruise</h3>
-                <p>Full Stact Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
+            <div class="team-section">
+              {tech.map((tech) => (
+                <Card key={tech._id} {...tech} />
+              ))}
             </div>
           </div>
-{/* SECTION TWO END */}
-        </div>
+        )}
+        {culture.length === 0 ? null : (
+          <div class="container text-center mt-5 team-part1">
+            <span className="part1-headtxt">CULTURE TEAM</span>
 
-        <div class="container text-center mt-5 team-part1">
-          <span className="part1-headtxt">TECH LEAD</span>
-
-{/* SECTION ONE START */}
-
-          <div class="row justify-content-evenly team-part1-content mt-5">
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg" />
-              </div>
-              <div class="caption">
-                <h3>Vin Diesel</h3>
-                <p>Senior App Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
-            </div>
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" />
-              </div>
-              <div class="caption">
-                <h3>David Corner</h3>
-                <p>Front End Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
-            </div>
-            <div class="profile-card col-4">
-              <div class="img">
-                <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg" />
-              </div>
-              <div class="caption">
-                <h3>Tom Cruise</h3>
-                <p>Full Stact Developer</p>
-                <div class="social-links">
-                  <a href="#">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-linkedin"></i>
-                  </a>                 
-                </div>
-              </div>
+            <div class="row justify-content-evenly team-part1-content mt-5">
+              {culture.map((culture) => (
+                <Card key={culture._id} {...culture} />
+              ))}
             </div>
           </div>
-{/* SECTION ONE END */}
+        )}
+        {media.length === 0 ? null : (
+          <div class="container text-center mt-5 team-part1">
+            <span className="part1-headtxt">MEDIA TEAM</span>
 
-        </div>
+            <div class="row justify-content-evenly team-part1-content mt-5">
+              {media.map((media) => (
+                <Card key={media._id} {...media} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default Team;
