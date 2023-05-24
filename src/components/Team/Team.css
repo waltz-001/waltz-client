@@ -20,7 +20,6 @@ transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .part1-headtxt{
-    /* color: #D9BA7E; */
     background: linear-gradient(270.02deg, #5B13D1 18.27%, #fff 61.7%);
     letter-spacing: 0.4rem;
     -webkit-background-clip: text;
@@ -111,9 +110,6 @@ height: 220px;
   gap: 5rem;
 }
 
-.texting{
-  font-size: 0.4rem;
-}
 .social-links a:hover{
   color: #0c52a1;
 }

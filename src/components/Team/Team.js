@@ -15,6 +15,7 @@ const Team = () => {
       const response = await axios.get(
         "https://waltz-server.onrender.com/admin/teams"
       );
+      console.log(response.data.teams);
       setTeams(response.data.teams);
     } catch (e) {
       setAlert({

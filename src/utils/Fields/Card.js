@@ -1,14 +1,15 @@
-const Card = ({ name, imageUrl, position, github, linkedin }) => {
+import "./Card.css";
+const Card = ({ name, imageUrl, position, description, github, linkedin }) => {
   return (
     <div class="profile-card col-4">
       <div class="img">
         <img src={imageUrl} />
       </div>
       <div class="caption">
-        <h3>{name}</h3>
+        <h3 className="texting">{name}</h3>
 
-        <p className="fs-6">{position}</p>
-        {/* <p className="fs-6">IT 2nd Year</p> */}
+        <p className="texting">{position}</p>
+        <p className="texting">{description}</p>
 
         <div class="social-links">
           {github ? (
