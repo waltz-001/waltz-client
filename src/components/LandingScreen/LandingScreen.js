@@ -29,7 +29,7 @@ const LandingScreen = () => {
             alt="logo"
           />
         </div>
-        <Timer />
+
         <div className="landing-button-container ">
           <HashLink smooth to={"/#about-us"}>
             <motion.div
