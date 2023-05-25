@@ -106,8 +106,8 @@ const Sponsors = () => {
         </motion.p>
         <div className="SponsorNames">
           <SponsorCard
-            SponsorName="SARACHI"
-            SponsorType="Title Sponsor"
+            SponsorName="SHRACHI"
+            SponsorType="Powered By"
             SponsorImage={Sarachi}
           />
           <SponsorCard
@@ -117,7 +117,7 @@ const Sponsors = () => {
           />
           <SponsorCard
             SponsorName="New Life Hospital"
-            SponsorType="Medical Partner"
+            SponsorType="Health Partner"
             SponsorImage={NewLifeHospital}
           />
         </div>
