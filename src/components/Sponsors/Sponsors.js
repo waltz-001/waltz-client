@@ -51,8 +51,10 @@ function SponsorCard({SponsorImage, SponsorName, SponsorType}) {
   return (
     <Tilt options={defaultTiltOptions} className="SponsorCard">
       <img src={SponsorImage} alt={SponsorName} className="SponsorImage" />
-      <p className="SponsorName">{SponsorName}</p>
-      <p className="SponsorType">{SponsorType}</p>
+      <div className="SponsorCardText">
+        <p className="SponsorName">{SponsorName}</p>
+        <p className="SponsorType">{SponsorType}</p>
+      </div>
     </Tilt>
   );
 }
@@ -103,7 +105,21 @@ const Sponsors = () => {
           possible
         </motion.p>
         <div className="SponsorNames">
-        <SponsorCard SponsorName="SARACHI" SponsorType="Title Sponsor" SponsorImage={Sarachi}/>
+          <SponsorCard
+            SponsorName="SARACHI"
+            SponsorType="Title Sponsor"
+            SponsorImage={Sarachi}
+          />
+          <SponsorCard
+            SponsorName="Peaches & Cream"
+            SponsorType="Hair and Grooming Partner"
+            SponsorImage={PeachNCream}
+          />
+          <SponsorCard
+            SponsorName="New Life Hospital"
+            SponsorType="Medical Partner"
+            SponsorImage={NewLifeHospital}
+          />
         </div>
         <HashLink to={"/#contact-us"}>
           <motion.div

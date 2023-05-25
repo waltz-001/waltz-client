@@ -144,15 +144,54 @@
 }
 .SponsorNames {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .SponsorCard {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  width: 280px;
-  height: 400px;
+  width: 250px;
+  height: 360px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: flex-end;
+}
+
+.SponsorImage
+{
+  width: 95%;
+  align-self:center ;
+  margin-top: 20px;
+  max-height: 50%;
+  size: fixed;
+  border-radius: 3px;
+  justify-self: flex-start;
+}
+.SponsorName
+{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.SponsorType
+{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.SponsorCardText
+{
+  align-items: center;
+  justify-self: end;
+  justify-content: flex-start;
+  height: 45%;
 }
