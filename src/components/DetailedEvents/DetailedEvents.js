@@ -63,7 +63,7 @@ function DetailedEvents() {
           events.length === 0 ?
             <p>Events will be scheduled soon stay tuned</p> : 
               events.filter(ev => ev.date - 25 === eventDay).map((bx) =>
-                <Cards key={bx.key} id={bx._id} url={bx.imageUrl} title={bx.title} desc={bx.description} startTime={bx.startTime} endTime={bx.endTime} />
+                <Cards key={bx.key} id={bx._id} url={bx.imageUrl} title={bx.title} desc={bx.description} startTime={bx.startTime} endTime={bx.endTime} date={bx.date}/>
               )
         }
       </div>
