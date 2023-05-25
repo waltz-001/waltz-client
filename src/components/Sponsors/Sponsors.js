@@ -4,7 +4,11 @@ import "./Sponsors.css";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
+import { Tilt } from 'react-tilt'
 
+import NewLifeHospital from "./SponsorImages/NewLifeHospital.jpeg";
+import PeachNCream from "./SponsorImages/PeachNCream.jpeg";
+import Sarachi from "./SponsorImages/Sarachi.jpeg";
 function useIntersectionObserver() {
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
@@ -29,6 +33,30 @@ function useIntersectionObserver() {
   }, []);
 
   return [ref, inView];
+}
+
+const defaultTiltOptions = {
+    reverse:        false,  // reverse the tilt direction
+    max:            35,     // max tilt rotation (degrees)
+    perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+    scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
+    speed:          1000,   // Speed of the enter/exit transition
+    transition:     true,   // Set a transition on enter/exit.
+    axis:           null,   // What axis should be disabled. Can be X or Y.
+    reset:          true,    // If the tilt effect has to be reset on exit.
+    easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+}
+
+function SponsorCard({SponsorImage, SponsorName, SponsorType}) {
+  return (
+    <Tilt options={defaultTiltOptions} className="SponsorCard">
+      <img src={SponsorImage} alt={SponsorName} className="SponsorImage" />
+      <div className="SponsorCardText">
+        <p className="SponsorName">{SponsorName}</p>
+        <p className="SponsorType">{SponsorType}</p>
+      </div>
+    </Tilt>
+  );
 }
 const Sponsors = () => {
   const [ref, inView] = useIntersectionObserver();
@@ -76,6 +104,23 @@ const Sponsors = () => {
           Their support and partnership has been invaluable in making WALTZ 2023
           possible
         </motion.p>
+        <div className="SponsorNames">
+          <SponsorCard
+            SponsorName="SARACHI"
+            SponsorType="Title Sponsor"
+            SponsorImage={Sarachi}
+          />
+          <SponsorCard
+            SponsorName="Peaches & Cream"
+            SponsorType="Hair and Grooming Partner"
+            SponsorImage={PeachNCream}
+          />
+          <SponsorCard
+            SponsorName="New Life Hospital"
+            SponsorType="Medical Partner"
+            SponsorImage={NewLifeHospital}
+          />
+        </div>
         <HashLink to={"/#contact-us"}>
           <motion.div
             whileHover={{ scale: 1.3 }}
