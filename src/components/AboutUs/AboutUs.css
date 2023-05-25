@@ -15,7 +15,6 @@
 }
 
 .about-us-container {
-  /* border: 1px solid red; */
   background: url("../../assests/images/AboutUs.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -37,6 +36,7 @@
 
 .about-us-content-left,
 .about-us-content-right {
+  /* border: 1px solid red; */
   max-width: 320px;
   /* max-height: 22rem; */
   overflow-y: scroll;
@@ -87,39 +87,40 @@
     font-size: 2rem;
     line-height: 30px;
   }
-
+  
   .about-us-container{
-    height: 70vh;
+    height: 60vh;
     background-position-y: 0rem;
   }
-
+  
   .about-us-content {
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     object-fit: cover;
-    height: 60vh;
+    height: 50vh;
     width: 88%;
     overflow-y: hidden;
     overflow-x: auto;
     margin: 5vh 2vw;
   }
-
+  
   .about-us-content::-webkit-scrollbar {
     width: 0;
   }
-
+  
   .about-us-container {
     padding-left: 0px;
     padding-right: 0;
     background-size: cover;
   }
-
+  
   .about-us-content-left {
     padding-right: 10vw;
     overflow-x: auto;
   }
-
+  
   .about-us-content-right,
   .about-us-content-left {
     margin-left: 50px;

@@ -6,6 +6,7 @@
     backdrop-filter: blur(5px);
     height: auto;
     overflow-x: hidden;
+    user-select: none;
 }
 
 .cont{
