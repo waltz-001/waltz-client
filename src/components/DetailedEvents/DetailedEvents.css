@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     height: auto;
     margin-top: -2rem;
+    user-select: none;
 }
 
 .head{
@@ -114,8 +115,5 @@
     .eventCards{
         width: 80vw;
     }
-    
-    
-    
 }
 
