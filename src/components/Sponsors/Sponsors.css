@@ -3,6 +3,7 @@
   background-size: cover;
 }
 
+
 .sponsors-container-top-image img {
   position: absolute;
   overflow-y: hidden;
@@ -143,7 +144,7 @@
   }
 }
 .SponsorNames {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -164,6 +165,7 @@
   flex-direction: column;
   padding: 5px;
   justify-content: flex-end;
+  margin: 5px;
 }
 
 .SponsorImage
