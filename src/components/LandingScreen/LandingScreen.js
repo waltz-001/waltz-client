@@ -29,7 +29,7 @@ const LandingScreen = () => {
             alt="logo"
           />
         </div>
-
+        <Timer />
         <div className="landing-button-container ">
           <HashLink smooth to={"/#about-us"}>
             <motion.div
@@ -41,14 +41,16 @@ const LandingScreen = () => {
               </p>
             </motion.div>
           </HashLink>
-          <Link to="/register">
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              className="button-solid-round register-btn mt-5 "
-            >
-              <p className="mt-3">REGISTER NOW</p>
-            </motion.div>
-          </Link>
+          {user.token === "" ? (
+            <Link to="/register">
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                className="button-solid-round register-btn mt-5 "
+              >
+                <p className="mt-3">REGISTER NOW</p>
+              </motion.div>
+            </Link>
+          ) : null}
         </div>
       </div>
     </div>
