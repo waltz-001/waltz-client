@@ -30,7 +30,7 @@
 
 .App{
   background-color: black;
-  background-image: url('./assests/images/landing_image.jpg');
+  background-image: url('./assests/images/landing_image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
