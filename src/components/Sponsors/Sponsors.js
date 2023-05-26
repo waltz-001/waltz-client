@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
 import { Tilt } from 'react-tilt'
-
 import NewLifeHospital from "./SponsorImages/NewLifeHospital.jpeg";
 import PeachNCream from "./SponsorImages/PeachNCream.jpeg";
 import Sarachi from "./SponsorImages/Sarachi.jpeg";
@@ -15,7 +14,6 @@ import FitnessFactory from "./SponsorImages/FitnessFactory.png"
 function useIntersectionObserver() {
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -23,21 +21,17 @@ function useIntersectionObserver() {
       },
       { threshold: 0.1 }
     );
-
     if (ref.current) {
       observer.observe(ref.current);
     }
-
     return () => {
       if (ref.current) {
         observer.unobserve(ref.current);
       }
     };
   }, []);
-
   return [ref, inView];
 }
-
 const defaultTiltOptions = {
     reverse:        false,  // reverse the tilt direction
     max:            35,     // max tilt rotation (degrees)
@@ -49,7 +43,6 @@ const defaultTiltOptions = {
     reset:          true,    // If the tilt effect has to be reset on exit.
     easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
 }
-
 function SponsorCard({SponsorImage, SponsorName, SponsorType}) {
   return (
     <Tilt options={defaultTiltOptions} className="SponsorCard">
@@ -63,7 +56,6 @@ function SponsorCard({SponsorImage, SponsorName, SponsorType}) {
 }
 const Sponsors = () => {
   const [ref, inView] = useIntersectionObserver();
-
   const animationVariants = {
     hidden: { y: -300, opacity: 0 },
     visible: { y: 0, opacity: 1 },
