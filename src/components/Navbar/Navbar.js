@@ -63,65 +63,131 @@ const Navbar = () => {
             <div className="navbar-option">
               <ul className="text-center">
                 <li className="my- nav-item res">
-                  <Link to={"/"}>HOME</Link>
+                  <button
+                    type="button"
+                    className="empbtn"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link to={"/"}>HOME</Link>
+                  </button>
                 </li>
                 <li className="my- nav-item res">
-                  <HashLink smooth to="/#about-us">
-                    ABOUT US
-                  </HashLink>
+                  <button
+                    type="button"
+                    className="empbtn"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <HashLink smooth to="/#about-us">
+                      ABOUT US
+                    </HashLink>
+                  </button>
                 </li>
                 {user.token !== "" ? (
                   <li className="my- nav-item res">
-                    <Link to={"/detailedEvents"}>EVENTS</Link>
+                    <button
+                      type="button"
+                      className="empbtn"
+                      data-bs-dismiss="offcanvas"
+                    >
+                      <Link to={"/detailedEvents"}>EVENTS</Link>
+                    </button>
                   </li>
                 ) : null}
                 {user.token !== "" ? (
                   <li className="my- nav-item res">
-                    <Link to={"/gallery"}>GALLERY</Link>
+                    <button
+                      type="button"
+                      className="empbtn"
+                      data-bs-dismiss="offcanvas"
+                    >
+                      <Link to={"/gallery"}>GALLERY</Link>
+                    </button>
                   </li>
                 ) : null}
                 <li className="my- nav-item res">
-                  <HashLink smooth to="/#sponsors">
-                    SPONSOR
-                  </HashLink>
+                  <button
+                    type="button"
+                    className="empbtn"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <HashLink smooth to="/#sponsors">
+                      SPONSOR
+                    </HashLink>
+                  </button>
                 </li>
                 <li className="my- nav-item res">
-                  <HashLink smooth to="/#contact-us">
-                    CONTACT US
-                  </HashLink>
+                  <button
+                    type="button"
+                    className="empbtn"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <HashLink smooth to="/#contact-us">
+                      CONTACT US
+                    </HashLink>
+                  </button>
                 </li>
                 <li className="my- nav-item res">
-                  <Link to="/merchandise">MERCHANDISE</Link>
+                  <button
+                    type="button"
+                    className="empbtn"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link to="/merchandise">MERCHANDISE</Link>
+                  </button>
                 </li>
                 {user.isAlumni ? (
                   <li className="my- nav-item res">
-                    <Link to="/alumni">ALUMNI</Link>
+                    <button
+                      type="button"
+                      className="empbtn"
+                      data-bs-dismiss="offcanvas"
+                    >
+                      <Link to="/alumni">ALUMNI</Link>
+                    </button>
                   </li>
                 ) : null}
                 {user.token === "" ? (
                   <div className="d-flex flex-column ">
                     <li className="my- nav-item res">
-                      <Link to="/signin">SIGN IN</Link>
+                      <button
+                        type="button"
+                        className="empbtn"
+                        data-bs-dismiss="offcanvas"
+                      >
+                        <Link to="/signin">SIGN IN</Link>
+                      </button>
                     </li>
                     <li className="my- nav-item res">
-                      <Link to="/register">REGISTER</Link>
+                      <button
+                        type="button"
+                        className="empbtn"
+                        data-bs-dismiss="offcanvas"
+                      >
+                        <Link to="/register">REGISTER</Link>
+                      </button>
                     </li>
                   </div>
                 ) : (
                   <li className="my- nav-item res">
-                    <Link
-                      to="/"
-                      onClick={() => {
-                        setUser({
-                          token: "",
-                          isAlumni: false,
-                          events: null,
-                          gallery: null,
-                        });
-                      }}
+                    <button
+                      type="button"
+                      className="empbtn"
+                      data-bs-dismiss="offcanvas"
                     >
-                      SIGN OUT
-                    </Link>
+                      <Link
+                        to="/"
+                        onClick={() => {
+                          setUser({
+                            token: "",
+                            isAlumni: false,
+                            events: null,
+                            gallery: null,
+                          });
+                        }}
+                      >
+                        SIGN OUT
+                      </Link>
+                    </button>
                   </li>
                 )}
 
@@ -130,9 +196,15 @@ const Navbar = () => {
                 </li> */}
 
                 <li className="my- nav-item res">
-                  <HashLink smooth to="/team">
-                    OUR TEAM
-                  </HashLink>
+                  <button
+                    type="button"
+                    className="empbtn"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <HashLink smooth to="/team">
+                      OUR TEAM
+                    </HashLink>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -250,3 +322,11 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+// <button
+//   type="button"
+//   className="empbtn"
+//   data-bs-dismiss="offcanvas"
+// ></button>;
