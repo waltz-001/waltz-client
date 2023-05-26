@@ -9,6 +9,9 @@ import { Tilt } from 'react-tilt'
 import NewLifeHospital from "./SponsorImages/NewLifeHospital.jpeg";
 import PeachNCream from "./SponsorImages/PeachNCream.jpeg";
 import Sarachi from "./SponsorImages/Sarachi.jpeg";
+import Pearl from "./SponsorImages/Pearl.png";
+import ISBM from "./SponsorImages/ISBM.png";
+import FitnessFactory from "./SponsorImages/FitnessFactory.png"
 function useIntersectionObserver() {
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
@@ -106,9 +109,19 @@ const Sponsors = () => {
         </motion.p>
         <div className="SponsorNames">
           <SponsorCard
+            SponsorName="ISB & M"
+            SponsorType="Title sponsor"
+            SponsorImage={ISBM}
+          />
+          <SponsorCard
             SponsorName="SHRACHI"
             SponsorType="Powered By"
             SponsorImage={Sarachi}
+          />
+          <SponsorCard
+            SponsorName="Pearl"
+            SponsorType="Fooding and Lodging Partner"
+            SponsorImage={Pearl}
           />
           <SponsorCard
             SponsorName="Peaches & Cream"
@@ -119,6 +132,11 @@ const Sponsors = () => {
             SponsorName="New Life Hospital"
             SponsorType="Health Partner"
             SponsorImage={NewLifeHospital}
+          />
+          <SponsorCard
+            SponsorName="Fitness Factory"
+            SponsorType="Fitness sponsor"
+            SponsorImage={FitnessFactory}
           />
         </div>
         <HashLink to={"/#contact-us"}>
