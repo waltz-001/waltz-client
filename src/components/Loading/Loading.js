@@ -1,5 +1,5 @@
 import "./Loading.css";
-import Loader from "../../assests/gif/loadinggif.gif";
+import Loader from "../../assests/gif/loader3.gif";
 
 const Loading = () => {
   return (
